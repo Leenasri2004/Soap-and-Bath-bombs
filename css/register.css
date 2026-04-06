@@ -1,0 +1,518 @@
+/* ════════════════════════════════
+   Register Page Layout
+════════════════════════════════ */
+.reg-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* ════════════════════════════════
+   LEFT: Visual Panel
+════════════════════════════════ */
+.reg-visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.reg-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.reg-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg,
+    rgba(45,31,26,.6) 0%,
+    rgba(123,79,163,.4) 60%,
+    rgba(60,174,163,.3) 100%);
+  z-index: 1;
+}
+
+.reg-visual-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem;
+  gap: 20px;
+}
+
+/* Brand */
+.reg-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: .04em;
+}
+
+.reg-brand-icon { color: #b2e8e4; font-size: 1.6rem; }
+
+/* Heading */
+.reg-visual-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.25;
+}
+
+.reg-visual-heading em {
+  font-style: italic;
+  color: #b2e8e4;
+}
+
+.reg-visual-sub {
+  font-size: .9rem;
+  color: rgba(255,255,255,.8);
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+/* Perks list */
+.reg-perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reg-perks li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .88rem;
+  color: rgba(255,255,255,.9);
+}
+
+.reg-perks i {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  color: #b2e8e4;
+  flex-shrink: 0;
+}
+
+/* Badges */
+.reg-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.reg-badges span {
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: .75rem;
+  padding: 5px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.25);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ════════════════════════════════
+   RIGHT: Form Panel
+════════════════════════════════ */
+.reg-form-panel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.reg-form-box {
+  width: 100%;
+  max-width: 440px;
+  padding: 1rem 0 2rem;
+}
+
+/* Mobile brand */
+.reg-mobile-brand {
+  display: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #7b4fa3;
+  text-decoration: none;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.reg-mobile-brand i { color: #3caea3; }
+
+/* ════════════════════════════════
+   Step Indicator
+════════════════════════════════ */
+.reg-steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.reg-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.reg-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #e5e7eb;
+  background: #fff;
+  color: #9ca3af;
+  font-size: .8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
+}
+
+.reg-step-label {
+  font-size: .7rem;
+  font-weight: 500;
+  color: #9ca3af;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  transition: color .3s;
+}
+
+.reg-step.active .reg-step-num {
+  border-color: #7b4fa3;
+  background: #7b4fa3;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(123,79,163,.35);
+}
+
+.reg-step.active .reg-step-label { color: #7b4fa3; }
+
+.reg-step.completed .reg-step-num {
+  border-color: #3caea3;
+  background: #3caea3;
+  color: #fff;
+}
+
+.reg-step.completed .reg-step-label { color: #3caea3; }
+
+.reg-step-line {
+  flex: 1;
+  height: 2px;
+  background: #e5e7eb;
+  margin: 0 6px;
+  margin-bottom: 20px;
+  transition: background .3s;
+}
+
+/* ════════════════════════════════
+   Step Content
+════════════════════════════════ */
+.reg-step-content {
+  display: none;
+  animation: regFadeIn .35s ease both;
+}
+
+.reg-step-content.active { display: block; }
+
+@keyframes regFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reg-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  color: #2d1f1a;
+  margin-bottom: .3rem;
+}
+
+.reg-sub {
+  font-size: .9rem;
+  color: #6b5a4f;
+  margin-bottom: 1.6rem;
+  line-height: 1.6;
+}
+
+/* ════════════════════════════════
+   Password Strength
+════════════════════════════════ */
+.reg-strength-wrap {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.reg-strength-bar {
+  flex: 1;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.reg-strength-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 99px;
+  transition: width .4s ease, background .4s ease;
+}
+
+.reg-strength-label {
+  font-size: .75rem;
+  font-weight: 600;
+  min-width: 44px;
+  text-align: right;
+}
+
+/* ════════════════════════════════
+   Terms & Opt-in rows
+════════════════════════════════ */
+.reg-terms-row,
+.reg-optin-row {
+  margin-bottom: .9rem;
+}
+
+.reg-terms-row .error-msg { margin-top: 4px; }
+
+.reg-link {
+  color: #7b4fa3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.reg-link:hover { text-decoration: underline; }
+
+/* ════════════════════════════════
+   Primary Button
+════════════════════════════════ */
+.reg-btn-primary {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #7b4fa3, #5e3a80);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 10px 28px rgba(123,79,163,.35);
+  transition: transform .2s, box-shadow .2s, background .2s;
+  margin-bottom: 1.2rem;
+  text-decoration: none;
+}
+
+.reg-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(123,79,163,.5);
+  background: linear-gradient(135deg, #5e3a80, #7b4fa3);
+}
+
+/* ════════════════════════════════
+   Step 2: Skin pills
+════════════════════════════════ */
+.reg-optional {
+  font-size: .75rem;
+  font-weight: 400;
+  color: #9ca3af;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.reg-skin-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.reg-pill {
+  font-family: 'Poppins', sans-serif;
+  font-size: .82rem;
+  font-weight: 500;
+  color: #6b5a4f;
+  background: #f7f3ef;
+  border: 1.5px solid #e5e7eb;
+  padding: 7px 16px;
+  border-radius: 24px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .25s;
+}
+
+.reg-pill:hover { border-color: #7b4fa3; color: #7b4fa3; }
+
+.reg-pill.active {
+  background: #7b4fa3;
+  border-color: #7b4fa3;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(123,79,163,.3);
+}
+
+/* Back + continue row */
+.reg-btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: .5rem;
+}
+
+.reg-btn-back {
+  flex-shrink: 0;
+  padding: 13px 20px;
+  background: transparent;
+  color: #6b5a4f;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: .9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color .2s, color .2s;
+}
+
+.reg-btn-back:hover { border-color: #7b4fa3; color: #7b4fa3; }
+
+.reg-btn-row .reg-btn-primary { flex: 1; margin-bottom: 0; }
+
+/* ════════════════════════════════
+   Step 3: Success
+════════════════════════════════ */
+.reg-success-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 1rem 0;
+}
+
+.reg-success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7b4fa3, #3caea3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  box-shadow: 0 12px 32px rgba(123,79,163,.4);
+  animation: regPop .5s cubic-bezier(.22,.68,0,1.4) both;
+}
+
+@keyframes regPop {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.reg-success-wrap .reg-heading { margin-bottom: 0; }
+.reg-success-wrap .reg-sub     { margin-bottom: 0; }
+
+/* Next cards */
+.reg-next-cards {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.reg-next-card {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 12px;
+  background: #f7f3ef;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #2d1f1a;
+  font-size: .82rem;
+  font-weight: 500;
+  transition: border-color .3s, background .3s, transform .3s;
+}
+
+.reg-next-card i {
+  font-size: 1.3rem;
+  color: #7b4fa3;
+}
+
+.reg-next-card:hover {
+  border-color: #7b4fa3;
+  background: #f0e8f8;
+  transform: translateY(-3px);
+}
+
+.reg-btn-home {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* ════════════════════════════════
+   Responsive
+════════════════════════════════ */
+@media (max-width: 900px) {
+  .reg-page { grid-template-columns: 1fr; }
+  .reg-visual { display: none; }
+
+  .reg-form-panel {
+    padding: 3rem 1.5rem;
+    background: #f7f3ef;
+    align-items: flex-start;
+  }
+
+  .reg-form-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem 1.8rem 2.4rem;
+    box-shadow: 0 20px 60px rgba(45,31,26,.1);
+  }
+
+  .reg-mobile-brand { display: flex; }
+}
+
+@media (max-width: 480px) {
+  .reg-form-box { padding: 1.6rem 1.2rem 2rem; }
+  .reg-heading  { font-size: 1.6rem; }
+  .reg-next-cards { gap: 8px; }
+  .reg-next-card { min-width: 80px; padding: 14px 8px; }
+}

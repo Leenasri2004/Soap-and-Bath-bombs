@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soap & Bath Bomb Workshop Studio - Chennai</title>
+    <!-- ✅ CSS LINK - THIS IS CORRECT -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<!-- Header with Home Dropdown -->
+<!-- ════════════════════════════════
+     Header
+════════════════════════════════ -->
+<header class="site-header" id="siteHeader">
+
+  <div class="header-inner">
+
+    <!-- LEFT: Navigation -->
+    <nav class="nav-left" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#" class="btn-buynow">Buy Now</a></li>
+      </ul>
+    </nav>
+
+    <!-- CENTER: Logo -->
+    <a href="index.html" class="logo" aria-label="Soap Studio – Home">
+      <span class="logo-icon"><i class="fa-solid fa-leaf"></i></span>
+      <span class="logo-text">Soap Studio</span>
+    </a>
+
+    <!-- RIGHT: Icons -->
+    <div class="nav-right">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+      <a href="login.html" class="icon-btn">
+        <i class="fa-regular fa-user"></i>
+      </a>
+
+      <a href="#" class="icon-btn">
+        <i class="fa-regular fa-heart"></i>
+      </a>
+
+      <a href="#" class="icon-btn cart-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">3</span>
+      </a>
+    </div>
+
+    <!-- MOBILE: Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- SEARCH BAR -->
+  <div class="search-bar" id="searchBar">
+    <div class="search-bar-inner">
+      <i class="fa-solid fa-magnifying-glass search-bar-icon"></i>
+
+      <input type="search" placeholder="Search articles, tips, products…">
+
+      <button class="search-close" id="searchClose">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobileNav">
+
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#">Pages</a></li>
+      <li><a href="#" class="mobile-buynow">Buy Now</a></li>
+    </ul>
+
+    <!-- EXTRA OPTIONS -->
+    <div class="mobile-extra">
+
+      <!-- LOGIN -->
+      <a href="login.html" class="mobile-login-btn">
+        <i class="fa-regular fa-user"></i> Login
+      </a>
+
+      <!-- DARK MODE -->
+      <button class="mobile-toggle" id="darkToggle">
+        <i class="fas fa-moon"></i> Dark Mode
+      </button>
+
+      <!-- RTL -->
+      <button class="mobile-toggle" id="rtlToggle">
+        <i class="fas fa-exchange-alt"></i> RTL Mode
+      </button>
+
+    </div>
+
+  </nav>
+
+</header>
+
+<section class="hero">
+
+    <!-- SLIDE 1 -->
+    <div class="hero-slide active" style="background-image: url('images/back.webp');">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <span>NATURE’S GENTLE TOUCH</span>
+            <h1>Handcrafted Organic<br>Soaps for Glowing Skin</h1>
+            <button>SHOP NOW</button>
+        </div>
+
+        <div class="hero-img">
+            <img src="images/handmade.webp">
+        </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="hero-slide" style="background-image: url('images/another back.avif');">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <span>FRESH FROM THE EARTH</span>
+            <h1>Clean Beauty Starts<br>Here</h1>
+            <button>SHOP NOW</button>
+        </div>
+
+        <div class="hero-img">
+            <img src="images/flavour-6.webp">
+        </div>
+    </div>
+
+</section>
+
+ <section class="collection">
+    
+    <div class="collection-header">
+        <h2>Explore Soap Collection</h2>
+        <a href="#">VIEW ALL</a>
+    </div>
+
+    <div class="collection-grid">
+
+        <div class="collection-item">
+            <img src="images/flavour-1.avif" alt="">
+            <div class="overlay-text">
+                <h4>Natural Soaps</h4>
+                <p>6 products</p>
+            </div>
+        </div>
+
+        <div class="collection-item">
+            <img src="images/flavour-2.webp" alt="">
+            <div class="overlay-text">
+                <h4>Charcoal Soaps</h4>
+                <p>8 products</p>
+            </div>
+        </div>
+
+        <div class="collection-item">
+            <img src="images/flavour-3.jpg" alt="">
+            <div class="overlay-text">
+                <h4>Herbal Soaps</h4>
+                <p>5 products</p>
+            </div>
+        </div>
+
+        <div class="collection-item">
+            <img src="images/flavour-4.jpg" alt="">
+            <div class="overlay-text">
+                <h4>Luxury Bars</h4>
+                <p>7 products</p>
+            </div>
+        </div>
+
+        <div class="collection-item">
+            <img src="images/flavour-5.webp" alt="">
+            <div class="overlay-text">
+                <h4>Color Soaps</h4>
+                <p>9 products</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+            
+
+
+<section class="soap-section">
+    <h2 class="soap-title">
+        Our soaps are cold-processed in small batches, infused
+        with natural herbs for a soothing skin experience.
+    </h2>
+
+    <div class="soap-badges">
+
+        <div class="soap-badge pink">
+            <span>100% PURE</span>
+            <h4>HERBS</h4>
+        </div>
+
+        <div class="soap-badge blue">
+            <span>NATURAL</span>
+            <h4>PRODUCT</h4>
+        </div>
+
+        <div class="soap-badge peach">
+            <span>100% PURE</span>
+            <h4>AROMA</h4>
+        </div>
+
+        <div class="soap-badge rose">
+            <span>NATIVE</span>
+            <h4>PRODUCT</h4>
+        </div>
+
+        <div class="soap-badge sky">
+            <span>RAW</span>
+            <h4>NATURE</h4>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+ <!-- SHOP PURE, NATURAL SOAP BARS -->
+<section class="product-section">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title">Shop Pure, Natural Soap Bars</h2>
+            <a href="#" class="view-all">VIEW ALL</a>
+        </div>
+
+        <div class="products-grid">
+            <!-- Product 1: Lavender -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="images/lavender.jpg" alt="Lavender Soap" class="product-image default">
+                    <img src="images/lavender-2.jpg" alt="Lavender Hover" class="product-image hover">
+
+                    <div class="action-icons">
+                        <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+                        <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+                        <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+                    </div>
+
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-info">
+                    <div class="brand-name">PureBloom</div>
+                    <h3 class="product-title">Organic Lavender Soap Bar</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="price">Rs. 250.00</div>
+                </div>
+            </div>
+
+            <!-- Product 2: Rose -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="images/rose.webp">
+                    <img src="images/rose-2.jpg" class="hover">
+
+                    <div class="action-icons">
+                        <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+                        <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+                        <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+                    </div>
+
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-info">
+                    <div class="brand-name">EarthEssence</div>
+                    <h3 class="product-title">Rose Petal Luxury Soap</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="price">Rs. 320.00</div>
+                </div>
+            </div>
+
+            <!-- Product 3: Citrus -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="images/citrus.webp">
+                    <img src="images/citrus-2.webp" class="hover">
+
+                    <div class="action-icons">
+                        <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+                        <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+                        <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+                    </div>
+
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-info">
+                    <div class="brand-name">NatureGlow</div>
+                    <h3 class="product-title">Citrus Burst Refresh Soap</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <div class="price">Rs. 180.00</div>
+                </div>
+            </div>
+
+            <!-- Product 4: Honey -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="images/honey.webp" alt="Honey Soap" class="product-image default">
+                    <img src="images/honey-2.webp" alt="Honey Hover" class="product-image hover">
+
+                    <div class="action-icons">
+                        <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+                        <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+                        <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+                    </div>
+
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-info">
+                    <div class="brand-name">HoneyPure</div>
+                    <h3 class="product-title">Manuka Honey Moisturizing Bar</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="price">Rs. 410.00</div>
+                </div>
+            </div>
+
+            <!-- Product 5: Oatmeal -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="images/oats.webp">
+                    <img src="images/oats-2.webp" alt="Oatmeal Hover" class="product-image hover">
+
+                    <div class="action-icons">
+                        <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+                        <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+                        <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+                    </div>
+
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-info">
+                    <div class="brand-name">GentleCare</div>
+                    <h3 class="product-title">Oatmeal Exfoliating Soap</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="price">Rs. 220.00</div>
+                </div>
+            </div>
+
+            <!-- Product 6: Charcoal -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="images/charcoal.webp" alt="Charcoal Soap" class="product-image default">
+                    <img src="images/charcoal-2.webp" alt="Charcoal Hover" class="product-image hover">
+                    <div class="action-icons">
+                        <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+                        <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+                        <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+                    </div>
+
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-info">
+                    <div class="brand-name">DetoxBar</div>
+                    <h3 class="product-title">Activated Charcoal Detox Soap</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="price">Rs. 290.00</div>
+                </div>
+            </div>
+
+            <!-- Product 7: Tea Tree -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="images/tea tree.png">
+                    <img src="images/tea tree-2.avif">
+
+                    <div class="action-icons">
+                        <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+                        <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+                        <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+                    </div>
+
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-info">
+                    <div class="brand-name">PureRemedy</div>
+                    <h3 class="product-title">Tea Tree Clear Skin Soap</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="price">Rs. 260.00</div>
+                </div>
+            </div>
+
+            <!-- Product 8: Vanilla -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="images/vanilla.webp">
+                    <img src="images/vanilla-2.webp">
+
+                    <div class="action-icons">
+                        <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+                        <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+                        <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+                    </div>
+
+                    <button class="add-to-cart">ADD TO CART</button>
+                </div>
+                <div class="product-info">
+                    <div class="brand-name">VanillaGlow</div>
+                    <h3 class="product-title">Vanilla Orchid Silk Soap</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="price">Rs. 350.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="diy-kits">
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="diy-top">
+        <div>
+            <span class="section-tag">DIY Kits</span>
+            <h2>Create Your Own Soap at Home</h2>
+        </div>
+        <a href="#" class="btn-secondary">Explore Kits</a>
+    </div>
+
+    <!-- SCROLL -->
+    <div class="kit-wrapper">
+
+        <button class="kit-btn left" onclick="scrollKits(-1)">&#10094;</button>
+
+        <div class="kit-grid" id="kitGrid">
+
+            <article class="kit-card">
+                <img src="images/bathbomb.webp">
+                <div class="kit-copy">
+                    <h3>Fizzy Bath Bomb Kit</h3>
+                    <p>Everything you need for fragrant bath creations.</p>
+                </div>
+            </article>
+
+            <article class="kit-card">
+                <img src="images/soap.jpg">
+                <div class="kit-copy">
+                    <h3>Soap Bar Starter Kit</h3>
+                    <p>Gentle bases and scent blends for your first bar.</p>
+                </div>
+            </article>
+
+            <article class="kit-card">
+                <img src="images/colourful.jpg">
+                <div class="kit-copy">
+                    <h3>Color & Scent Kit</h3>
+                    <p>Bright pigments and essential oils.</p>
+                </div>
+            </article>
+
+            <!-- extra cards -->
+            <article class="kit-card">
+                <img src="images/soap.jpg">
+                <div class="kit-copy">
+                    <h3>Luxury Soap Kit</h3>
+                    <p>Create premium handmade soaps.</p>
+                </div>
+            </article>
+
+            <article class="kit-card">
+                <img src="images/bathbomb.webp">
+                <div class="kit-copy">
+                    <h3>Herbal Kit</h3>
+                    <p>Natural herbs and oils for skincare.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <button class="kit-btn right" onclick="scrollKits(1)">&#10095;</button>
+
+    </div>
+
+</div>
+</section>
+
+
+
+
+<section class="hotspot-showcase">
+  <div class="container hotspot-grid">
+    
+    <!-- LEFT: FEATURED LARGE IMAGE -->
+    <div class="hotspot-item hotspot-item--large" data-position="left">
+      <img src="images/handmade-soap-bars-2024-12-07-21-31-31-utc.webp" alt="Featured Natural Soap">
+      <button class="hotspot-trigger" data-target="product-1">
+        <span>+</span>
+      </button>
+
+      <!-- POPUP CARD -->
+      <div class="hotspot-card" id="product-1">
+        <div class="brand">PureBloom</div>
+        <div class="title">Lavender Oatmeal Calm Bar</div>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-count">(124)</span>
+        </div>
+        <div class="price-row">
+          <span class="price-new">₹420</span>
+          <span class="price-old">₹480</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: TWO STACKED IMAGES -->
+    <div class="hotspot-right-column">
+      
+      <div class="hotspot-item" data-position="right">
+        <img src="images/handmade-soap-on-wooden-background-2023-11-27-04-50-10-utc.webp" alt="Herbal Clay Soap">
+        <button class="hotspot-trigger" data-target="product-2">
+          <span>+</span>
+        </button>
+
+        <div class="hotspot-card" id="product-2">
+          <div class="brand">EarthEssence</div>
+          <div class="title">Herbal Clay Detox Bar</div>
+          <div class="rating">
+            <span class="stars">★★★★☆</span>
+            <span class="rating-count">(89)</span>
+          </div>
+          <div class="price-row">
+            <span class="price-new">₹390</span>
+            <span class="price-old">₹430</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotspot-item" data-position="right">
+        <img src="images/pieces-of-natural-handmade-soap-on-white-backgroun-2023-11-27-05-30-45-utc.webp" alt="Citrus Glow Soap">
+        <button class="hotspot-trigger" data-target="product-3">
+          <span>+</span>
+        </button>
+
+        <div class="hotspot-card" id="product-3">
+          <div class="brand">CitrusBloom</div>
+          <div class="title">Citrus Glow Vitamin C Bar</div>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(57)</span>
+          </div>
+          <div class="price-row">
+            <span class="price-new">₹450</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Workshops - Horizontal Layout -->
+<section id="workshops" class="workshops">
+    <div class="container">
+        <h2>Our Workshops</h2>
+        <div class="workshops-horizontal">
+            <!-- Soap Making -->
+            <div class="workshop-slide">
+                <div class="workshop-card-horizontal">
+                    <div class="workshop-image">
+                        <img src="images/soap-1.jpeg" alt="Soap Making">
+                        <div class="workshop-overlay">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Soap Making</h3>
+                        <p>Master melt-and-pour & cold process with natural ingredients. Take home 4 custom soaps!</p>
+                        <div class="workshop-price-duration">
+                            <span class="price">₹1,500</span>
+                            <span class="duration">3 hours</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> All materials included</li>
+                            <li><i class="fas fa-check"></i> Take home 4 soaps</li>
+                            <li><i class="fas fa-check"></i> Expert guidance</li>
+                        </ul>
+                        <a href="#book" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bath Bombs -->
+            <div class="workshop-slide">
+                <div class="workshop-card-horizontal">
+                    <div class="workshop-image">
+                        <img src="images/bath bombs.jpg">
+                        <div class="workshop-overlay">
+                            <i class="fas fa-bath"></i>
+                        </div>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Bath Bombs</h3>
+                        <p>Create fizzy bath bombs with essential oils & colors. Perfect fun for all ages!</p>
+                        <div class="workshop-price-duration">
+                            <span class="price">₹1,200</span>
+                            <span class="duration">2.5 hours</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 6 bath bombs</li>
+                            <li><i class="fas fa-check"></i> Custom scents</li>
+                            <li><i class="fas fa-check"></i> Kid-friendly</li>
+                        </ul>
+                        <a href="#book" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Combo -->
+            <div class="workshop-slide">
+                <div class="workshop-card-horizontal">
+                    <div class="workshop-image">
+                        <img src="images/bath-bomb-preparation.jpg">
+                        <div class="workshop-overlay">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Combo Session</h3>
+                        <p>Soap + Bath Bombs full day! Best value with group discounts available.</p>
+                        <div class="workshop-price-duration">
+                            <span class="price">₹2,500</span>
+                            <span class="duration">5 hours</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> Save ₹200</li>
+                            <li><i class="fas fa-check"></i> Group 20% off</li>
+                            <li><i class="fas fa-check"></i> Lunch included</li>
+                        </ul>
+                        <a href="#book" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="workshop-nav">
+            <button class="nav-btn prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="nav-btn next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Dots -->
+        <div class="workshop-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Why People Love Our Studio -->
+<section class="love-section">
+    <div class="container">
+        <div class="love-layout">
+            <div class="love-text">
+                <span class="section-tag">Why Choose Us</span>
+                <h2>People Fall in Love With the Experience</h2>
+                <p>From first‑time crafters to hobby makers, everyone leaves with a smile, a bag full of goodies, and lots of photos.</p>
+
+                <ul class="love-list">
+                    <li><i class="fas fa-check-circle"></i> Friendly, patient instructor who explains every step slowly.</li>
+                    <li><i class="fas fa-check-circle"></i> Recipes you can recreate at home with easy ingredients.</li>
+                    <li><i class="fas fa-check-circle"></i> Super Instagram‑worthy setup and colourful creations.</li>
+                </ul>
+            </div>
+
+            <div class="love-stats">
+                <div class="love-card">
+                    <h3>500+</h3>
+                    <p>Happy crafters across Chennai</p>
+                </div>
+                <div class="love-card">
+                    <h3>4.9★</h3>
+                    <p>Average workshop rating</p>
+                </div>
+                <div class="love-card">
+                    <h3>80%</h3>
+                    <p>Come again with friends</p>
+                </div>
+                <div class="love-card">
+                    <h3>3–5</h3>
+                    <p>Creations per person</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Perfect For -->
+<section class="perfect-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Occasions</span>
+            <h2>Perfect For Every Little Celebration</h2>
+        </div>
+
+        <div class="perfect-grid">
+            <div class="perfect-card">
+                <div class="perfect-icon">
+                    <i class="fas fa-birthday-cake"></i>
+                </div>
+                <h3>Birthday Specials</h3>
+                <p>Turn birthdays into a creative soap & bath bomb party instead of a regular cake‑cutting.</p>
+            </div>
+
+            <div class="perfect-card">
+                <div class="perfect-icon">
+                    <i class="fas fa-children"></i>
+                </div>
+                <h3>Kids’ Activity</h3>
+                <p>Screen‑free, safe and colourful hands‑on fun for children above 7 years.</p>
+            </div>
+
+            <div class="perfect-card">
+                <div class="perfect-icon">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <h3>Friends’ Day Out</h3>
+                <p>Craft together, click photos and take home matching sets as a memory.</p>
+            </div>
+
+            <div class="perfect-card">
+                <div class="perfect-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Self‑Care Lovers</h3>
+                <p>Create gentle products that actually suit your skin and fragrance taste.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Skin-Safe Promise -->
+<section class="skin-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Gentle On Skin</span>
+            <h2>Our Skin‑Safe Promise</h2>
+        </div>
+
+        <div class="skin-layout">
+            <div class="skin-card good">
+                <h3>We Love Using</h3>
+                <ul>
+                    <li><i class="fas fa-leaf"></i> Cold‑pressed oils & butters</li>
+                    <li><i class="fas fa-seedling"></i> Plant‑based colorants & clays</li>
+                    <li><i class="fas fa-wind"></i> Essential oils in safe ratios</li>
+                    <li><i class="fas fa-hand-holding-heart"></i> Gentle, melt & pour bases</li>
+                </ul>
+            </div>
+
+            <div class="skin-card avoid">
+                <h3>We Avoid</h3>
+                <ul>
+                    <li><i class="fas fa-ban"></i> Harsh sulphates in workshop recipes</li>
+                    <li><i class="fas fa-ban"></i> Heavy artificial colours on skin</li>
+                    <li><i class="fas fa-ban"></i> Over‑fragrancing that causes headaches</li>
+                    <li><i class="fas fa-ban"></i> Animal testing in any form</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Quick FAQs -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-header">
+           <span class="section-tag">Questions</span>
+            <h2>Quick FAQs</h2>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do I need any prior experience?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>No experience needed at all. We start from basics and guide you step by step until you feel confident.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I take everything I make?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, all soaps and bath bombs you make are packed for you to take home, along with recipe notes.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is it suitable for kids?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, kids above 7 years can join. For younger children, we suggest a parent or guardian to accompany.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I confirm my slot?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Fill the booking form, we’ll reply within 24 hours with available slots and a payment link to confirm.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Book a Slot (Big Form) -->
+<section id="book" class="book book-big">
+    <div class="container">
+        <div class="book-header">
+            <span class="section-tag">Reserve Your Seat</span>
+            <h2>Book a Workshop Slot</h2>
+            <p>Share your details and preferred date. We’ll confirm your booking on WhatsApp or email.</p>
+        </div>
+
+        <form class="booking-form booking-form-big">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input id="name" type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input id="email" type="email" placeholder="you@example.com" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone / WhatsApp *</label>
+                    <input id="phone" type="tel" placeholder="+91 9XXXX XXXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date *</label>
+                    <input id="date" type="date" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="workshop">Select Workshop *</label>
+                    <select id="workshop" required>
+                        <option value="">Choose a workshop</option>
+                        <option>Soap Making</option>
+                        <option>Bath Bombs</option>
+                        <option>Combo (Soap + Bath Bombs)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="people">No. of Participants *</label>
+                    <input id="people" type="number" min="1" max="10" placeholder="e.g. 2" required>
+                </div>
+            </div>
+
+            <div class="form-group full">
+                <label for="notes">Notes (optional)</label>
+                <textarea id="notes" placeholder="Any special occasion, age group, time preference, etc."></textarea>
+            </div>
+
+         <div class="form-actions">
+                <button type="submit" class="btn-main">Request Slot</button>
+                <p class="small-text">We usually confirm within 24 hours. Payment link will be shared after confirmation.</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="footer">
+    <div class="container">
+                <!-- Newsletter Subscribe -->
+        <div class="newsletter">
+            <div class="newsletter-content">
+                <h3>Join Our Community</h3>
+                <p>Subscribe for workshop updates, DIY ideas, and natural self-care inspiration.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <!-- Top Footer with Logo and Sections -->
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">
+                    <h2><i class="fas fa-spa"></i> SoapStudio</h2>
+                </a>
+                <p>Discover the joy of crafting natural soaps & bath bombs at our Chennai workshops. Create, learn, and take home your masterpieces!</p>
+                <div class="footer-contact">
+                    <p><i class="fas fa-map-marker-alt"></i> Thiruvanmiyur, Chennai, Tamil Nadu 600041</p>
+                    <p><i class="fas fa-phone"></i> +91 8825826702</p>
+                    <p><i class="fas fa-envelope"></i> info@soapstudio.in</p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Workshops</h4>
+                <ul>
+                    <li><a href="#workshops">Soap Making</a></li>
+                    <li><a href="#workshops">Bath Bombs</a></li>
+                    <li><a href="#workshops">Combo Sessions</a></li>
+                    <li>Weekends: Sat-Sun 10AM-2PM</li>
+                    <li>Min 4 participants</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#book">Book Now</a></li>
+                    <li><a href="#workshops">Workshops</a></li>
+                    <li><a href="#contact">Policies</a></li>
+                    <a href="https://facebook.com/soapstudiochennai" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/918825826702" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p>Join 500+ happy crafters!</p>
+            </div>
+        </div>
+        
+
+        
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 <a href="#home">SoapStudio</a>. All rights reserved. | Designed in Chennai with <i class="fas fa-heart" style="color: #FF6B6B;"></i></p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

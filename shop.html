@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soap Studio – Shop</title>
+  <link rel="stylesheet" href="css/shop.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+
+    <!-- LEFT: Navigation -->
+    <nav class="nav-left">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#" class="btn-buynow">Buy Now</a></li>
+      </ul>
+    </nav>
+
+    <!-- CENTER: Logo -->
+    <a href="index.html" class="logo">
+      <span class="logo-icon"><i class="fa-solid fa-leaf"></i></span>
+      <span class="logo-text">Soap Studio</span>
+    </a>
+
+    <!-- RIGHT: Icons -->
+    <div class="nav-right">
+      <a href="#" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="login.html" title="Login"><i class="fa-regular fa-user"></i></a>
+      <a href="#" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+      <a href="#" title="Cart" class="cart-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">3</span>
+      </a>
+    </div>
+
+    <!-- MOBILE: Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+
+  <!-- MOBILE: Dropdown Nav -->
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#">Pages</a></li>
+      <li><a href="#">Buy Now</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  /* ── Hamburger ── */
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+</script>
+
+<!-- ── Hero Section ── -->
+<section class="shop-hero">
+
+  <!-- Decorative blobs -->
+  <div class="hero-blob hero-blob--tl"></div>
+  <div class="hero-blob hero-blob--br"></div>
+
+  <div class="hero-container">
+
+    <!-- Eyebrow label -->
+    <span class="hero-eyebrow">
+      <i class="fa-solid fa-leaf"></i> 100% Natural &amp; Organic
+    </span>
+
+    <!-- Main heading -->
+    <h1 class="hero-heading">Shop Pure,<br>Natural Soap Bars</h1>
+
+    <!-- Divider -->
+    <div class="hero-divider">
+      <span></span><i class="fa-solid fa-spa"></i><span></span>
+    </div>
+
+    <!-- Subtitle -->
+    <p class="hero-subtitle">
+      Crafted with natural ingredients for healthy, glowing skin —<br>
+      free from harsh chemicals, full of nature's goodness.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="hero-actions">
+      <a href="#products" class="btn-primary">Explore Collection</a>
+      <a href="#" class="btn-ghost">Our Story</a>
+    </div>
+
+    <!-- Trust badges -->
+    <div class="hero-badges">
+      <span><i class="fa-solid fa-seedling"></i> Vegan</span>
+      <span><i class="fa-solid fa-hand-holding-heart"></i> Cruelty-Free</span>
+      <span><i class="fa-solid fa-recycle"></i> Eco Packaging</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     Product Grid Section
+════════════════════════════════ -->
+<section class="products-section" id="products">
+  <div class="products-container">
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <span class="section-eyebrow"><i class="fa-solid fa-spa"></i> Our Collection</span>
+      <h2 class="section-title">Handcrafted Soap Bars</h2>
+      <p class="section-sub">Each bar is small-batch made with botanicals, essential oils, and zero harsh chemicals.</p>
+    </div>
+
+    <!-- ── Filter & Sort Toolbar ── -->
+    <div class="shop-toolbar">
+
+      <!-- LEFT: result count + advanced filter trigger -->
+      <div class="toolbar-left">
+        <span class="toolbar-count" id="productCount">8 Products</span>
+        <div class="toolbar-divider"></div>
+        <button class="btn-advanced-filter" id="advFilterBtn">
+          <i class="fa-solid fa-sliders"></i> Filter
+          <span class="filter-dot" id="filterDot"></span>
+        </button>
+      </div>
+
+      <!-- CENTER: category pills -->
+      <div class="toolbar-cats" id="catScroll">
+        <button class="cat-btn active" data-filter="all">All</button>
+        <button class="cat-btn" data-filter="floral">
+          <i class="fa-solid fa-fan"></i> Floral
+        </button>
+        <button class="cat-btn" data-filter="citrus">
+          <i class="fa-solid fa-lemon"></i> Citrus
+        </button>
+        <button class="cat-btn" data-filter="herbal">
+          <i class="fa-solid fa-leaf"></i> Herbal
+        </button>
+        <button class="cat-btn" data-filter="luxury">
+          <i class="fa-solid fa-gem"></i> Luxury
+        </button>
+      </div>
+
+      <!-- RIGHT: sort + view toggle -->
+      <div class="toolbar-right">
+        <div class="sort-wrap">
+          <i class="fa-solid fa-arrow-up-wide-short sort-icon"></i>
+          <select class="sort-select" id="sortSelect">
+            <option value="default">Sort by</option>
+            <option value="popular">Popularity</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="newest">Newest</option>
+          </select>
+          <i class="fa-solid fa-chevron-down sort-arrow"></i>
+        </div>
+        <div class="view-toggle">
+          <button class="view-btn active" id="viewGrid" title="Grid view"><i class="fa-solid fa-grip"></i></button>
+          <button class="view-btn" id="viewList" title="List view"><i class="fa-solid fa-list"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Advanced Filter Panel -->
+    <div class="adv-filter-panel" id="advPanel">
+      <div class="adv-filter-inner">
+
+        <div class="adv-group">
+          <p class="adv-label">Price Range</p>
+          <div class="price-range-wrap">
+            <span class="price-range-val" id="priceVal">₹0 – ₹500</span>
+            <input type="range" min="0" max="500" value="500" step="10" class="price-slider" id="priceSlider" />
+          </div>
+        </div>
+
+        <div class="adv-group">
+          <p class="adv-label">Rating</p>
+          <div class="rating-filters">
+            <label class="rating-opt"><input type="radio" name="rating" value="0" checked /> All</label>
+            <label class="rating-opt"><input type="radio" name="rating" value="4" /> <i class="fa-solid fa-star"></i> 4+</label>
+            <label class="rating-opt"><input type="radio" name="rating" value="5" /> <i class="fa-solid fa-star"></i> 5 only</label>
+          </div>
+        </div>
+
+        <div class="adv-group">
+          <p class="adv-label">Availability</p>
+          <div class="avail-filters">
+            <label class="avail-opt"><input type="checkbox" value="sale" /> On Sale</label>
+            <label class="avail-opt"><input type="checkbox" value="new" /> New Arrivals</label>
+            <label class="avail-opt"><input type="checkbox" value="best" /> Best Sellers</label>
+          </div>
+        </div>
+
+        <button class="btn-apply-filter">Apply Filters</button>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+
+      <!-- Card 1: Lavender -->
+      <div class="product-card" data-category="floral">
+        <div class="card-image-wrap">
+          <span class="card-badge badge--new">New</span>
+          <img src="images/lavender.jpg" alt="Lavender Bliss" class="img-main" />
+          <img src="images/lavender-2.jpg" alt="Lavender Bliss hover" class="img-hover" />
+          <div class="card-actions">
+            <button title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="qv-trigger" title="Quick View"
+              data-title="Lavender Bliss Bar"
+              data-brand="Soap Studio Naturals"
+              data-price="₹299" data-old="₹399"
+              data-badge="New" data-badge-type="new"
+              data-stars="4" data-reviews="42"
+              data-img="images/lavender.jpg"
+              data-thumb1="images/lavender.jpg"
+              data-thumb2="images/lavender-2.jpg"
+              data-desc="A calming blend of pure lavender essential oil and shea butter. Soothes the skin, relieves stress, and leaves a gentle floral scent that lingers all day."
+              data-scents="Lavender,Chamomile,Vanilla"
+              data-sizes="50g,100g,150g"
+            ><i class="fa-regular fa-eye"></i></button>
+            <button title="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <div class="card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            <span>(42)</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">₹299</span>
+            <span class="price-old">₹399</span>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 2: Rose -->
+      <div class="product-card" data-category="floral">
+        <div class="card-image-wrap">
+          <span class="card-badge badge--sale">Sale</span>
+          <img src="images/rose.webp" alt="Rose Petal" class="img-main" />
+          <img src="images/rose-2.jpg" alt="Rose Petal hover" class="img-hover" />
+          <div class="card-actions">
+            <button title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="qv-trigger" title="Quick View"
+              data-title="Rose Petal Glow"
+              data-brand="Soap Studio Naturals"
+              data-price="₹349" data-old="₹449"
+              data-badge="Sale" data-badge-type="sale"
+              data-stars="5" data-reviews="87"
+              data-img="images/rose.webp"
+              data-thumb1="images/rose.webp"
+              data-thumb2="images/rose-2.jpg"
+              data-desc="Infused with real rose petals and rosehip oil, this bar brightens dull skin and deeply moisturises. Perfect for a luxurious daily cleanse."
+              data-scents="Rose,Geranium,Jasmine"
+              data-sizes="50g,100g,150g"
+            ><i class="fa-regular fa-eye"></i></button>
+            <button title="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <div class="card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span>(87)</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">₹349</span>
+            <span class="price-old">₹449</span>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 3: Citrus -->
+      <div class="product-card" data-category="citrus">
+        <div class="card-image-wrap">
+          <img src="images/citrus.webp" alt="Citrus Burst" class="img-main" />
+          <img src="images/citrus-2.webp" alt="Citrus Burst hover" class="img-hover" />
+          <div class="card-actions">
+            <button title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="qv-trigger" title="Quick View"
+              data-title="Citrus Burst Bar"
+              data-brand="Soap Studio Naturals"
+              data-price="₹279"
+              data-stars="4" data-reviews="63"
+              data-img="images/citrus.webp"
+              data-thumb1="images/citrus.webp"
+              data-thumb2="images/citrus-2.webp"
+              data-desc="A zesty, energising bar packed with sweet orange and lemon peel extracts. Wakes up your senses and leaves skin feeling fresh and radiant."
+              data-scents="Orange,Lemon,Grapefruit"
+              data-sizes="50g,100g,150g"
+            ><i class="fa-regular fa-eye"></i></button>
+            <button title="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <div class="card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            <span>(63)</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">₹279</span>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 4: Charcoal -->
+      <div class="product-card" data-category="herbal">
+        <div class="card-image-wrap">
+          <span class="card-badge badge--best">Best Seller</span>
+          <img src="images/charcoal.webp" alt="Charcoal Detox" class="img-main" />
+          <img src="images/charcoal-2.webp" alt="Charcoal Detox hover" class="img-hover" />
+          <div class="card-actions">
+            <button title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="qv-trigger" title="Quick View"
+              data-title="Charcoal Detox Bar"
+              data-brand="Soap Studio Naturals"
+              data-price="₹329" data-old="₹429"
+              data-badge="Best Seller" data-badge-type="best"
+              data-stars="5" data-reviews="119"
+              data-img="images/charcoal.webp"
+              data-thumb1="images/charcoal.webp"
+              data-thumb2="images/charcoal-2.webp"
+              data-desc="Activated charcoal draws out impurities and unclogs pores while tea tree oil fights bacteria. Ideal for oily and acne-prone skin types."
+              data-scents="Charcoal,Tea Tree,Mint"
+              data-sizes="50g,100g,150g"
+            ><i class="fa-regular fa-eye"></i></button>
+            <button title="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <div class="card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span>(119)</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">₹329</span>
+            <span class="price-old">₹429</span>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 5: Honey -->
+      <div class="product-card" data-category="luxury">
+        <div class="card-image-wrap">
+          <span class="card-badge badge--new">New</span>
+          <img src="images/honey.webp" alt="Honey Glow" class="img-main" />
+          <img src="images/honey-2.webp" alt="Honey Glow hover" class="img-hover" />
+          <div class="card-actions">
+            <button title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="qv-trigger" title="Quick View"
+              data-title="Honey Glow Bar"
+              data-brand="Soap Studio Naturals"
+              data-price="₹379" data-old="₹479"
+              data-badge="New" data-badge-type="new"
+              data-stars="4" data-reviews="55"
+              data-img="images/honey.webp"
+              data-thumb1="images/honey.webp"
+              data-thumb2="images/honey-2.webp"
+              data-desc="Raw honey and oat milk combine to nourish and soften even the driest skin. A rich, creamy lather that feels like a spa treatment every morning."
+              data-scents="Honey,Oat,Almond"
+              data-sizes="50g,100g,150g"
+            ><i class="fa-regular fa-eye"></i></button>
+            <button title="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <div class="card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            <span>(55)</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">₹379</span>
+            <span class="price-old">₹479</span>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 6: Oats -->
+      <div class="product-card" data-category="herbal">
+        <div class="card-image-wrap">
+          <img src="images/oats.webp" alt="Oat & Milk" class="img-main" />
+          <img src="images/oats-2.webp" alt="Oat & Milk hover" class="img-hover" />
+          <div class="card-actions">
+            <button title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="qv-trigger" title="Quick View"
+              data-title="Oat &amp; Milk Soothe"
+              data-brand="Soap Studio Naturals"
+              data-price="₹259"
+              data-stars="4" data-reviews="74"
+              data-img="images/oats.webp"
+              data-thumb1="images/oats.webp"
+              data-thumb2="images/oats-2.webp"
+              data-desc="Colloidal oatmeal and whole milk proteins calm irritated, sensitive skin. Fragrance-free and dermatologist-tested — gentle enough for daily use."
+              data-scents="Oat,Milk,Unscented"
+              data-sizes="50g,100g,150g"
+            ><i class="fa-regular fa-eye"></i></button>
+            <button title="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <div class="card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            <span>(74)</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">₹259</span>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 7: Vanilla -->
+      <div class="product-card" data-category="luxury">
+        <div class="card-image-wrap">
+          <span class="card-badge badge--sale">Sale</span>
+          <img src="images/vanilla.webp" alt="Vanilla Dream" class="img-main" />
+          <img src="images/vanilla-2.webp" alt="Vanilla Dream hover" class="img-hover" />
+          <div class="card-actions">
+            <button title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="qv-trigger" title="Quick View"
+              data-title="Vanilla Dream Bar"
+              data-brand="Soap Studio Naturals"
+              data-price="₹319" data-old="₹419"
+              data-badge="Sale" data-badge-type="sale"
+              data-stars="5" data-reviews="98"
+              data-img="images/vanilla.webp"
+              data-thumb1="images/vanilla.webp"
+              data-thumb2="images/vanilla-2.webp"
+              data-desc="Madagascar vanilla and sweet almond oil create a warm, indulgent bar that melts into skin. A bestselling scent loved for its comforting, dessert-like aroma."
+              data-scents="Vanilla,Almond,Coconut"
+              data-sizes="50g,100g,150g"
+            ><i class="fa-regular fa-eye"></i></button>
+            <button title="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <div class="card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span>(98)</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">₹319</span>
+            <span class="price-old">₹419</span>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Card 8: Tea Tree -->
+      <div class="product-card" data-category="herbal">
+        <div class="card-image-wrap">
+          <span class="card-badge badge--best">Best Seller</span>
+          <img src="images/tea tree.png" alt="Tea Tree Clear" class="img-main" />
+          <img src="images/tea tree-2.avif" alt="Tea Tree Clear hover" class="img-hover" />
+          <div class="card-actions">
+            <button title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="qv-trigger" title="Quick View"
+              data-title="Tea Tree Clear Bar"
+              data-brand="Soap Studio Naturals"
+              data-price="₹289" data-old="₹369"
+              data-badge="Best Seller" data-badge-type="best"
+              data-stars="5" data-reviews="132"
+              data-img="images/tea tree.png"
+              data-thumb1="images/tea tree.png"
+              data-thumb2="images/tea tree-2.avif"
+              data-desc="Pure tea tree oil and neem extract work together to purify skin, reduce blemishes, and control excess oil. A cult favourite for clear, healthy skin."
+              data-scents="Tea Tree,Neem,Eucalyptus"
+              data-sizes="50g,100g,150g"
+            ><i class="fa-regular fa-eye"></i></button>
+            <button title="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <div class="card-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span>(132)</span>
+          </div>
+          <div class="card-price">
+            <span class="price-current">₹289</span>
+            <span class="price-old">₹369</span>
+          </div>
+          <button class="btn-cart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
+
+    </div><!-- /product-grid -->
+
+    <!-- ════ Pagination + Load More ════ -->
+    <div class="shop-pagination-wrap">
+
+      <!-- Progress bar -->
+      <div class="pg-progress-track">
+        <div class="pg-progress-bar" id="pgBar"></div>
+      </div>
+      <p class="pg-progress-label" id="pgLabel">Showing 8 of 24 products</p>
+
+      <!-- Load More button -->
+      <button class="btn-load-more" id="loadMoreBtn">
+        <span class="lm-text">Load More Products</span>
+        <span class="lm-spinner" aria-hidden="true"></span>
+        <i class="fa-solid fa-arrow-down lm-icon"></i>
+      </button>
+
+      <!-- Divider with OR -->
+      <div class="pg-divider">
+        <span></span><em>or browse by page</em><span></span>
+      </div>
+
+      <!-- Pagination row -->
+      <nav class="pagination" aria-label="Shop pages">
+        <button class="pg-btn pg-prev" id="pgPrev" aria-label="Previous page" disabled>
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="pg-numbers" id="pgNumbers">
+          <!-- rendered by JS -->
+        </div>
+
+        <button class="pg-btn pg-next" id="pgNext" aria-label="Next page">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </nav>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  /* ── Shared state ── */
+  let activeFilter = 'all';
+  let activeSort   = 'default';
+
+  const grid    = document.querySelector('.product-grid');
+  const cards   = () => [...document.querySelectorAll('.product-card')];
+  const countEl = document.getElementById('productCount');
+
+  /* ── Helpers ── */
+  function priceOf(card) {
+    return parseInt(card.querySelector('.price-current').textContent.replace(/[^•\d]/g, ''));
+  }
+  function reviewsOf(card) {
+    const t = card.querySelector('.card-stars span').textContent;
+    return parseInt(t.replace(/[()]/g, ''));
+  }
+  function starsOf(card) {
+    return card.querySelectorAll('.fa-solid.fa-star').length;
+  }
+
+  /* ── Apply filter + sort ── */
+  function applyAll() {
+    let visible = cards().filter(card => {
+      return activeFilter === 'all' || card.dataset.category === activeFilter;
+    });
+
+    /* sort visible subset */
+    if (activeSort === 'price-asc')  visible.sort((a,b) => priceOf(a) - priceOf(b));
+    if (activeSort === 'price-desc') visible.sort((a,b) => priceOf(b) - priceOf(a));
+    if (activeSort === 'popular')    visible.sort((a,b) => reviewsOf(b) - reviewsOf(a));
+    if (activeSort === 'newest')     visible.reverse();
+
+    /* re-order DOM and show/hide */
+    const hiddenCards = cards().filter(c => !visible.includes(c));
+    hiddenCards.forEach(c => { c.style.display = 'none'; });
+    visible.forEach(c => {
+      c.style.display = '';
+      grid.appendChild(c);   /* re-order in DOM */
+    });
+
+    countEl.textContent = visible.length + ' Product' + (visible.length !== 1 ? 's' : '');
+  }
+
+  /* ── Category pills ── */
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      applyAll();
+    });
+  });
+
+  /* ── Sort dropdown ── */
+  document.getElementById('sortSelect').addEventListener('change', e => {
+    activeSort = e.target.value;
+    applyAll();
+  });
+
+  /* ── Advanced filter panel toggle ── */
+  const advPanel  = document.getElementById('advPanel');
+  const filterDot = document.getElementById('filterDot');
+  document.getElementById('advFilterBtn').addEventListener('click', () => {
+    advPanel.classList.toggle('open');
+  });
+
+  /* price slider label */
+  document.getElementById('priceSlider').addEventListener('input', e => {
+    document.getElementById('priceVal').textContent = '₹0 – ₹' + e.target.value;
+  });
+
+  /* apply advanced filters */
+  document.querySelector('.btn-apply-filter').addEventListener('click', () => {
+    const maxPrice  = parseInt(document.getElementById('priceSlider').value);
+    const minStars  = parseInt(document.querySelector('input[name="rating"]:checked').value);
+    const badges    = [...document.querySelectorAll('.avail-filters input:checked')].map(i => i.value);
+
+    cards().forEach(card => {
+      const price = priceOf(card);
+      const stars = starsOf(card);
+      const badge = card.querySelector('.card-badge');
+      const badgeType = badge ? badge.classList[1].replace('badge--','') : '';
+
+      let show = price <= maxPrice && stars >= minStars;
+      if (badges.length && !badges.includes(badgeType)) show = false;
+      card.style.display = show ? '' : 'none';
+    });
+
+    const vis = cards().filter(c => c.style.display !== 'none').length;
+    countEl.textContent = vis + ' Product' + (vis !== 1 ? 's' : '');
+    filterDot.style.display = 'block';
+    advPanel.classList.remove('open');
+  });
+
+  /* ── View toggle ── */
+  document.getElementById('viewGrid').addEventListener('click', () => {
+    grid.classList.remove('list-view');
+    document.getElementById('viewGrid').classList.add('active');
+    document.getElementById('viewList').classList.remove('active');
+  });
+  document.getElementById('viewList').addEventListener('click', () => {
+    grid.classList.add('list-view');
+    document.getElementById('viewList').classList.add('active');
+    document.getElementById('viewGrid').classList.remove('active');
+  });
+
+  /* ── Pagination + Load More ── */
+  const TOTAL_PRODUCTS  = 24;
+  const LOAD_BATCH      = 4;
+  const TOTAL_PAGES     = 3;
+  let   shownCount      = 8;
+  let   currentPage     = 1;
+
+  const pgBar    = document.getElementById('pgBar');
+  const pgLabel  = document.getElementById('pgLabel');
+  const pgPrev   = document.getElementById('pgPrev');
+  const pgNext   = document.getElementById('pgNext');
+  const pgNums   = document.getElementById('pgNumbers');
+  const lmBtn    = document.getElementById('loadMoreBtn');
+
+  function updateProgress() {
+    const pct = Math.min((shownCount / TOTAL_PRODUCTS) * 100, 100);
+    pgBar.style.width = pct + '%';
+    pgLabel.textContent = 'Showing ' + shownCount + ' of ' + TOTAL_PRODUCTS + ' products';
+    if (shownCount >= TOTAL_PRODUCTS) {
+      lmBtn.disabled = true;
+      lmBtn.classList.add('lm-done');
+      lmBtn.querySelector('.lm-text').textContent = 'All Products Loaded';
+      lmBtn.querySelector('.lm-icon').style.display = 'none';
+    }
+  }
+
+  function renderPages() {
+    pgNums.innerHTML = '';
+    for (let i = 1; i <= TOTAL_PAGES; i++) {
+      const btn = document.createElement('button');
+      btn.className = 'pg-num' + (i === currentPage ? ' active' : '');
+      btn.textContent = i;
+      btn.setAttribute('aria-label', 'Page ' + i);
+      btn.addEventListener('click', () => goToPage(i));
+      pgNums.appendChild(btn);
+    }
+    pgPrev.disabled = currentPage === 1;
+    pgNext.disabled = currentPage === TOTAL_PAGES;
+  }
+
+  function goToPage(n) {
+    currentPage = n;
+    shownCount  = n * 8;
+    if (shownCount > TOTAL_PRODUCTS) shownCount = TOTAL_PRODUCTS;
+    renderPages();
+    updateProgress();
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  /* Load More click */
+  lmBtn.addEventListener('click', () => {
+    if (lmBtn.disabled) return;
+    lmBtn.classList.add('lm-loading');
+    lmBtn.querySelector('.lm-text').textContent = 'Loading…';
+    setTimeout(() => {
+      shownCount = Math.min(shownCount + LOAD_BATCH, TOTAL_PRODUCTS);
+      lmBtn.classList.remove('lm-loading');
+      lmBtn.querySelector('.lm-text').textContent = 'Load More Products';
+      /* advance page indicator if threshold crossed */
+      currentPage = Math.ceil(shownCount / 8);
+      if (currentPage > TOTAL_PAGES) currentPage = TOTAL_PAGES;
+      renderPages();
+      updateProgress();
+    }, 1200);
+  });
+
+  pgPrev.addEventListener('click', () => { if (currentPage > 1) goToPage(currentPage - 1); });
+  pgNext.addEventListener('click', () => { if (currentPage < TOTAL_PAGES) goToPage(currentPage + 1); });
+
+  /* init */
+  renderPages();
+  updateProgress();
+</script>
+
+<!-- ════════════════════════════════
+     Newsletter Section
+════════════════════════════════ -->
+<section class="newsletter-section">
+
+  <!-- Decorative background shapes -->
+  <div class="nl-shape nl-shape--left"></div>
+  <div class="nl-shape nl-shape--right"></div>
+
+  <div class="nl-container">
+
+    <!-- Icon badge -->
+    <div class="nl-icon-badge">
+      <i class="fa-solid fa-envelope-open-text"></i>
+    </div>
+
+    <!-- Eyebrow -->
+    <span class="nl-eyebrow"><i class="fa-solid fa-leaf"></i> Join the Soap Studio Family</span>
+
+    <!-- Heading -->
+    <h2 class="nl-heading">Subscribe for Natural<br>Beauty Tips &amp; Offers</h2>
+
+    <!-- Subheading -->
+    <p class="nl-sub">Get exclusive deals, skincare tips, and new product updates delivered straight to your inbox. No spam, ever.</p>
+
+    <!-- Perks row -->
+    <div class="nl-perks">
+      <span><i class="fa-solid fa-tag"></i> Exclusive discounts</span>
+      <span><i class="fa-solid fa-flask"></i> Skincare tips</span>
+      <span><i class="fa-solid fa-box-open"></i> New arrivals first</span>
+    </div>
+
+    <!-- Form -->
+    <form class="nl-form" id="nlForm" novalidate>
+      <div class="nl-input-wrap">
+        <i class="fa-regular fa-envelope nl-input-icon"></i>
+        <input
+          type="email"
+          id="nlEmail"
+          class="nl-input"
+          placeholder="Enter your email address"
+          autocomplete="email"
+          required
+        />
+      </div>
+      <button type="submit" class="nl-btn">
+        <span class="nl-btn-text">Join Now</span>
+        <i class="fa-solid fa-arrow-right nl-btn-icon"></i>
+      </button>
+    </form>
+
+    <!-- Inline error -->
+    <p class="nl-error" id="nlError"></p>
+
+    <!-- Success state (hidden by default) -->
+    <div class="nl-success" id="nlSuccess">
+      <div class="nl-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <p class="nl-success-msg">You’re in! Welcome to the Soap Studio family. 🌿</p>
+    </div>
+
+    <!-- Privacy note -->
+    <p class="nl-privacy">
+      <i class="fa-solid fa-lock"></i> We respect your privacy. Unsubscribe anytime.
+    </p>
+
+  </div>
+</section>
+
+<script>
+  /* ── Newsletter form ── */
+  document.getElementById('nlForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const input   = document.getElementById('nlEmail');
+    const errorEl = document.getElementById('nlError');
+    const success = document.getElementById('nlSuccess');
+    const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!input.value.trim()) {
+      errorEl.textContent = 'Please enter your email address.';
+      input.classList.add('nl-input--error');
+      return;
+    }
+    if (!emailRx.test(input.value.trim())) {
+      errorEl.textContent = 'Please enter a valid email address.';
+      input.classList.add('nl-input--error');
+      return;
+    }
+
+    /* clear error, show loading state */
+    errorEl.textContent = '';
+    input.classList.remove('nl-input--error');
+    const btn = this.querySelector('.nl-btn');
+    btn.classList.add('nl-btn--loading');
+    btn.disabled = true;
+
+    setTimeout(() => {
+      this.style.display = 'none';
+      document.querySelector('.nl-perks').style.display = 'none';
+      success.classList.add('visible');
+    }, 1000);
+  });
+
+  /* clear error on input */
+  document.getElementById('nlEmail').addEventListener('input', function() {
+    this.classList.remove('nl-input--error');
+    document.getElementById('nlError').textContent = '';
+  });
+</script>
+
+<!-- ════════════════════════════════
+     Quick View Modal
+════════════════════════════════ -->
+<div class="qv-overlay" id="qvOverlay" role="dialog" aria-modal="true" aria-label="Quick View">
+  <div class="qv-modal" id="qvModal">
+
+    <!-- Close -->
+    <button class="qv-close" id="qvClose" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- LEFT: Image panel -->
+    <div class="qv-image-panel">
+      <div class="qv-main-img-wrap">
+        <img src="" alt="" class="qv-main-img" id="qvMainImg" />
+        <div class="qv-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      </div>
+      <div class="qv-thumbs" id="qvThumbs">
+        <!-- rendered by JS -->
+      </div>
+    </div>
+
+    <!-- RIGHT: Details panel -->
+    <div class="qv-details-panel">
+
+      <!-- Badge + brand -->
+      <div class="qv-top-row">
+        <span class="qv-badge" id="qvBadge"></span>
+        <span class="qv-brand" id="qvBrand"></span>
+      </div>
+
+      <!-- Title -->
+      <h2 class="qv-title" id="qvTitle"></h2>
+
+      <!-- Stars -->
+      <div class="qv-stars" id="qvStars"></div>
+
+      <!-- Price -->
+      <div class="qv-price-row">
+        <span class="qv-price-current" id="qvPrice"></span>
+        <span class="qv-price-old" id="qvOld"></span>
+        <span class="qv-savings" id="qvSavings"></span>
+      </div>
+
+      <!-- Divider -->
+      <div class="qv-rule"></div>
+
+      <!-- Description -->
+      <p class="qv-desc" id="qvDesc"></p>
+
+      <!-- Scent variants -->
+      <div class="qv-option-group">
+        <p class="qv-option-label">Fragrance</p>
+        <div class="qv-option-pills" id="qvScents"></div>
+      </div>
+
+      <!-- Size variants -->
+      <div class="qv-option-group">
+        <p class="qv-option-label">Size</p>
+        <div class="qv-option-pills" id="qvSizes"></div>
+      </div>
+
+      <!-- Quantity + actions -->
+      <div class="qv-actions-row">
+        <div class="qv-qty">
+          <button class="qv-qty-btn" id="qvQtyMinus"><i class="fa-solid fa-minus"></i></button>
+          <span class="qv-qty-val" id="qvQtyVal">1</span>
+          <button class="qv-qty-btn" id="qvQtyPlus"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <button class="qv-btn-cart">
+          <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+        </button>
+        <button class="qv-btn-wish" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+
+      <!-- View full details -->
+      <a href="#" class="qv-full-link">
+        View Full Details <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+      <!-- Trust strip -->
+      <div class="qv-trust">
+        <span><i class="fa-solid fa-truck-fast"></i> Free shipping ₹499+</span>
+        <span><i class="fa-solid fa-rotate-left"></i> Easy returns</span>
+        <span><i class="fa-solid fa-shield-halved"></i> Secure checkout</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ── Quick View ── */
+  const overlay   = document.getElementById('qvOverlay');
+  const modal     = document.getElementById('qvModal');
+  const qvClose   = document.getElementById('qvClose');
+  let   qvQty     = 1;
+
+  function buildStars(n) {
+    let s = '';
+    for (let i = 1; i <= 5; i++) {
+      if (i <= n)       s += '<i class="fa-solid fa-star"></i>';
+      else if (i - 0.5 <= n) s += '<i class="fa-solid fa-star-half-stroke"></i>';
+      else              s += '<i class="fa-regular fa-star"></i>';
+    }
+    return s;
+  }
+
+  function buildPills(container, items, firstActive) {
+    container.innerHTML = '';
+    items.forEach((item, idx) => {
+      const b = document.createElement('button');
+      b.className = 'qv-pill' + (idx === 0 && firstActive ? ' active' : '');
+      b.textContent = item.trim();
+      b.addEventListener('click', () => {
+        container.querySelectorAll('.qv-pill').forEach(p => p.classList.remove('active'));
+        b.classList.add('active');
+      });
+      container.appendChild(b);
+    });
+  }
+
+  function openModal(btn) {
+    const d = btn.dataset;
+    qvQty = 1;
+    document.getElementById('qvQtyVal').textContent = 1;
+
+    /* image */
+    const mainImg = document.getElementById('qvMainImg');
+    mainImg.src = d.img;
+    mainImg.alt = d.title;
+
+    /* thumbnails */
+    const thumbs = [d.thumb1, d.thumb2].filter(Boolean);
+    const thumbsEl = document.getElementById('qvThumbs');
+    thumbsEl.innerHTML = '';
+    thumbs.forEach((src, i) => {
+      const img = document.createElement('img');
+      img.src = src; img.alt = d.title + ' view ' + (i+1);
+      img.className = 'qv-thumb' + (i === 0 ? ' active' : '');
+      img.addEventListener('click', () => {
+        mainImg.src = src;
+        thumbsEl.querySelectorAll('.qv-thumb').forEach(t => t.classList.remove('active'));
+        img.classList.add('active');
+      });
+      thumbsEl.appendChild(img);
+    });
+
+    /* badge */
+    const badge = document.getElementById('qvBadge');
+    if (d.badge) {
+      badge.textContent = d.badge;
+      badge.className = 'qv-badge badge--' + (d.badgeType || 'new');
+      badge.style.display = 'inline-flex';
+    } else { badge.style.display = 'none'; }
+
+    /* text fields */
+    document.getElementById('qvBrand').textContent  = d.brand  || '';
+    document.getElementById('qvTitle').textContent  = d.title  || '';
+    document.getElementById('qvDesc').textContent   = d.desc   || '';
+    document.getElementById('qvPrice').textContent  = d.price  || '';
+
+    const oldEl = document.getElementById('qvOld');
+    const savEl = document.getElementById('qvSavings');
+    if (d.old) {
+      oldEl.textContent = d.old;
+      oldEl.style.display = 'inline';
+      const cur = parseInt(d.price.replace(/\D/g,''));
+      const old = parseInt(d.old.replace(/\D/g,''));
+      savEl.textContent = 'Save ₹' + (old - cur);
+      savEl.style.display = 'inline-flex';
+    } else {
+      oldEl.style.display = 'none';
+      savEl.style.display = 'none';
+    }
+
+    /* stars */
+    const stars = parseInt(d.stars) || 0;
+    document.getElementById('qvStars').innerHTML =
+      buildStars(stars) + '<span>(' + (d.reviews || 0) + ' reviews)</span>';
+
+    /* pills */
+    if (d.scents) buildPills(document.getElementById('qvScents'), d.scents.split(','), true);
+    if (d.sizes)  buildPills(document.getElementById('qvSizes'),  d.sizes.split(','),  true);
+
+    /* open */
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* trigger */
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.qv-trigger');
+    if (btn) { e.preventDefault(); openModal(btn); }
+  });
+
+  /* close */
+  qvClose.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  /* qty */
+  document.getElementById('qvQtyMinus').addEventListener('click', () => {
+    if (qvQty > 1) document.getElementById('qvQtyVal').textContent = --qvQty;
+  });
+  document.getElementById('qvQtyPlus').addEventListener('click', () => {
+    document.getElementById('qvQtyVal').textContent = ++qvQty;
+  });
+
+  /* wishlist toggle */
+  document.querySelector('.qv-btn-wish').addEventListener('click', function() {
+    const icon = this.querySelector('i');
+    icon.classList.toggle('fa-regular');
+    icon.classList.toggle('fa-solid');
+    this.classList.toggle('wished');
+  });
+
+  /* image zoom on hover */
+  const mainWrap = document.querySelector('.qv-main-img-wrap');
+  mainWrap.addEventListener('mousemove', e => {
+    const rect = mainWrap.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width  * 100).toFixed(1);
+    const y = ((e.clientY - rect.top)  / rect.height * 100).toFixed(1);
+    document.getElementById('qvMainImg').style.transformOrigin = x + '% ' + y + '%';
+  });
+  mainWrap.addEventListener('mouseenter', () => {
+    document.getElementById('qvMainImg').style.transform = 'scale(1.55)';
+  });
+  mainWrap.addEventListener('mouseleave', () => {
+    document.getElementById('qvMainImg').style.transform = 'scale(1)';
+  });
+</script>
+
+<!-- ════════════════════════════════
+     Footer
+════════════════════════════════ -->
+<footer class="site-footer">
+
+  <!-- Top accent line -->
+  <div class="footer-accent"></div>
+
+  <div class="footer-container">
+
+    <!-- ── MAIN GRID ── -->
+    <div class="footer-grid">
+
+      <!-- COL 1: Brand -->
+      <div class="footer-col footer-col--brand">
+        <a href="index.html" class="footer-logo">
+          <span class="footer-logo-icon"><i class="fa-solid fa-leaf"></i></span>
+          <span class="footer-logo-text">Soap Studio</span>
+        </a>
+        <p class="footer-about">
+          Small-batch, handcrafted soap bars made with 100% natural botanicals,
+          essential oils, and zero harsh chemicals. Gentle on skin, kind to the planet.
+        </p>
+        <!-- Contact -->
+        <ul class="footer-contact">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>12, Green Lane, Coimbatore, Tamil Nadu 641001</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:hello@SoapStudionaturals.com">hello@SoapStudionaturals.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- COL 2: Shop Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Shop</h4>
+        <ul class="footer-links">
+          <li><a href="shop.html"><i class="fa-solid fa-chevron-right"></i> All Products</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Best Sellers</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> New Arrivals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Offers &amp; Deals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Gift Sets</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Bundles</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 4: Social + Mini Newsletter -->
+      <div class="footer-col footer-col--social">
+        <h4 class="footer-heading">Follow Us</h4>
+        <p class="footer-social-sub">Follow us for skincare tips, behind-the-scenes, and exclusive offers.</p>
+
+        <div class="footer-socials">
+          <a href="#" class="social-btn social-btn--ig" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--fb" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--wa" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--yt" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--pin" aria-label="Pinterest">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+        </div>
+
+        <!-- Mini newsletter -->
+        <div class="footer-mini-nl">
+          <p class="footer-mini-nl-label"><i class="fa-solid fa-envelope"></i> Quick Subscribe</p>
+          <form class="footer-nl-form" id="footerNlForm" novalidate>
+            <input type="email" placeholder="Your email" class="footer-nl-input" id="footerNlEmail" />
+            <button type="submit" class="footer-nl-btn" aria-label="Subscribe">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <p class="footer-nl-msg" id="footerNlMsg"></p>
+        </div>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <!-- ── BOTTOM BAR ── -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p class="footer-copy">&copy; 2026 <strong>Soap Studio</strong>. All rights reserved. Made with <i class="fa-solid fa-heart footer-heart"></i> in India.</p>
+      </div>
+      <div class="footer-bottom-right">
+        <!-- Payment icons -->
+        <div class="footer-payments">
+          <span class="pay-icon" title="Visa"><i class="fa-brands fa-cc-visa"></i></span>
+          <span class="pay-icon" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></span>
+          <span class="pay-icon" title="PayPal"><i class="fa-brands fa-cc-paypal"></i></span>
+          <span class="pay-icon" title="Razorpay"><i class="fa-solid fa-mobile-screen-button"></i></span>
+          <span class="pay-icon" title="UPI"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script>
+  /* ── Back to top ── */
+  const btt = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', window.scrollY > 400);
+  });
+  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* ── Footer mini newsletter ── */
+  document.getElementById('footerNlForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const val = document.getElementById('footerNlEmail').value.trim();
+    const msg = document.getElementById('footerNlMsg');
+    const rx  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!rx.test(val)) {
+      msg.textContent = 'Enter a valid email.';
+      msg.style.color = '#e07b5a';
+      return;
+    }
+    msg.textContent = '✓ Subscribed! Thank you.';
+    msg.style.color = '#3caea3';
+    this.reset();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foamy – Product</title>
+  <link rel="stylesheet" href="css/product.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════
+     Header
+════════════════════════════════ -->
+<header class="ph-header" id="phHeader">
+  <div class="ph-inner">
+
+    <!-- LEFT: Navigation -->
+    <nav class="ph-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="product.html" class="active" aria-current="page">Product</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#" class="ph-buynow">Buy Now</a></li>
+      </ul>
+    </nav>
+
+    <!-- CENTER: Logo -->
+    <a href="index.html" class="ph-logo" aria-label="Foamy – Home">
+      <span class="ph-logo-icon"><i class="fa-solid fa-leaf"></i></span>
+      <span class="ph-logo-text">Foamy</span>
+    </a>
+
+    <!-- RIGHT: Actions -->
+    <div class="ph-actions">
+
+      <!-- Search -->
+      <button class="ph-icon-btn ph-search-trigger" id="phSearchTrigger" aria-label="Search" title="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+      <!-- Login with dropdown -->
+      <div class="ph-dropdown-wrap">
+        <a href="login.html" class="ph-icon-btn" title="Login / Account">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <div class="ph-login-dropdown">
+          <div class="ph-login-top">
+            <p class="ph-login-greeting">Welcome back!</p>
+            <p class="ph-login-sub">Sign in to your account</p>
+          </div>
+          <a href="login.html" class="ph-login-btn">Login</a>
+          <a href="#" class="ph-register-link">Create account</a>
+          <div class="ph-login-divider"></div>
+          <a href="#" class="ph-login-link"><i class="fa-solid fa-box"></i> My Orders</a>
+          <a href="#" class="ph-login-link"><i class="fa-regular fa-heart"></i> Wishlist</a>
+        </div>
+      </div>
+
+      <!-- Wishlist -->
+      <a href="#" class="ph-icon-btn" title="Wishlist" id="phWishlist">
+        <i class="fa-regular fa-heart"></i>
+        <span class="ph-wish-badge" id="phWishBadge" style="display:none">0</span>
+      </a>
+
+      <!-- Cart with mini-cart -->
+      <div class="ph-dropdown-wrap">
+        <button class="ph-icon-btn ph-cart-btn" id="phCartBtn" aria-label="Cart" title="Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="ph-cart-badge" id="phCartBadge">2</span>
+        </button>
+        <!-- Mini-cart dropdown -->
+        <div class="ph-mini-cart" id="phMiniCart">
+          <div class="ph-mc-header">
+            <span class="ph-mc-title">Your Cart</span>
+            <span class="ph-mc-count" id="phMcCount">2 items</span>
+          </div>
+          <ul class="ph-mc-list" id="phMcList">
+            <li class="ph-mc-item">
+              <img src="images/lavender.jpg" alt="Lavender Bliss" class="ph-mc-img" />
+              <div class="ph-mc-info">
+                <span class="ph-mc-name">Lavender Bliss Bar</span>
+                <span class="ph-mc-qty-price">1 × <strong>₹299</strong></span>
+              </div>
+              <button class="ph-mc-remove" data-id="1" aria-label="Remove"><i class="fa-solid fa-xmark"></i></button>
+            </li>
+            <li class="ph-mc-item">
+              <img src="images/charcoal.webp" alt="Charcoal Detox" class="ph-mc-img" />
+              <div class="ph-mc-info">
+                <span class="ph-mc-name">Charcoal Detox Bar</span>
+                <span class="ph-mc-qty-price">1 × <strong>₹329</strong></span>
+              </div>
+              <button class="ph-mc-remove" data-id="2" aria-label="Remove"><i class="fa-solid fa-xmark"></i></button>
+            </li>
+          </ul>
+          <div class="ph-mc-footer">
+            <div class="ph-mc-subtotal">
+              <span>Subtotal</span>
+              <strong id="phMcSubtotal">₹628</strong>
+            </div>
+            <a href="shop.html" class="ph-mc-view-cart">View Cart</a>
+            <a href="#" class="ph-mc-checkout">Checkout <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dark mode toggle -->
+      <button class="ph-icon-btn ph-dark-btn" id="phDarkToggle" aria-label="Toggle dark mode" title="Dark mode">
+        <i class="fa-solid fa-moon" id="phDarkIcon"></i>
+      </button>
+
+      <!-- RTL toggle -->
+      <button class="ph-icon-btn ph-rtl-btn" id="phRtlToggle" aria-label="Toggle RTL" title="RTL mode">
+        <i class="fa-solid fa-right-left" id="phRtlIcon"></i>
+      </button>
+
+      <!-- Hamburger (mobile) -->
+      <button class="ph-hamburger" id="phHamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Search bar (slides down) -->
+  <div class="ph-search-bar" id="phSearchBar">
+    <div class="ph-search-inner">
+      <i class="fa-solid fa-magnifying-glass ph-search-icon"></i>
+      <input type="search" id="phSearchInput" placeholder="Search products, ingredients, tips…" autocomplete="off" />
+      <!-- Live suggestions -->
+      <ul class="ph-suggestions" id="phSuggestions">
+        <li><i class="fa-solid fa-spa"></i> Lavender Bliss Bar</li>
+        <li><i class="fa-solid fa-spa"></i> Charcoal Detox Bar</li>
+        <li><i class="fa-solid fa-spa"></i> Rose Petal Glow</li>
+        <li><i class="fa-solid fa-spa"></i> Honey Glow Bar</li>
+        <li><i class="fa-solid fa-spa"></i> Tea Tree Clear Bar</li>
+      </ul>
+      <button class="ph-search-close" id="phSearchClose" aria-label="Close search">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav class="ph-mobile-nav" id="phMobileNav" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="product.html" class="active">Product</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#">Pages</a></li>
+      <li><a href="#" class="ph-mob-buynow">Buy Now</a></li>
+    </ul>
+    <div class="ph-mob-extras">
+      <a href="login.html" class="ph-mob-login"><i class="fa-regular fa-user"></i> Login / Account</a>
+      <button class="ph-mob-toggle" id="phMobDark">
+        <i class="fa-solid fa-moon" id="phMobDarkIcon"></i>
+        <span id="phMobDarkLabel">Dark Mode</span>
+      </button>
+      <button class="ph-mob-toggle" id="phMobRtl">
+        <i class="fa-solid fa-right-left" id="phMobRtlIcon"></i>
+        <span id="phMobRtlLabel">RTL Mode</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ════════════════════════════════
+     Sticky Add-to-Cart Bar
+     (appears when scrolled past hero)
+════════════════════════════════ -->
+<div class="ph-sticky-bar" id="phStickyBar">
+  <div class="ph-sticky-inner">
+    <div class="ph-sticky-product">
+      <img src="images/lavender.jpg" alt="Lavender Bliss" class="ph-sticky-img" />
+      <div>
+        <span class="ph-sticky-name">Lavender Bliss Bar</span>
+        <span class="ph-sticky-price">₹299 <del>₹399</del></span>
+      </div>
+    </div>
+    <div class="ph-sticky-actions">
+      <div class="ph-sticky-qty">
+        <button class="ph-sq-btn" id="phSqMinus"><i class="fa-solid fa-minus"></i></button>
+        <span class="ph-sq-val" id="phSqVal">1</span>
+        <button class="ph-sq-btn" id="phSqPlus"><i class="fa-solid fa-plus"></i></button>
+      </div>
+      <button class="ph-sticky-atc" id="phStickyAtc">
+        <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     Breadcrumb
+════════════════════════════════ -->
+<nav class="pp-breadcrumb" aria-label="Breadcrumb">
+  <div class="pp-breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <i class="fa-solid fa-chevron-right"></i>
+    <a href="shop.html">Shop</a>
+    <i class="fa-solid fa-chevron-right"></i>
+    <span>Lavender Bliss Bar</span>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════
+     Product Hero
+════════════════════════════════ -->
+<main class="pp-main">
+  <section class="pp-hero">
+    <div class="pp-container">
+
+      <!-- ── LEFT: Image Gallery ── -->
+      <div class="pp-gallery">
+
+        <!-- Badges -->
+        <div class="pp-badges">
+          <span class="pp-badge pp-badge--best"><i class="fa-solid fa-fire"></i> Best Seller</span>
+          <span class="pp-badge pp-badge--organic"><i class="fa-solid fa-leaf"></i> Organic</span>
+        </div>
+
+        <!-- Main image -->
+        <div class="pp-main-img-wrap" id="ppMainImgWrap">
+          <img src="images/lavender.jpg" alt="Lavender Bliss Bar" class="pp-main-img" id="ppMainImg" />
+          <!-- Zoom lens -->
+          <div class="pp-zoom-lens" id="ppZoomLens"></div>
+          <!-- Zoom result -->
+          <div class="pp-zoom-result" id="ppZoomResult"></div>
+          <!-- Zoom hint -->
+          <div class="pp-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Hover to zoom</div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="pp-thumbs" id="ppThumbs">
+          <button class="pp-thumb active" data-src="images/lavender.jpg" data-alt="Lavender Bliss Bar – Front" aria-label="View front">
+            <img src="images/lavender.jpg" alt="Front" />
+          </button>
+          <button class="pp-thumb" data-src="images/lavender-2.jpg" data-alt="Lavender Bliss Bar – Side" aria-label="View side">
+            <img src="images/lavender-2.jpg" alt="Side" />
+          </button>
+          <button class="pp-thumb" data-src="images/petal.jpg" data-alt="Lavender Bliss Bar – Ingredients" aria-label="View ingredients">
+            <img src="images/petal.jpg" alt="Ingredients" />
+          </button>
+          <button class="pp-thumb" data-src="images/natural.webp" data-alt="Lavender Bliss Bar – Lifestyle" aria-label="View lifestyle">
+            <img src="images/natural.webp" alt="Lifestyle" />
+          </button>
+          <!-- Video thumb -->
+          <button class="pp-thumb pp-thumb--video" data-video="true" aria-label="Play product video">
+            <img src="images/lavender.jpg" alt="Video" />
+            <span class="pp-play-icon"><i class="fa-solid fa-play"></i></span>
+          </button>
+        </div>
+
+        <!-- Trust strip -->
+        <div class="pp-trust-strip">
+          <span><i class="fa-solid fa-seedling"></i> Vegan</span>
+          <span><i class="fa-solid fa-hand-holding-heart"></i> Cruelty-Free</span>
+          <span><i class="fa-solid fa-recycle"></i> Eco Pack</span>
+          <span><i class="fa-solid fa-flask"></i> No Parabens</span>
+        </div>
+      </div>
+
+      <!-- ── RIGHT: Product Details ── -->
+      <div class="pp-details">
+
+        <!-- Brand + category -->
+        <div class="pp-brand-row">
+          <span class="pp-brand">Foamy Naturals</span>
+          <span class="pp-sep">•</span>
+          <span class="pp-category">Floral Collection</span>
+        </div>
+
+        <!-- Product name -->
+        <h1 class="pp-name">Lavender Bliss Bar</h1>
+
+        <!-- Rating -->
+        <div class="pp-rating-row">
+          <div class="pp-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <span class="pp-rating-num">4.5</span>
+          <a href="#pp-reviews" class="pp-review-count">(128 reviews)</a>
+          <span class="pp-sep">•</span>
+          <span class="pp-sold">342 sold</span>
+        </div>
+
+        <!-- Price -->
+        <div class="pp-price-row">
+          <span class="pp-price">&#8377;299</span>
+          <span class="pp-price-old">&#8377;399</span>
+          <span class="pp-discount-badge">Save &#8377;100</span>
+        </div>
+
+        <!-- Short description -->
+        <p class="pp-desc">A calming blend of pure lavender essential oil and shea butter. Soothes the skin, relieves stress, and leaves a gentle floral scent that lingers all day. Handcrafted in small batches with zero harsh chemicals.</p>
+
+        <!-- Divider -->
+        <div class="pp-rule"></div>
+
+        <!-- Scent variants -->
+        <div class="pp-option-group">
+          <p class="pp-option-label">Fragrance <span class="pp-option-selected" id="ppScentSelected">Lavender</span></p>
+          <div class="pp-option-pills" id="ppScents">
+            <button class="pp-pill active" data-val="Lavender">Lavender</button>
+            <button class="pp-pill" data-val="Rose">Rose</button>
+            <button class="pp-pill" data-val="Citrus">Citrus</button>
+            <button class="pp-pill" data-val="Charcoal">Charcoal</button>
+            <button class="pp-pill pp-pill--disabled" data-val="Vanilla" disabled>Vanilla <span class="pp-oos">Out</span></button>
+          </div>
+        </div>
+
+        <!-- Size variants -->
+        <div class="pp-option-group">
+          <p class="pp-option-label">Size <span class="pp-option-selected" id="ppSizeSelected">100g</span></p>
+          <div class="pp-option-pills" id="ppSizes">
+            <button class="pp-pill" data-val="50g">50g</button>
+            <button class="pp-pill active" data-val="100g">100g</button>
+            <button class="pp-pill" data-val="150g">150g</button>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="pp-rule"></div>
+
+        <!-- Quantity + CTA -->
+        <div class="pp-purchase-row">
+          <!-- Qty stepper -->
+          <div class="pp-qty">
+            <button class="pp-qty-btn" id="ppQtyMinus" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+            <span class="pp-qty-val" id="ppQtyVal">1</span>
+            <button class="pp-qty-btn" id="ppQtyPlus" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+          </div>
+          <!-- Add to Cart -->
+          <button class="pp-atc-btn" id="ppAtcBtn">
+            <i class="fa-solid fa-bag-shopping pp-atc-icon"></i>
+            <span class="pp-atc-text">Add to Cart</span>
+          </button>
+          <!-- Wishlist -->
+          <button class="pp-wish-btn" id="ppWishBtn" aria-label="Add to wishlist">
+            <i class="fa-regular fa-heart" id="ppWishIcon"></i>
+          </button>
+        </div>
+
+        <!-- Buy Now -->
+        <a href="#" class="pp-buy-now">
+          <i class="fa-solid fa-bolt"></i> Buy Now
+        </a>
+
+        <!-- Availability + delivery -->
+        <div class="pp-info-strip">
+          <div class="pp-info-item">
+            <i class="fa-solid fa-circle-check pp-in-stock"></i>
+            <span><strong>In Stock</strong> &mdash; Ships within 24 hours</span>
+          </div>
+          <div class="pp-info-item">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Free shipping on orders above <strong>&#8377;499</strong></span>
+          </div>
+          <div class="pp-info-item">
+            <i class="fa-solid fa-rotate-left"></i>
+            <span>Easy 7-day returns</span>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="pp-rule"></div>
+
+        <!-- Share -->
+        <div class="pp-share-row">
+          <span class="pp-share-label">Share:</span>
+          <a href="#" class="pp-share-btn pp-share--ig" aria-label="Share on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="pp-share-btn pp-share--fb" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="pp-share-btn pp-share--wa" aria-label="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="pp-share-btn pp-share--tw" aria-label="Share on X"><i class="fa-brands fa-x-twitter"></i></a>
+          <button class="pp-share-btn pp-share--copy" id="ppCopyLink" aria-label="Copy link"><i class="fa-solid fa-link"></i></button>
+          <span class="pp-copy-msg" id="ppCopyMsg"></span>
+        </div>
+
+      </div><!-- /pp-details -->
+    </div><!-- /pp-container -->
+  </section><!-- /pp-hero -->
+
+<!-- ════════════════════════════════
+     Related Products
+════════════════════════════════ -->
+<section class="rp-section">
+  <div class="rp-container">
+
+    <!-- Header -->
+    <div class="rp-header">
+      <div class="rp-header-left">
+        <span class="rp-eyebrow"><i class="fa-solid fa-spa"></i> Curated for You</span>
+        <h2 class="rp-title">You May Also Like</h2>
+        <p class="rp-sub">Handpicked soaps that pair beautifully with your selection</p>
+      </div>
+      <div class="rp-header-right">
+        <a href="shop.html" class="rp-view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+        <!-- Slider arrows -->
+        <div class="rp-arrows">
+          <button class="rp-arrow" id="rpPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="rp-arrow" id="rpNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider track -->
+    <div class="rp-track" id="rpTrack">
+
+      <!-- Card 1: Rose Petal Glow -->
+      <article class="rp-card"
+        data-img="images/rose.webp"
+        data-name="Rose Petal Glow"
+        data-price="&#8377;349"
+        data-old="&#8377;449"
+        data-desc="Infused with real rose petals and rosehip oil, this bar brightens dull skin and deeply moisturises. Perfect for a luxurious daily cleanse.">
+        <div class="rp-img-wrap">
+          <img src="images/rose.webp"   alt="Rose Petal Glow" class="rp-img-main" />
+          <img src="images/rose-2.jpg" alt="Rose Petal Glow hover" class="rp-img-hover" />
+          <span class="rp-badge rp-badge--sale">Sale</span>
+          <!-- Action icons -->
+          <div class="rp-actions">
+            <button class="rp-wish-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="rp-qv-btn"   aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+            <button class="rp-compare-btn" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <!-- ATC button -->
+          <button class="rp-atc-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="rp-card-body">
+          <span class="rp-brand">Soap Studio Naturals</span>
+          <h3 class="rp-name">Rose Petal Glow</h3>
+          <div class="rp-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span>(87)</span>
+          </div>
+          <div class="rp-price-row">
+            <span class="rp-price">&#8377;349</span>
+            <span class="rp-price-old">&#8377;449</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Charcoal Detox -->
+      <article class="rp-card"
+        data-img="images/charcoal.webp"
+        data-name="Charcoal Detox Bar"
+        data-price="&#8377;329"
+        data-old="&#8377;429"
+        data-desc="Activated charcoal draws out impurities and unclogs pores while tea tree oil fights bacteria. Ideal for oily and acne-prone skin types.">
+        <div class="rp-img-wrap">
+          <img src="images/charcoal.webp"   alt="Charcoal Detox" class="rp-img-main" />
+          <img src="images/charcoal-2.webp" alt="Charcoal Detox hover" class="rp-img-hover" />
+          <span class="rp-badge rp-badge--best">Best Seller</span>
+          <div class="rp-actions">
+            <button class="rp-wish-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="rp-qv-btn"   aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+            <button class="rp-compare-btn" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <button class="rp-atc-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="rp-card-body">
+          <span class="rp-brand">Soap Studio Naturals</span>
+          <h3 class="rp-name">Charcoal Detox Bar</h3>
+          <div class="rp-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span>(119)</span>
+          </div>
+          <div class="rp-price-row">
+            <span class="rp-price">&#8377;329</span>
+            <span class="rp-price-old">&#8377;429</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: Honey Glow -->
+      <article class="rp-card"
+        data-img="images/honey.webp"
+        data-name="Honey Glow Bar"
+        data-price="&#8377;379"
+        data-old="&#8377;479"
+        data-desc="Raw honey and oat milk combine to nourish and soften even the driest skin. A rich, creamy lather that feels like a spa treatment every morning.">
+        <div class="rp-img-wrap">
+          <img src="images/honey.webp"   alt="Honey Glow" class="rp-img-main" />
+          <img src="images/honey-2.webp" alt="Honey Glow hover" class="rp-img-hover" />
+          <span class="rp-badge rp-badge--new">New</span>
+          <div class="rp-actions">
+            <button class="rp-wish-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="rp-qv-btn"   aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+            <button class="rp-compare-btn" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <button class="rp-atc-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="rp-card-body">
+          <span class="rp-brand">Soap Studio Naturals</span>
+          <h3 class="rp-name">Honey Glow Bar</h3>
+          <div class="rp-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            <span>(55)</span>
+          </div>
+          <div class="rp-price-row">
+            <span class="rp-price">&#8377;379</span>
+            <span class="rp-price-old">&#8377;479</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: Citrus Burst -->
+      <article class="rp-card"
+        data-img="images/citrus.webp"
+        data-name="Citrus Burst Bar"
+        data-price="&#8377;279"
+        data-old=""
+        data-desc="A zesty, energising bar packed with sweet orange and lemon peel extracts. Wakes up your senses and leaves skin feeling fresh and radiant.">
+        <div class="rp-img-wrap">
+          <img src="images/citrus.webp"   alt="Citrus Burst" class="rp-img-main" />
+          <img src="images/citrus-2.webp" alt="Citrus Burst hover" class="rp-img-hover" />
+          <div class="rp-actions">
+            <button class="rp-wish-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="rp-qv-btn"   aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+            <button class="rp-compare-btn" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <button class="rp-atc-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="rp-card-body">
+          <span class="rp-brand">Soap Studio Naturals</span>
+          <h3 class="rp-name">Citrus Burst Bar</h3>
+          <div class="rp-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            <span>(63)</span>
+          </div>
+          <div class="rp-price-row">
+            <span class="rp-price">&#8377;279</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5: Oat & Milk -->
+      <article class="rp-card"
+        data-img="images/oats.webp"
+        data-name="Oat &amp; Milk Soothe"
+        data-price="&#8377;259"
+        data-old=""
+        data-desc="Colloidal oatmeal and whole milk proteins calm irritated, sensitive skin. Fragrance-free and dermatologist-tested — gentle enough for daily use.">
+        <div class="rp-img-wrap">
+          <img src="images/oats.webp"   alt="Oat Milk" class="rp-img-main" />
+          <img src="images/oats-2.webp" alt="Oat Milk hover" class="rp-img-hover" />
+          <span class="rp-badge rp-badge--new">New</span>
+          <div class="rp-actions">
+            <button class="rp-wish-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="rp-qv-btn"   aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+            <button class="rp-compare-btn" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <button class="rp-atc-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="rp-card-body">
+          <span class="rp-brand">Soap Studio Naturals</span>
+          <h3 class="rp-name">Oat &amp; Milk Soothe</h3>
+          <div class="rp-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            <span>(74)</span>
+          </div>
+          <div class="rp-price-row">
+            <span class="rp-price">&#8377;259</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6: Tea Tree -->
+      <article class="rp-card"
+        data-img="images/tea tree.png"
+        data-name="Tea Tree Clear Bar"
+        data-price="&#8377;289"
+        data-old="&#8377;369"
+        data-desc="Pure tea tree oil and neem extract work together to purify skin, reduce blemishes, and control excess oil. A cult favourite for clear, healthy skin.">
+        <div class="rp-img-wrap">
+          <img src="images/tea tree.png"   alt="Tea Tree" class="rp-img-main" />
+          <img src="images/tea tree-2.avif" alt="Tea Tree hover" class="rp-img-hover" />
+          <span class="rp-badge rp-badge--best">Best Seller</span>
+          <div class="rp-actions">
+            <button class="rp-wish-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button class="rp-qv-btn"   aria-label="Quick view"><i class="fa-regular fa-eye"></i></button>
+            <button class="rp-compare-btn" aria-label="Compare"><i class="fa-solid fa-shuffle"></i></button>
+          </div>
+          <button class="rp-atc-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+        </div>
+        <div class="rp-card-body">
+          <span class="rp-brand">Soap Studio Naturals</span>
+          <h3 class="rp-name">Tea Tree Clear Bar</h3>
+          <div class="rp-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <span>(132)</span>
+          </div>
+          <div class="rp-price-row">
+            <span class="rp-price">&#8377;289</span>
+            <span class="rp-price-old">&#8377;369</span>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /rp-track -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     Ingredients & Benefits
+════════════════════════════════ -->
+<section class="ib-section">
+  <div class="ib-blob ib-blob--tl"></div>
+  <div class="ib-blob ib-blob--br"></div>
+  <div class="ib-pattern"></div>
+  <div class="ib-container">
+    <div class="ib-header">
+      <span class="ib-eyebrow"><i class="fa-solid fa-leaf"></i> What’s Inside</span>
+      <h2 class="ib-title">Ingredients &amp; Benefits</h2>
+      <p class="ib-sub">Every bar is crafted with purpose — each ingredient chosen for its proven skin benefit and natural origin.</p>
+      <div class="ib-divider"><span></span><i class="fa-solid fa-spa"></i><span></span></div>
+    </div>
+    <div class="ib-grid">
+      <div class="ib-card ib-card--featured">
+        <div class="ib-icon-wrap ib-icon--teal"><i class="fa-solid fa-leaf"></i></div>
+        <div class="ib-card-body">
+          <span class="ib-card-tag">Core Promise</span>
+          <h3 class="ib-card-title">100% Natural Ingredients</h3>
+          <p class="ib-card-desc">Every ingredient is plant-derived, ethically sourced, and free from synthetic additives. What you see on the label is exactly what goes on your skin.</p>
+          <ul class="ib-card-list">
+            <li><i class="fa-solid fa-circle-check"></i> No synthetic fragrances</li>
+            <li><i class="fa-solid fa-circle-check"></i> No artificial colourants</li>
+            <li><i class="fa-solid fa-circle-check"></i> No mineral oils</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ib-card">
+        <div class="ib-icon-wrap ib-icon--purple"><i class="fa-solid fa-hands"></i></div>
+        <div class="ib-card-body">
+          <h3 class="ib-card-title">Handmade with Care</h3>
+          <p class="ib-card-desc">Each bar is cold-process crafted in small batches, preserving the full potency of every botanical ingredient.</p>
+        </div>
+      </div>
+      <div class="ib-card">
+        <div class="ib-icon-wrap ib-icon--teal"><i class="fa-solid fa-flask"></i></div>
+        <div class="ib-card-body">
+          <h3 class="ib-card-title">Chemical-Free Formula</h3>
+          <p class="ib-card-desc">Zero parabens, sulphates, or phthalates. Safe for daily use and gentle enough for the most sensitive skin types.</p>
+        </div>
+      </div>
+      <div class="ib-card">
+        <div class="ib-icon-wrap ib-icon--gold"><i class="fa-solid fa-face-smile"></i></div>
+        <div class="ib-card-body">
+          <h3 class="ib-card-title">Suitable for All Skin Types</h3>
+          <p class="ib-card-desc">Dermatologist-tested and pH-balanced to work harmoniously with every skin type — dry, oily, combination, or sensitive.</p>
+        </div>
+      </div>
+      <div class="ib-card">
+        <div class="ib-icon-wrap ib-icon--teal"><i class="fa-solid fa-recycle"></i></div>
+        <div class="ib-card-body">
+          <h3 class="ib-card-title">Eco-Friendly Packaging</h3>
+          <p class="ib-card-desc">Wrapped in recycled kraft paper and printed with soy-based inks. Fully biodegradable — zero plastic, zero guilt.</p>
+        </div>
+      </div>
+      <div class="ib-card">
+        <div class="ib-icon-wrap ib-icon--purple"><i class="fa-solid fa-heart"></i></div>
+        <div class="ib-card-body">
+          <h3 class="ib-card-title">Cruelty-Free &amp; Vegan</h3>
+          <p class="ib-card-desc">Never tested on animals. All ingredients are 100% plant-based, making every bar completely vegan-friendly.</p>
+        </div>
+      </div>
+    </div>
+    <div class="ib-ingredients-wrap">
+      <h3 class="ib-ing-heading">Key Ingredients in This Bar</h3>
+      <div class="ib-ing-grid">
+        <div class="ib-ing-card">
+          <div class="ib-ing-img-wrap">
+            <img src="images/lavender.jpg" alt="Lavender Essential Oil" class="ib-ing-img" />
+            <div class="ib-ing-overlay"></div>
+            <span class="ib-ing-pct">35%</span>
+          </div>
+          <div class="ib-ing-body">
+            <h4 class="ib-ing-name">Lavender Essential Oil</h4>
+            <p class="ib-ing-benefit">Calms the mind, reduces redness, and promotes restful sleep.</p>
+            <div class="ib-ing-tags"><span>Anti-inflammatory</span><span>Calming</span></div>
+          </div>
+        </div>
+        <div class="ib-ing-card">
+          <div class="ib-ing-img-wrap">
+            <img src="images/natural.webp" alt="Shea Butter" class="ib-ing-img" />
+            <div class="ib-ing-overlay"></div>
+            <span class="ib-ing-pct">28%</span>
+          </div>
+          <div class="ib-ing-body">
+            <h4 class="ib-ing-name">Shea Butter</h4>
+            <p class="ib-ing-benefit">Deeply moisturises and softens skin, locking in hydration all day.</p>
+            <div class="ib-ing-tags"><span>Moisturising</span><span>Nourishing</span></div>
+          </div>
+        </div>
+        <div class="ib-ing-card">
+          <div class="ib-ing-img-wrap">
+            <img src="images/oil.jpg" alt="Coconut Oil" class="ib-ing-img" />
+            <div class="ib-ing-overlay"></div>
+            <span class="ib-ing-pct">22%</span>
+          </div>
+          <div class="ib-ing-body">
+            <h4 class="ib-ing-name">Coconut Oil</h4>
+            <p class="ib-ing-benefit">Creates a rich, creamy lather while cleansing and protecting the skin barrier.</p>
+            <div class="ib-ing-tags"><span>Cleansing</span><span>Protective</span></div>
+          </div>
+        </div>
+        <div class="ib-ing-card">
+          <div class="ib-ing-img-wrap">
+            <img src="images/petal.jpg" alt="Dried Lavender Petals" class="ib-ing-img" />
+            <div class="ib-ing-overlay"></div>
+            <span class="ib-ing-pct">15%</span>
+          </div>
+          <div class="ib-ing-body">
+            <h4 class="ib-ing-name">Dried Lavender Petals</h4>
+            <p class="ib-ing-benefit">Gentle exfoliation that removes dead skin cells and improves texture.</p>
+            <div class="ib-ing-tags"><span>Exfoliating</span><span>Aromatic</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ib-certs">
+      <div class="ib-cert"><i class="fa-solid fa-seedling"></i><span>Vegan Certified</span></div>
+      <div class="ib-cert-sep"></div>
+      <div class="ib-cert"><i class="fa-solid fa-hand-holding-heart"></i><span>Cruelty-Free</span></div>
+      <div class="ib-cert-sep"></div>
+      <div class="ib-cert"><i class="fa-solid fa-recycle"></i><span>Eco Packaging</span></div>
+      <div class="ib-cert-sep"></div>
+      <div class="ib-cert"><i class="fa-solid fa-flask"></i><span>Paraben-Free</span></div>
+      <div class="ib-cert-sep"></div>
+      <div class="ib-cert"><i class="fa-solid fa-droplet"></i><span>Sulphate-Free</span></div>
+      <div class="ib-cert-sep"></div>
+      <div class="ib-cert"><i class="fa-solid fa-star"></i><span>Dermatologist Tested</span></div>
+    </div>
+  </div>
+</section>
+
+</main><!-- /pp-main -->
+
+<!-- Quick View Modal -->
+<div class="rp-overlay" id="rpOverlay"></div>
+<div class="rp-modal" id="rpModal" role="dialog" aria-modal="true" aria-label="Quick View">
+  <button class="rp-modal-close" id="rpModalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <div class="rp-modal-inner">
+    <div class="rp-modal-img-wrap">
+      <img src="" alt="" id="rpModalImg" class="rp-modal-img" />
+    </div>
+    <div class="rp-modal-details">
+      <span class="rp-brand">Soap Studio Naturals</span>
+      <h3 class="rp-modal-name" id="rpModalName"></h3>
+      <div class="rp-stars">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+      </div>
+      <div class="rp-price-row" style="margin-top:8px">
+        <span class="rp-price" id="rpModalPrice"></span>
+        <span class="rp-price-old" id="rpModalOld"></span>
+      </div>
+      <p class="rp-modal-desc" id="rpModalDesc"></p>
+      <button class="rp-modal-atc">
+        <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+      </button>
+      <a href="product.html" class="rp-modal-view">View Full Details <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ── Scroll shadow + sticky bar ── */
+  const header    = document.getElementById('phHeader');
+  const stickyBar = document.getElementById('phStickyBar');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('ph-scrolled', window.scrollY > 10);
+    stickyBar.classList.toggle('ph-sticky-visible', window.scrollY > 320);
+  });
+
+  /* ── Hamburger ── */
+  const hamburger = document.getElementById('phHamburger');
+  const mobileNav = document.getElementById('phMobileNav');
+  hamburger.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+
+  /* ── Search bar ── */
+  const searchBar   = document.getElementById('phSearchBar');
+  const searchInput = document.getElementById('phSearchInput');
+  const suggestions = document.getElementById('phSuggestions');
+  document.getElementById('phSearchTrigger').addEventListener('click', () => {
+    searchBar.classList.toggle('open');
+    if (searchBar.classList.contains('open')) searchInput.focus();
+  });
+  document.getElementById('phSearchClose').addEventListener('click', () => {
+    searchBar.classList.remove('open'); suggestions.classList.remove('show');
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { searchBar.classList.remove('open'); suggestions.classList.remove('show'); }
+  });
+  const allSuggestions = ['Lavender Bliss Bar','Charcoal Detox Bar','Rose Petal Glow','Honey Glow Bar','Tea Tree Clear Bar','Oat & Milk Soothe','Vanilla Dream Bar','Citrus Burst Bar'];
+  searchInput.addEventListener('input', function() {
+    const q = this.value.trim().toLowerCase();
+    if (!q) { suggestions.classList.remove('show'); return; }
+    const matches = allSuggestions.filter(s => s.toLowerCase().includes(q));
+    suggestions.innerHTML = matches.map(s => `<li><i class="fa-solid fa-spa"></i> ${s}</li>`).join('');
+    suggestions.classList.toggle('show', matches.length > 0);
+  });
+
+  /* ── Mini-cart ── */
+  document.getElementById('phCartBtn').addEventListener('click', function(e) {
+    e.stopPropagation();
+    document.getElementById('phMiniCart').classList.toggle('open');
+  });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.ph-dropdown-wrap'))
+      document.querySelectorAll('.ph-mini-cart, .ph-login-dropdown').forEach(d => d.classList.remove('open'));
+  });
+  document.querySelectorAll('.ph-mc-remove').forEach(btn => {
+    btn.addEventListener('click', function() { this.closest('.ph-mc-item').remove(); updateCartCount(); });
+  });
+  function updateCartCount() {
+    const count = document.querySelectorAll('.ph-mc-item').length;
+    document.getElementById('phCartBadge').textContent = count;
+    document.getElementById('phMcCount').textContent = count + ' item' + (count !== 1 ? 's' : '');
+    if (count === 0) {
+      document.getElementById('phMcList').innerHTML = '<li class="ph-mc-empty"><i class="fa-solid fa-bag-shopping"></i><span>Your cart is empty</span></li>';
+      document.getElementById('phMcSubtotal').textContent = '\u20b90';
+    }
+  }
+
+  /* ── Sticky bar qty ── */
+  let stickyQty = 1;
+  document.getElementById('phSqMinus').addEventListener('click', () => { if (stickyQty > 1) document.getElementById('phSqVal').textContent = --stickyQty; });
+  document.getElementById('phSqPlus').addEventListener('click',  () => { document.getElementById('phSqVal').textContent = ++stickyQty; });
+  document.getElementById('phStickyAtc').addEventListener('click', function() {
+    this.innerHTML = '<i class="fa-solid fa-check"></i> Added!';
+    this.style.background = '#3caea3';
+    setTimeout(() => { this.innerHTML = '<i class="fa-solid fa-bag-shopping"></i> Add to Cart'; this.style.background = ''; }, 1800);
+  });
+
+  /* ── Dark Mode ── */
+  function applyDark(on) {
+    document.documentElement.classList.toggle('ph-dark', on);
+    const icon = on ? 'fa-sun' : 'fa-moon', label = on ? 'Light Mode' : 'Dark Mode';
+    document.getElementById('phDarkIcon').className    = 'fa-solid ' + icon;
+    document.getElementById('phMobDarkIcon').className = 'fa-solid ' + icon;
+    document.getElementById('phMobDarkLabel').textContent = label;
+    document.getElementById('phDarkToggle').title = label;
+    localStorage.setItem('foamy-dark', on ? '1' : '0');
+  }
+  if (localStorage.getItem('foamy-dark') === '1') applyDark(true);
+  document.getElementById('phDarkToggle').addEventListener('click', () => applyDark(!document.documentElement.classList.contains('ph-dark')));
+  document.getElementById('phMobDark').addEventListener('click',    () => applyDark(!document.documentElement.classList.contains('ph-dark')));
+
+  /* ── RTL Mode ── */
+  function applyRtl(on) {
+    document.documentElement.setAttribute('dir', on ? 'rtl' : 'ltr');
+    const icon = on ? 'fa-left-right' : 'fa-right-left', label = on ? 'LTR Mode' : 'RTL Mode';
+    document.getElementById('phRtlIcon').className    = 'fa-solid ' + icon;
+    document.getElementById('phMobRtlIcon').className = 'fa-solid ' + icon;
+    document.getElementById('phMobRtlLabel').textContent = label;
+    document.getElementById('phRtlToggle').title = label;
+    localStorage.setItem('foamy-rtl', on ? '1' : '0');
+  }
+  if (localStorage.getItem('foamy-rtl') === '1') applyRtl(true);
+  document.getElementById('phRtlToggle').addEventListener('click', () => applyRtl(document.documentElement.getAttribute('dir') !== 'rtl'));
+  document.getElementById('phMobRtl').addEventListener('click',    () => applyRtl(document.documentElement.getAttribute('dir') !== 'rtl'));
+
+  /* ── Thumbnail switcher ── */
+  document.querySelectorAll('.pp-thumb:not(.pp-thumb--video)').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.pp-thumb').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      const mi = document.getElementById('ppMainImg');
+      mi.style.opacity = '0';
+      setTimeout(() => { mi.src = btn.dataset.src; mi.alt = btn.dataset.alt; mi.style.opacity = '1';
+        document.getElementById('ppZoomResult').style.backgroundImage = `url('${btn.dataset.src}')`; }, 180);
+    });
+  });
+
+  /* ── Image zoom ── */
+  const mainWrap = document.getElementById('ppMainImgWrap');
+  const mainImg  = document.getElementById('ppMainImg');
+  const zoomLens = document.getElementById('ppZoomLens');
+  const zoomResult = document.getElementById('ppZoomResult');
+  const ZOOM = 2.5;
+  function initZoom() {
+    zoomResult.style.backgroundImage = `url('${mainImg.src}')`;
+    const rw = mainWrap.offsetWidth, rh = mainWrap.offsetHeight;
+    zoomLens.style.width  = (rw / ZOOM) + 'px';
+    zoomLens.style.height = (rh / ZOOM) + 'px';
+    zoomResult.style.backgroundSize = (rw * ZOOM) + 'px ' + (rh * ZOOM) + 'px';
+  }
+  mainWrap.addEventListener('mouseenter', () => { initZoom(); zoomLens.style.display = 'block'; zoomResult.style.display = 'block'; });
+  mainWrap.addEventListener('mouseleave', () => { zoomLens.style.display = 'none'; zoomResult.style.display = 'none'; });
+  mainWrap.addEventListener('mousemove', e => {
+    const rect = mainWrap.getBoundingClientRect();
+    const lw = zoomLens.offsetWidth, lh = zoomLens.offsetHeight;
+    const x = Math.max(0, Math.min(e.clientX - rect.left - lw/2, rect.width  - lw));
+    const y = Math.max(0, Math.min(e.clientY - rect.top  - lh/2, rect.height - lh));
+    zoomLens.style.left = x + 'px'; zoomLens.style.top = y + 'px';
+    zoomResult.style.backgroundPosition = `-${x*ZOOM}px -${y*ZOOM}px`;
+  });
+
+  /* ── Variant pills ── */
+  function initPills(cId, sId) {
+    document.querySelectorAll(`#${cId} .pp-pill:not(.pp-pill--disabled)`).forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll(`#${cId} .pp-pill`).forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(sId).textContent = btn.dataset.val;
+      });
+    });
+  }
+  initPills('ppScents','ppScentSelected'); initPills('ppSizes','ppSizeSelected');
+
+  /* ── Qty stepper ── */
+  let ppQty = 1;
+  document.getElementById('ppQtyMinus').addEventListener('click', () => { if (ppQty > 1) document.getElementById('ppQtyVal').textContent = --ppQty; });
+  document.getElementById('ppQtyPlus').addEventListener('click',  () => { document.getElementById('ppQtyVal').textContent = ++ppQty; });
+
+  /* ── Add to Cart ── */
+  document.getElementById('ppAtcBtn').addEventListener('click', function() {
+    const icon = this.querySelector('.pp-atc-icon'), text = this.querySelector('.pp-atc-text');
+    this.classList.add('pp-atc-success'); icon.className = 'fa-solid fa-check pp-atc-icon'; text.textContent = 'Added to Cart!';
+    const badge = document.getElementById('phCartBadge');
+    badge.textContent = parseInt(badge.textContent) + ppQty;
+    badge.classList.add('pp-badge-bump'); setTimeout(() => badge.classList.remove('pp-badge-bump'), 400);
+    setTimeout(() => { this.classList.remove('pp-atc-success'); icon.className = 'fa-solid fa-bag-shopping pp-atc-icon'; text.textContent = 'Add to Cart'; }, 2000);
+  });
+
+  /* ── Wishlist ── */
+  document.getElementById('ppWishBtn').addEventListener('click', function() {
+    const icon = document.getElementById('ppWishIcon'), wished = icon.classList.contains('fa-solid');
+    icon.className = wished ? 'fa-regular fa-heart' : 'fa-solid fa-heart';
+    this.classList.toggle('pp-wished', !wished);
+  });
+
+  /* ── Copy link ── */
+  document.getElementById('ppCopyLink').addEventListener('click', () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const msg = document.getElementById('ppCopyMsg'); msg.textContent = 'Link copied!';
+      setTimeout(() => { msg.textContent = ''; }, 2000);
+    });
+  });
+
+  /* ── Related Products ── */
+  const rpObserver = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('rp-visible'), i * 80); rpObserver.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.rp-card').forEach(c => rpObserver.observe(c));
+
+  document.querySelectorAll('.rp-wish-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const icon = this.querySelector('i'); icon.classList.toggle('fa-regular'); icon.classList.toggle('fa-solid'); this.classList.toggle('rp-wished');
+    });
+  });
+
+  document.querySelectorAll('.rp-atc-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation(); const orig = this.innerHTML;
+      this.innerHTML = '<i class="fa-solid fa-check"></i> Added!'; this.style.background = '#3caea3';
+      const badge = document.getElementById('phCartBadge'); badge.textContent = parseInt(badge.textContent) + 1;
+      badge.classList.add('pp-badge-bump'); setTimeout(() => badge.classList.remove('pp-badge-bump'), 400);
+      setTimeout(() => { this.innerHTML = orig; this.style.background = ''; }, 1800);
+    });
+  });
+
+  const rpTrack = document.getElementById('rpTrack');
+  document.getElementById('rpPrev').addEventListener('click', () => rpTrack.scrollBy({ left: -320, behavior: 'smooth' }));
+  document.getElementById('rpNext').addEventListener('click', () => rpTrack.scrollBy({ left:  320, behavior: 'smooth' }));
+  function updateRpArrows() {
+    document.getElementById('rpPrev').style.opacity = rpTrack.scrollLeft > 8 ? '1' : '0.3';
+    document.getElementById('rpNext').style.opacity = rpTrack.scrollLeft < rpTrack.scrollWidth - rpTrack.clientWidth - 8 ? '1' : '0.3';
+  }
+  rpTrack.addEventListener('scroll', updateRpArrows); window.addEventListener('resize', updateRpArrows); updateRpArrows();
+
+  const rpModal = document.getElementById('rpModal'), rpOverlay = document.getElementById('rpOverlay');
+  document.querySelectorAll('.rp-qv-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation(); const card = btn.closest('.rp-card');
+      document.getElementById('rpModalImg').src  = card.dataset.img;
+      document.getElementById('rpModalName').textContent  = card.dataset.name;
+      document.getElementById('rpModalPrice').textContent = card.dataset.price;
+      document.getElementById('rpModalOld').textContent   = card.dataset.old || '';
+      document.getElementById('rpModalDesc').textContent  = card.dataset.desc;
+      rpModal.classList.add('open'); document.body.style.overflow = 'hidden';
+    });
+  });
+  function closeRpModal() { rpModal.classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('rpModalClose').addEventListener('click', closeRpModal);
+  rpOverlay.addEventListener('click', closeRpModal);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeRpModal(); });
+
+  /* ── Benefits scroll observer ── */
+  const ibObserver = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('ib-visible'), i * 90); ibObserver.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.ib-card, .ib-ing-card, .ib-cert').forEach(el => ibObserver.observe(el));
+</script>
+
+</body>
+</html>
