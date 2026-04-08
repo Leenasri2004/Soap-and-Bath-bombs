@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender Bliss Bar - Natural Soap Collection | Soap Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="product-page.css">
+</head>
+<body>
+
+<!-- Header (same as shop.html) -->
+<header class="site-header">
+  <div class="header-container">
+     <a href="index.html" class="logo">
+      <img src="images/logo-1.png" alt="Soap Studio Logo" class="logo-img">
+    </a>
+    <nav class="nav-left">
+      <ul>
+         <li class="dropdown">
+            <a href="#">Home ▾</a>
+            <ul class="dropdown-menu" >
+                <li><a href="index.html">Home1</a></li>
+                <li><a href="home-2.html">Home2</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="workshop.html">Workshop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="dropdown">
+          <a href="#">Pages ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About1</a></li>
+            <li><a href="about-2.html">About2</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <a href="#" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+      <a href="#" title="Cart" class="cart-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">3</span>
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="toggle-btn" id="darkToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button class="toggle-btn" id="rtlToggle">RTL</button>
+    <a href="login.html" class="mobile-login-btn">Login</a>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+    <div class="container">
+        <a href="index.html">Home</a> / 
+        <a href="shop.html">Shop</a> / 
+        <span>Lavender Bliss Bar</span>
+    </div>
+</div>
+
+<!-- Product Page Content -->
+<main class="product-page">
+    <div class="container">
+        <div class="product-layout">
+            
+            <!-- Product Images -->
+            <div class="product-images">
+                <div class="main-image-container">
+                    <img src="images/lavender.jpg" alt="Lavender Bliss Bar" class="main-product-image" id="mainImage">
+                    <button class="wishlist-btn-large">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+                <div class="thumbnail-gallery">
+                    <img src="images/lavender.jpg" alt="Lavender Bliss Bar" class="thumbnail active" data-image="images/lavender.jpg">
+                    <img src="images/lavender-2.jpg" alt="Lavender Bliss Bar" class="thumbnail" data-image="images/lavender-2.jpg">
+                    <img src="images/natural.webp" alt="Lavender Bliss Bar" class="thumbnail" data-image="images/natural.webp">
+                    <img src="images/handmade.webp" alt="Lavender Bliss Bar" class="thumbnail" data-image="images/handmade.webp">
+                </div>
+            </div>
+            
+            <!-- Product Details -->
+            <div class="product-details">
+                <div class="product-header">
+                    <h1 class="product-title">Lavender Bliss Bar</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="rating-text">(4.9) • 127 reviews</span>
+                    </div>
+                </div>
+                
+                <div class="product-price-section">
+                    <div class="price">
+                        <span class="current-price">₹299</span>
+                        <span class="original-price">₹399</span>
+                        <span class="discount-badge">25% OFF</span>
+                    </div>
+                    <p class="price-note">Free shipping on orders over ₹500</p>
+                </div>
+                
+                <div class="product-description">
+                    <p>Indulge in the calming essence of our Lavender Bliss Bar, handcrafted with pure lavender essential oils and natural botanicals. This luxurious soap bar provides deep hydration while the soothing lavender scent helps relieve stress and promote relaxation.</p>
+                </div>
+                
+                <div class="product-features">
+                    <h3>Key Benefits:</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Infused with pure lavender essential oils</li>
+                        <li><i class="fa-solid fa-check"></i> Deep moisturizing with natural glycerin</li>
+                        <li><i class="fa-solid fa-check"></i> Stress-relieving aromatherapy properties</li>
+                        <li><i class="fa-solid fa-check"></i> Suitable for all skin types</li>
+                        <li><i class="fa-solid fa-check"></i> 100% natural and cruelty-free</li>
+                    </ul>
+                </div>
+                
+                <div class="product-options">
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <div class="quantity-controls">
+                            <button class="qty-btn" data-action="decrease">-</button>
+                            <input type="number" class="qty-input" value="1" min="1" max="10">
+                            <button class="qty-btn" data-action="increase">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="size-selector">
+                        <label>Size:</label>
+                        <div class="size-options">
+                            <button class="size-option active" data-size="100g">100g - ₹299</button>
+                            <button class="size-option" data-size="200g">200g - ₹549</button>
+                            <button class="size-option" data-size="300g">300g - ₹799</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-actions">
+                    <button class="add-to-cart-btn primary">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
+                    <button class="buy-now-btn">
+                        <i class="fa-solid fa-bolt"></i>
+                        Buy Now
+                    </button>
+                </div>
+                
+                <div class="product-meta">
+                    <div class="meta-item">
+                        <strong>SKU:</strong> LAV-001
+                    </div>
+                    <div class="meta-item">
+                        <strong>Category:</strong> <a href="#">Floral Soaps</a>
+                    </div>
+                    <div class="meta-item">
+                        <strong>Tags:</strong> 
+                        <a href="#">Lavender</a>, 
+                        <a href="#">Relaxing</a>, 
+                        <a href="#">Natural</a>
+                    </div>
+                </div>
+                
+                <div class="social-share">
+                    <span>Share:</span>
+                    <a href="#" class="share-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="share-btn"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="share-btn"><i class="fa-brands fa-pinterest"></i></a>
+                    <a href="#" class="share-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+// Example URL mapping for different products
+const productUrls = {
+    'lavender-bliss-bar': '/product/lavender-bliss-bar',
+    'rose-petal-glow': '/product/rose-petal-glow',
+    'citrus-burst-bar': '/product/citrus-burst-bar',
+    'charcoal-detox-bar': '/product/charcoal-detox-bar',
+    'honey-glow-bar': '/product/honey-glow-bar',
+    'oat-milk-soothe': '/product/oat-milk-soothe',
+    'vanilla-dream-bar': '/product/vanilla-dream-bar',
+    'tea-tree-clear-bar': '/product/tea-tree-clear-bar',
+    'coconut-cream-bar': '/product/coconut-cream-bar',
+    'eucalyptus-fresh-bar': '/product/eucalyptus-fresh-bar',
+    'shea-butter-luxury-bar': '/product/shea-butter-luxury-bar',
+    'lemon-mint-refresh-bar': '/product/lemon-mint-refresh-bar'
+};
+
+// This would be handled by your server/router
+console.log('Product page URLs:', productUrls);
+</script>
+
+</body>
+</html>
