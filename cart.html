@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Soap Studio Cart</title>
+  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="css/dark.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="page-cart">
+<header class="site-header">
+  <div class="header-container">
+
+
+     <a href="index.html" class="logo">
+      <img src="images/logo-1.png" alt="Soap Studio Logo" class="logo-img">
+    </a>
+
+
+    <!-- LEFT: Navigation -->
+    <nav class="nav-left">
+      <ul>
+         <li class="dropdown">
+            <a href="#">Home ▾</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home-2.html">Home2</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- CENTER: Logo -->
+  
+
+    <!-- RIGHT: Icons -->
+    <div class="nav-right">
+      <a href="#" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+      <a href="#" title="Cart" class="cart-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">3</span>
+      </a>
+    </div>
+
+    <!-- MOBILE: Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+      <button id="rtl-toggle" class="rtl-btn" aria-label="Toggle RTL">
+        <span id="rtl-icon">LTR</span>
+      </button>
+
+      <!-- BUY NOW RIGHT -->
+      <a href="login.html" class="mobile-login-btn">Login</a>
+  </div>
+
+  <!-- MOBILE: Dropdown Nav -->
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="home-2.html">Home2</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="service.html">Services</a></li>
+       <li><a href="shop.html">Shop</a></li>
+       <li><a href="blog.html">Blog</a></li>
+       <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  </header>
+
+<main class="cart-page">
+    <section class="cart-hero">
+      <div class="cart-hero-inner">
+        <span class="cart-eyebrow"><i class="fa-solid fa-bag-shopping"></i> Your Basket</span>
+        <h1 class="cart-title">A Softer Routine Starts Here</h1>
+        <p class="cart-subtitle">Review your Soap Studio picks, adjust quantities, and head to checkout with your lavender-toned self-care lineup.</p>
+      </div>
+    </section>
+
+    <section class="cart-shell">
+      <div class="cart-layout">
+        <section class="cart-items-panel">
+          <div class="cart-panel-head">
+            <div>
+              <p class="cart-panel-label">Shopping Cart</p>
+              <h2 class="cart-panel-title">3 handcrafted favorites</h2>
+            </div>
+            <button class="cart-clear-btn" type="button">Clear Cart</button>
+          </div>
+
+          <div class="cart-list">
+            <article class="cart-item" data-price="299">
+              <div class="cart-item-media">
+                <img src="images/lavender.jpg" alt="Lavender Bliss Bar" class="cart-item-img" />
+              </div>
+              <div class="cart-item-content">
+                <div class="cart-item-top">
+                  <div>
+                    <p class="cart-item-tag">Lavender Collection</p>
+                    <h3 class="cart-item-name">Lavender Bliss Bar</h3>
+                    <p class="cart-item-meta">100g • Vegan • Small Batch</p>
+                  </div>
+                  <button class="cart-item-remove" type="button" aria-label="Remove Lavender Bliss Bar">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <p class="cart-item-copy">A calming botanical bar made with lavender essential oil and creamy shea butter for a soft, soothing cleanse.</p>
+                <div class="cart-item-bottom">
+                  <div class="cart-qty" aria-label="Quantity selector">
+                    <button class="cart-qty-btn" type="button" data-action="decrease">-</button>
+                    <span class="cart-qty-value">1</span>
+                    <button class="cart-qty-btn" type="button" data-action="increase">+</button>
+                  </div>
+                  <div class="cart-item-price">₹299</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="cart-item" data-price="349">
+              <div class="cart-item-media">
+                <img src="images/rose.webp" alt="Rose Petal Glow" class="cart-item-img" />
+              </div>
+              <div class="cart-item-content">
+                <div class="cart-item-top">
+                  <div>
+                    <p class="cart-item-tag">Floral Ritual</p>
+                    <h3 class="cart-item-name">Rose Petal Glow</h3>
+                    <p class="cart-item-meta">100g • Brightening • Bestseller</p>
+                  </div>
+                  <button class="cart-item-remove" type="button" aria-label="Remove Rose Petal Glow">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <p class="cart-item-copy">A rose-infused cleansing bar with a smooth creamy lather, designed to bring softness and glow into your daily routine.</p>
+                <div class="cart-item-bottom">
+                  <div class="cart-qty" aria-label="Quantity selector">
+                    <button class="cart-qty-btn" type="button" data-action="decrease">-</button>
+                    <span class="cart-qty-value">1</span>
+                    <button class="cart-qty-btn" type="button" data-action="increase">+</button>
+                  </div>
+                  <div class="cart-item-price">₹349</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="cart-item" data-price="289">
+              <div class="cart-item-media">
+                <img src="images/tea tree.png" alt="Tea Tree Clear Bar" class="cart-item-img" />
+              </div>
+              <div class="cart-item-content">
+                <div class="cart-item-top">
+                  <div>
+                    <p class="cart-item-tag">Purifying Care</p>
+                    <h3 class="cart-item-name">Tea Tree Clear Bar</h3>
+                    <p class="cart-item-meta">100g • Clarifying • Herbal</p>
+                  </div>
+                  <button class="cart-item-remove" type="button" aria-label="Remove Tea Tree Clear Bar">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <p class="cart-item-copy">A fresh purifying bar crafted for balanced skin, combining gentle cleansing with a crisp, clean finish.</p>
+                <div class="cart-item-bottom">
+                  <div class="cart-qty" aria-label="Quantity selector">
+                    <button class="cart-qty-btn" type="button" data-action="decrease">-</button>
+                    <span class="cart-qty-value">1</span>
+                    <button class="cart-qty-btn" type="button" data-action="increase">+</button>
+                  </div>
+                  <div class="cart-item-price">₹289</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <aside class="cart-summary-panel">
+          <div class="cart-summary-card">
+            <p class="cart-panel-label">Order Summary</p>
+            <h2 class="cart-summary-title">Ready to checkout</h2>
+
+            <div class="cart-summary-lines">
+              <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">₹937</strong>
+              </div>
+              <div class="cart-summary-line">
+                <span>Shipping</span>
+                <strong>Free</strong>
+              </div>
+              <div class="cart-summary-line">
+                <span>Lavender Club Discount</span>
+                <strong class="cart-discount">-₹80</strong>
+              </div>
+            </div>
+
+            <div class="cart-total-line">
+              <span>Total</span>
+              <strong id="cartTotal">₹857</strong>
+            </div>
+
+            <form class="cart-coupon">
+              <label for="cartCoupon" class="cart-coupon-label">Promo Code</label>
+              <div class="cart-coupon-row">
+                <input id="cartCoupon" type="text" placeholder="LAVENDER10" />
+                <button type="submit">Apply</button>
+              </div>
+            </form>
+
+            <button class="cart-checkout-btn" type="button">
+              Checkout Securely <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <div class="cart-trust">
+              <div class="cart-trust-item"><i class="fa-solid fa-lock"></i><span>Secure payment</span></div>
+              <div class="cart-trust-item"><i class="fa-solid fa-truck-fast"></i><span>Fast dispatch</span></div>
+              <div class="cart-trust-item"><i class="fa-solid fa-heart"></i><span>Handmade with care</span></div>
+            </div>
+          </div>
+
+          <div class="cart-note-card">
+            <h3>Why this cart feels different</h3>
+            <p>Every Soap Studio bar is packed with botanical ingredients, gentle cleansing oils, and a calm ritual-first approach. Your cart is not just products, it is a routine in progress.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ════════════════════════════════
+     Footer
+════════════════════════════════ -->
+<footer class="site-footer">
+
+  <!-- Top accent line -->
+  <div class="footer-accent"></div>
+
+  <div class="footer-container">
+
+    <!-- ── MAIN GRID ── -->
+    <div class="footer-grid">
+
+      <!-- COL 1: Brand -->
+      <div class="footer-col footer-col--brand">
+        <a href="index.html" class="footer-logo">
+          <img src="images/white logo.png" alt="Soap Studio Logo" class="logo-img">
+        </a>
+        <p class="footer-about">
+          Small-batch, handcrafted soap bars made with 100% natural botanicals,
+          essential oils, and zero harsh chemicals. Gentle on skin, kind to the planet.
+        </p>
+        <!-- Contact -->
+        <ul class="footer-contact">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>12, Green Lane, Coimbatore, Tamil Nadu 641001</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:hello@SoapStudionaturals.com">hello@SoapStudionaturals.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- COL 2: Shop Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Cart</h4>
+        <ul class="footer-links">
+          <li><a href="shop.html"><i class="fa-solid fa-chevron-right"></i> All Products</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Best Sellers</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> New Arrivals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Offers &amp; Deals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Gift Sets</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Bundles</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 4: Social + Mini Newsletter -->
+      <div class="footer-col footer-col--social">
+        <h4 class="footer-heading">Follow Us</h4>
+        <p class="footer-social-sub">Follow us for skincare tips, behind-the-scenes, and exclusive offers.</p>
+
+        <div class="footer-socials">
+          <a href="#" class="social-btn social-btn--ig" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--fb" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--wa" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--yt" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--pin" aria-label="Pinterest">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+        </div>
+
+        <!-- Mini newsletter -->
+        <div class="footer-mini-nl">
+          <p class="footer-mini-nl-label"><i class="fa-solid fa-envelope"></i> Quick Subscribe</p>
+          <form class="footer-nl-form" id="footerNlForm" novalidate>
+            <input type="email" placeholder="Your email" class="footer-nl-input" id="footerNlEmail" />
+            <button type="submit" class="footer-nl-btn" aria-label="Subscribe">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <p class="footer-nl-msg" id="footerNlMsg"></p>
+        </div>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <!-- ── BOTTOM BAR ── -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p class="footer-copy">&copy; 2026 <strong>Soap Studio</strong>. All rights reserved. Made with <i class="fa-solid fa-heart footer-heart"></i> in India.</p>
+      </div>
+      <div class="footer-bottom-right">
+        <!-- Payment icons -->
+        <div class="footer-payments">
+          <span class="pay-icon" title="Visa"><i class="fa-brands fa-cc-visa"></i></span>
+          <span class="pay-icon" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></span>
+          <span class="pay-icon" title="PayPal"><i class="fa-brands fa-cc-paypal"></i></span>
+          <span class="pay-icon" title="Razorpay"><i class="fa-solid fa-mobile-screen-button"></i></span>
+          <span class="pay-icon" title="UPI"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <script>
+    const items = [...document.querySelectorAll('.cart-item')];
+    const subtotalEl = document.getElementById('cartSubtotal');
+    const totalEl = document.getElementById('cartTotal');
+    const discount = 80;
+
+    function formatRupees(value) {
+      return `₹${value}`;
+    }
+
+    function updateTotals() {
+      const subtotal = items
+        .filter(item => item.isConnected)
+        .reduce((sum, item) => {
+          const price = Number(item.dataset.price || 0);
+          const qty = Number(item.querySelector('.cart-qty-value')?.textContent || 1);
+          return sum + price * qty;
+        }, 0);
+
+      subtotalEl.textContent = formatRupees(subtotal);
+      totalEl.textContent = formatRupees(Math.max(subtotal - discount, 0));
+    }
+
+    items.forEach(item => {
+      const qtyValue = item.querySelector('.cart-qty-value');
+
+      item.querySelectorAll('.cart-qty-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const current = Number(qtyValue.textContent);
+          const next = button.dataset.action === 'increase' ? current + 1 : Math.max(1, current - 1);
+          qtyValue.textContent = next;
+          updateTotals();
+        });
+      });
+
+      item.querySelector('.cart-item-remove')?.addEventListener('click', () => {
+        item.remove();
+        updateTotals();
+      });
+    });
+
+    document.querySelector('.cart-clear-btn')?.addEventListener('click', () => {
+      document.querySelectorAll('.cart-item').forEach(item => item.remove());
+      updateTotals();
+    });
+
+    document.querySelector('.cart-coupon')?.addEventListener('submit', event => {
+      event.preventDefault();
+    });
+
+    updateTotals();
+  </script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
+
+
+

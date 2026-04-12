@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Soap & Bath Bomb Workshop Studio - Chennai</title>
+    <!-- ✅ CSS LINK - THIS IS CORRECT -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="page-home">
+<!-- Header with Home Dropdown -->
+<header class="site-header">
+  <div class="header-container">
+
+
+     <a href="index.html" class="logo">
+      <img src="images/logo-1.png" alt="Soap Studio Logo" class="logo-img">
+    </a>
+
+
+    <!-- LEFT: Navigation -->
+    <nav class="nav-left">
+      <ul>
+         <li class="dropdown active">
+            <a href="#" class="active">Home ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="home-2.html">Home2</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- CENTER: Logo -->
+  
+
+    <!-- RIGHT: Icons -->
+    <div class="nav-right">
+      <a href="#" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+      <a href="cart.html" title="Cart" class="cart-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">3</span>
+      </a>
+    </div>
+
+    <!-- MOBILE: Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+      <button id="rtl-toggle" class="rtl-btn" aria-label="Toggle RTL">
+        <span id="rtl-icon">LTR</span>
+      </button>
+
+      <!-- BUY NOW RIGHT -->
+      <a href="login.html" class="mobile-login-btn">Login</a>
+  </div>
+
+  <!-- MOBILE: Dropdown Nav -->
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="home-2.html">Home2</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="service.html">Services</a></li>
+       <li><a href="shop.html">Shop</a></li>
+       <li><a href="blog.html">Blog</a></li>
+       <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+
+<script>
+  /* ── Hamburger ── */
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+</script>
+
+<section class="hero">
+
+    <!-- SLIDE 1 -->
+    <div class="hero-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/back.webp');">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <span>NATURE’S GENTLE TOUCH</span>
+            <h1 style="color: #ffffff;">Handcrafted Organic<br>Soaps for Glowing Skin</h1>
+            <p>Small‑batch bars made with cold‑processed oils, butters, and botanicals that pamper your skin. 
+            Free from harsh sulfates, parabens, and synthetic fillers.</p>
+            <button>SHOP NOW</button>
+        </div>
+
+        <div class="hero-img">
+            <img src="images/handmade.webp">
+        </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="hero-slide" style="background-image: url('images/another back.avif');">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <span>FRESH FROM THE EARTH</span>
+            <h1>Clean Beauty Starts<br>Here</h1>
+            <p>Each bar is enriched with plant‑based actives, clays, and pure essential oils for a spa‑like ritual. 
+            Gentle enough for daily use, effective enough to feel the difference.</p>
+            <button>SHOP NOW</button>
+        </div>
+
+        <div class="hero-img">
+            <img src="images/flavour-6.webp">
+        </div>
+    </div>
+
+</section>
+
+<section class="collection">
+    
+  <div class="collection-header">
+    <h2>Explore Soap Collection</h2>
+    <a href="shop.html">VIEW ALL</a>
+  </div>
+
+  <div class="collection-wrapper">
+    <!-- Left scroll button -->
+    <button class="col-btn" id="colPrev" aria-label="Scroll left">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <!-- Scrollable row -->
+    <div class="collection-grid" id="collectionGrid">
+
+      <div class="collection-item">
+        <img src="images/flavour-1.avif" alt="Natural soaps">
+        <div class="overlay-text">
+          <h4>Natural Soaps</h4>
+          <p>6 products</p>
+        </div>
+      </div>
+
+      <div class="collection-item">
+        <img src="images/flavour-2.webp" alt="Charcoal soaps">
+        <div class="overlay-text">
+          <h4>Charcoal Soaps</h4>
+          <p>8 products</p>
+        </div>
+      </div>
+
+      <div class="collection-item">
+        <img src="images/flavour-3.jpg" alt="Herbal soaps">
+        <div class="overlay-text">
+          <h4>Herbal Soaps</h4>
+          <p>5 products</p>
+        </div>
+      </div>
+
+      <div class="collection-item">
+        <img src="images/flavour-4.jpg" alt="Luxury bars">
+        <div class="overlay-text">
+          <h4>Luxury Bars</h4>
+          <p>7 products</p>
+        </div>
+      </div>
+
+      <div class="collection-item">
+        <img src="images/flavour-5.webp" alt="Color soaps">
+        <div class="overlay-text">
+          <h4>Color Soaps</h4>
+          <p>9 products</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right scroll button -->
+    <button class="col-btn" id="colNext" aria-label="Scroll right">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+</section>
+            
+
+
+<section class="soap-section">
+    <h2 class="soap-title">
+        Our soaps are cold-processed in small batches, infused
+        with natural herbs for a soothing skin experience.
+    </h2>
+
+    <div class="soap-badges">
+
+        <div class="soap-badge pink">
+            <span>100% PURE</span>
+            <h4>HERBS</h4>
+        </div>
+
+        <div class="soap-badge blue">
+            <span>NATURAL</span>
+            <h4>PRODUCT</h4>
+        </div>
+
+        <div class="soap-badge peach">
+            <span>100% PURE</span>
+            <h4>AROMA</h4>
+        </div>
+
+        <div class="soap-badge rose">
+            <span>NATIVE</span>
+            <h4>PRODUCT</h4>
+        </div>
+
+        <div class="soap-badge sky">
+            <span>RAW</span>
+            <h4>NATURE</h4>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<!-- SHOP PURE, NATURAL SOAP BARS -->
+<section class="product-section">
+  <div class="container">
+
+    <div class="section-header">
+      <h2 class="section-title">Shop Pure, Natural Soap Bars</h2>
+      <a href="shop.html" class="view-all">VIEW ALL</a>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- Product 1: Lavender -->
+      <div class="product-card">
+        <div class="image-container">
+          <img src="images/lavender.jpg" alt="Lavender Soap" class="product-image default">
+          <img src="images/lavender-2.jpg" alt="Lavender Hover" class="product-image hover">
+
+          <div class="action-icons">
+            <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+            <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+            <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+          </div>
+
+          <!-- Hover content -->
+          <div class="hover-info">
+            <span class="hover-brand">PureBloom</span>
+            <p >Calming lavender with creamy shea butter for night‑time pampering.</p>
+          </div>
+
+          <button class="add-to-cart">ADD TO CART</button>
+        </div>
+        <div class="product-info">
+          <div class="brand-name">PureBloom</div>
+          <h3 class="product-title">Organic Lavender Soap Bar</h3>
+          <div class="rating">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="price">Rs. 250.00</div>
+        </div>
+      </div>
+
+      <!-- Product 2: Rose -->
+      <div class="product-card">
+        <div class="image-container">
+          <img src="images/rose.webp" alt="Rose Soap" class="product-image default">
+          <img src="images/rose-2.jpg" alt="Rose Hover" class="product-image hover">
+
+          <div class="action-icons">
+            <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+            <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+            <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+          </div>
+
+          <div class="hover-info">
+            <span class="hover-brand">EarthEssence</span>
+            <p>Handcrafted rose bar with real petals for a soft, romantic lather.</p>
+          </div>
+
+          <button class="add-to-cart">ADD TO CART</button>
+        </div>
+        <div class="product-info">
+          <div class="brand-name">EarthEssence</div>
+          <h3 class="product-title">Rose Petal Luxury Soap</h3>
+          <div class="rating">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div class="price">Rs. 320.00</div>
+        </div>
+      </div>
+
+      <!-- Product 3: Citrus -->
+      <div class="product-card">
+        <div class="image-container">
+          <img src="images/citrus.webp" alt="Citrus Soap" class="product-image default">
+          <img src="images/citrus-2.webp" alt="Citrus Hover" class="product-image hover">
+
+          <div class="action-icons">
+            <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+            <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+            <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+          </div>
+
+          <div class="hover-info">
+            <span class="hover-brand">NatureGlow</span>
+            <p>Bright citrus oils to wake up dull skin and refresh summer showers.</p>
+          </div>
+
+          <button class="add-to-cart">ADD TO CART</button>
+        </div>
+        <div class="product-info">
+          <div class="brand-name">NatureGlow</div>
+          <h3 class="product-title">Citrus Burst Refresh Soap</h3>
+          <div class="rating">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <div class="price">Rs. 180.00</div>
+        </div>
+      </div>
+
+      <!-- Product 4: Honey -->
+      <div class="product-card">
+        <div class="image-container">
+          <img src="images/honey.webp" alt="Honey Soap" class="product-image default">
+          <img src="images/honey-2.webp" alt="Honey Hover" class="product-image hover">
+
+          <div class="action-icons">
+            <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+            <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+            <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+          </div>
+
+          <div class="hover-info">
+            <span class="hover-brand">HoneyPure</span>
+            <p>Manuka honey and oat infusion to deeply moisturize dry, tight skin.</p>
+          </div>
+
+          <button class="add-to-cart">ADD TO CART</button>
+        </div>
+        <div class="product-info">
+          <div class="brand-name">HoneyPure</div>
+          <h3 class="product-title">Manuka Honey Moisturizing Bar</h3>
+          <div class="rating">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="price">Rs. 410.00</div>
+        </div>
+      </div>
+
+      <!-- Product 5: Oatmeal -->
+      <div class="product-card">
+        <div class="image-container">
+          <img src="images/oats.webp" alt="Oatmeal Soap" class="product-image default">
+          <img src="images/oats-2.webp" alt="Oatmeal Hover" class="product-image hover">
+
+          <div class="action-icons">
+            <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+            <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+            <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+          </div>
+
+          <div class="hover-info">
+            <span class="hover-brand">GentleCare</span>
+            <p>Finely ground oats for a soft exfoliation that’s kind to sensitive skin.</p>
+          </div>
+
+          <button class="add-to-cart">ADD TO CART</button>
+        </div>
+        <div class="product-info">
+          <div class="brand-name">GentleCare</div>
+          <h3 class="product-title">Oatmeal Exfoliating Soap</h3>
+          <div class="rating">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div class="price">Rs. 220.00</div>
+        </div>
+      </div>
+
+      <!-- Product 6: Charcoal -->
+      <div class="product-card">
+        <div class="image-container">
+          <img src="images/charcoal.webp" alt="Charcoal Soap" class="product-image default">
+          <img src="images/charcoal-2.webp" alt="Charcoal Hover" class="product-image hover">
+
+          <div class="action-icons">
+            <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+            <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+            <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+          </div>
+
+          <div class="hover-info">
+            <span class="hover-brand">DetoxBar</span>
+            <p>Activated charcoal draws out impurities for a clearer, detoxed feel.</p>
+          </div>
+
+          <button class="add-to-cart">ADD TO CART</button>
+        </div>
+        <div class="product-info">
+          <div class="brand-name">DetoxBar</div>
+          <h3 class="product-title">Activated Charcoal Detox Soap</h3>
+          <div class="rating">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div class="price">Rs. 290.00</div>
+        </div>
+      </div>
+
+      <!-- Product 7: Tea Tree -->
+      <div class="product-card">
+        <div class="image-container">
+          <img src="images/tea tree.png" alt="Tea Tree Soap" class="product-image default">
+          <img src="images/tea tree-2.avif" alt="Tea Tree Hover" class="product-image hover">
+
+          <div class="action-icons">
+            <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+            <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+            <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+          </div>
+
+          <div class="hover-info">
+            <span class="hover-brand">PureRemedy</span>
+            <p>Tea tree and neem blend to support breakout‑prone, congested skin.</p>
+          </div>
+
+          <button class="add-to-cart">ADD TO CART</button>
+        </div>
+        <div class="product-info">
+          <div class="brand-name">PureRemedy</div>
+          <h3 class="product-title">Tea Tree Clear Skin Soap</h3>
+          <div class="rating">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="price">Rs. 260.00</div>
+        </div>
+      </div>
+
+      <!-- Product 8: Vanilla -->
+      <div class="product-card">
+        <div class="image-container">
+          <img src="images/vanilla.webp" alt="Vanilla Soap" class="product-image default">
+          <img src="images/vanilla-2.webp" alt="Vanilla Hover" class="product-image hover">
+
+          <div class="action-icons">
+            <div class="action-icon" title="Wishlist"><i class="far fa-heart"></i></div>
+            <div class="action-icon" title="Quick View"><i class="far fa-eye"></i></div>
+            <div class="action-icon" title="Compare"><i class="fas fa-shuffle"></i></div>
+          </div>
+
+          <div class="hover-info">
+            <span class="hover-brand">VanillaGlow</span>
+            <p >Warm vanilla and coconut milk for a dessert‑like, silky shower ritual.</p>
+          </div>
+
+          <button class="add-to-cart">ADD TO CART</button>
+        </div>
+        <div class="product-info">
+          <div class="brand-name">VanillaGlow</div>
+          <h3 class="product-title">Vanilla Orchid Silk Soap</h3>
+          <div class="rating">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div class="price">Rs. 350.00</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<section class="diy-kits">
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="diy-top">
+        <div>
+            <span class="section-tag">DIY Kits</span>
+            <h2>Create Your Own Soap at Home</h2>
+        </div>
+        <a href="shop.html" class="btn-secondary">Explore Kits</a>
+    </div>
+
+    <!-- SCROLL -->
+    <div class="kit-wrapper">
+
+        <button class="kit-btn left" onclick="scrollKits(-1)">&#10094;</button>
+
+        <div class="kit-grid" id="kitGrid">
+
+            <article class="kit-card">
+                <img src="images/soap kit.webp">
+                <div class="kit-copy">
+                    <h3>Fizzy Bath Bomb Kit</h3>
+                    <p>Everything you need for fragrant bath creations.</p>
+                </div>
+            </article>
+
+            <article class="kit-card">
+                <img src="images/soap bar kit.webp">
+                <div class="kit-copy">
+                    <h3>Soap Bar Starter Kit</h3>
+                    <p>Gentle bases and scent blends for your first bar.</p>
+                </div>
+            </article>
+
+            <article class="kit-card">
+                <img src="images/colour kit.webp">
+                <div class="kit-copy">
+                    <h3>Color & Scent Kit</h3>
+                    <p>Bright pigments and essential oils.</p>
+                </div>
+            </article>
+
+            <!-- extra cards -->
+            <article class="kit-card">
+                <img src="images/luxury kit.webp">
+                <div class="kit-copy">
+                    <h3>Luxury Soap Kit</h3>
+                    <p>Create premium handmade soaps.</p>
+                </div>
+            </article>
+
+            <article class="kit-card">
+                <img src="images/herbs kit.jpg">
+                <div class="kit-copy">
+                    <h3>Herbal Kit</h3>
+                    <p>Natural herbs and oils for skincare.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <button class="kit-btn right" onclick="scrollKits(1)">&#10095;</button>
+
+    </div>
+
+</div>
+</section>
+
+
+
+
+<section class="hotspot-showcase">
+  <div class="container">
+
+    <div class="hotspot-header">
+      <div>
+        <span class="section-tag">Spotlight Picks</span>
+        <h2>Shop Directly From Our Soap Scenes</h2>
+        <p>Tap the glow points to discover ingredients, ratings, and pricing for each handcrafted bar.</p>
+      </div>
+    </div>
+
+    <div class="hotspot-grid">
+      <!-- LEFT: FEATURED LARGE IMAGE -->
+      <div class="hotspot-item hotspot-item--large" data-position="left">
+        <img src="images/handmade-soap-bars-2024-12-07-21-31-31-utc.webp" alt="Featured Natural Soap">
+        <button class="hotspot-trigger" data-target="product-1">
+          <span>+</span>
+        </button>
+
+        <!-- POPUP CARD -->
+        <div class="hotspot-card" id="product-1">
+          <div class="brand">PureBloom</div>
+          <div class="title">Lavender Oatmeal Calm Bar</div>
+          <div class="rating">
+            <span class="stars">★★★★★</span>
+            <span class="rating-count">(124)</span>
+          </div>
+          <div class="price-row">
+            <span class="price-new">₹420</span>
+            <span class="price-old">₹480</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: TWO STACKED IMAGES -->
+      <div class="hotspot-right-column">
+        
+        <div class="hotspot-item" data-position="right">
+          <img src="images/handmade-soap-on-wooden-background-2023-11-27-04-50-10-utc.webp" alt="Herbal Clay Soap">
+          <button class="hotspot-trigger" data-target="product-2">
+            <span>+</span>
+          </button>
+
+          <div class="hotspot-card" id="product-2">
+            <div class="brand">EarthEssence</div>
+            <div class="title">Herbal Clay Detox Bar</div>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span class="rating-count">(89)</span>
+            </div>
+            <div class="price-row">
+              <span class="price-new">₹390</span>
+              <span class="price-old">₹430</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotspot-item" data-position="right">
+          <img src="images/pieces-of-natural-handmade-soap-on-white-backgroun-2023-11-27-05-30-45-utc.webp" alt="Citrus Glow Soap">
+          <button class="hotspot-trigger" data-target="product-3">
+            <span>+</span>
+          </button>
+
+          <div class="hotspot-card" id="product-3">
+            <div class="brand">CitrusBloom</div>
+            <div class="title">Citrus Glow Vitamin C Bar</div>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span class="rating-count">(57)</span>
+            </div>
+            <div class="price-row">
+              <span class="price-new">₹450</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Workshops - Horizontal Layout -->
+<section id="workshops" class="workshops">
+    <div class="container">
+        <h2>Our Workshops</h2>
+        <div class="workshops-horizontal">
+            <!-- Soap Making -->
+            <div class="workshop-slide">
+                <div class="workshop-card-horizontal">
+                    <div class="workshop-image">
+                        <img src="images/soap-1.jpeg" alt="Soap Making">
+                        <div class="workshop-overlay">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Soap Making</h3>
+                        <p>Master melt-and-pour & cold process with natural ingredients. Take home 4 custom soaps!</p>
+                        <div class="workshop-price-duration">
+                            <span class="price">₹1,500</span>
+                            <span class="duration">3 hours</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> All materials included</li>
+                            <li><i class="fas fa-check"></i> Take home 4 soaps</li>
+                            <li><i class="fas fa-check"></i> Expert guidance</li>
+                        </ul>
+                        <a href="#book" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bath Bombs -->
+            <div class="workshop-slide">
+                <div class="workshop-card-horizontal">
+                    <div class="workshop-image">
+                        <img src="images/bath bombs.jpg">
+                        <div class="workshop-overlay">
+                            <i class="fas fa-bath"></i>
+                        </div>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Bath Bombs</h3>
+                        <p>Create fizzy bath bombs with essential oils & colors. Perfect fun for all ages!</p>
+                        <div class="workshop-price-duration">
+                            <span class="price">₹1,200</span>
+                            <span class="duration">2.5 hours</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 6 bath bombs</li>
+                            <li><i class="fas fa-check"></i> Custom scents</li>
+                            <li><i class="fas fa-check"></i> Kid-friendly</li>
+                        </ul>
+                        <a href="#book" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Combo -->
+            <div class="workshop-slide">
+                <div class="workshop-card-horizontal">
+                    <div class="workshop-image">
+                        <img src="images/bath-bomb-preparation.jpg">
+                        <div class="workshop-overlay">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Combo Session</h3>
+                        <p>Soap + Bath Bombs full day! Best value with group discounts available.</p>
+                        <div class="workshop-price-duration">
+                            <span class="price">₹2,500</span>
+                            <span class="duration">5 hours</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> Save ₹200</li>
+                            <li><i class="fas fa-check"></i> Group 20% off</li>
+                            <li><i class="fas fa-check"></i> Lunch included</li>
+                        </ul>
+                        <a href="#book" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="workshop-nav">
+            <button class="nav-btn prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="nav-btn next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Dots -->
+        <div class="workshop-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Why People Love Our Studio -->
+<section class="love-section">
+    <div class="container">
+        <div class="love-layout">
+            <div class="love-text">
+                <span class="section-tag">Why Choose Us</span>
+                <h2>People Fall in Love With the Experience</h2>
+                <p>From first‑time crafters to hobby makers, everyone leaves with a smile, a bag full of goodies, and lots of photos.</p>
+
+                <ul class="love-list">
+                    <li><i class="fas fa-check-circle"></i> Friendly, patient instructor who explains every step slowly.</li>
+                    <li><i class="fas fa-check-circle"></i> Recipes you can recreate at home with easy ingredients.</li>
+                    <li><i class="fas fa-check-circle"></i> Super Instagram‑worthy setup and colourful creations.</li>
+                </ul>
+            </div>
+
+            <div class="love-stats">
+                <div class="love-card">
+                    <h3>500+</h3>
+                    <p>Happy crafters across Chennai</p>
+                </div>
+                <div class="love-card">
+                    <h3>4.9★</h3>
+                    <p>Average workshop rating</p>
+                </div>
+                <div class="love-card">
+                    <h3>80%</h3>
+                    <p>Come again with friends</p>
+                </div>
+                <div class="love-card">
+                    <h3>3–5</h3>
+                    <p>Creations per person</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Perfect For -->
+<section class="perfect-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Occasions</span>
+            <h2>Perfect For Every Little Celebration</h2>
+        </div>
+
+        <div class="perfect-grid">
+            <div class="perfect-card">
+                <div class="perfect-icon">
+                    <i class="fas fa-birthday-cake"></i>
+                </div>
+                <h3>Birthday Specials</h3>
+                <p>Turn birthdays into a creative soap & bath bomb party instead of a regular cake‑cutting.</p>
+            </div>
+
+            <div class="perfect-card">
+                <div class="perfect-icon">
+                    <i class="fas fa-children"></i>
+                </div>
+                <h3>Kids’ Activity</h3>
+                <p>Screen‑free, safe and colourful hands‑on fun for children above 7 years.</p>
+            </div>
+
+            <div class="perfect-card">
+                <div class="perfect-icon">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <h3>Friends’ Day Out</h3>
+                <p>Craft together, click photos and take home matching sets as a memory.</p>
+            </div>
+
+            <div class="perfect-card">
+                <div class="perfect-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Self‑Care Lovers</h3>
+                <p>Create gentle products that actually suit your skin and fragrance taste.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Skin-Safe Promise -->
+<section class="skin-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Gentle On Skin</span>
+            <h2>Our Skin‑Safe Promise</h2>
+        </div>
+
+        <div class="skin-layout">
+            <div class="skin-card good">
+                <h3>We Love Using</h3>
+                <ul>
+                    <li><i class="fas fa-leaf"></i> Cold‑pressed oils & butters</li>
+                    <li><i class="fas fa-seedling"></i> Plant‑based colorants & clays</li>
+                    <li><i class="fas fa-wind"></i> Essential oils in safe ratios</li>
+                    <li><i class="fas fa-hand-holding-heart"></i> Gentle, melt & pour bases</li>
+                </ul>
+            </div>
+
+            <div class="skin-card avoid">
+                <h3>We Avoid</h3>
+                <ul>
+                    <li><i class="fas fa-ban"></i> Harsh sulphates in workshop recipes</li>
+                    <li><i class="fas fa-ban"></i> Heavy artificial colours on skin</li>
+                    <li><i class="fas fa-ban"></i> Over‑fragrancing that causes headaches</li>
+                    <li><i class="fas fa-ban"></i> Animal testing in any form</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Quick FAQs -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-header">
+           <span class="section-tag">Questions</span>
+            <h2>Quick FAQs</h2>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do I need any prior experience?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>No experience needed at all. We start from basics and guide you step by step until you feel confident.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I take everything I make?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, all soaps and bath bombs you make are packed for you to take home, along with recipe notes.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is it suitable for kids?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, kids above 7 years can join. For younger children, we suggest a parent or guardian to accompany.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I confirm my slot?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Fill the booking form, we’ll reply within 24 hours with available slots and a payment link to confirm.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Book a Slot (Big Form) -->
+<section id="book" class="book book-big">
+    <div class="container">
+        <div class="book-header">
+            <span class="section-tag">Reserve Your Seat</span>
+            <h2>Book a Workshop Slot</h2>
+            <p>Share your details and preferred date. We’ll confirm your booking on WhatsApp or email.</p>
+        </div>
+
+        <form class="booking-form booking-form-big">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input id="name" type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input id="email" type="email" placeholder="you@example.com" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone / WhatsApp *</label>
+                    <input id="phone" type="tel" placeholder="+91 9XXXX XXXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date *</label>
+                    <input id="date" type="date" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="workshop">Select Workshop *</label>
+                    <select id="workshop" required>
+                        <option value="">Choose a workshop</option>
+                        <option>Soap Making</option>
+                        <option>Bath Bombs</option>
+                        <option>Combo (Soap + Bath Bombs)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="people">No. of Participants *</label>
+                    <input id="people" type="number" min="1" max="10" placeholder="e.g. 2" required>
+                </div>
+            </div>
+
+            <div class="form-group full">
+                <label for="notes">Notes (optional)</label>
+                <textarea id="notes" placeholder="Any special occasion, age group, time preference, etc."></textarea>
+            </div>
+
+         <div class="form-actions">
+                <button type="submit" class="btn-main">Request Slot</button>
+                <p class="small-text">We usually confirm within 24 hours. Payment link will be shared after confirmation.</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- ════════════════════════════════
+     Footer
+════════════════════════════════ -->
+<footer class="site-footer">
+
+  <!-- Top accent line -->
+  <div class="footer-accent"></div>
+
+  <div class="footer-container">
+
+    <!-- ── MAIN GRID ── -->
+    <div class="footer-grid">
+
+      <!-- COL 1: Brand -->
+      <div class="footer-col footer-col--brand">
+        <a href="index.html" class="footer-logo">
+          <img src="images/white logo.png" alt="Soap Studio Logo" class="logo-img">
+        </a>
+        <p class="footer-about">
+          Small-batch, handcrafted soap bars made with 100% natural botanicals,
+          essential oils, and zero harsh chemicals. Gentle on skin, kind to the planet.
+        </p>
+        <!-- Contact -->
+        <ul class="footer-contact">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>12, Green Lane, Coimbatore, Tamil Nadu 641001</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:hello@SoapStudionaturals.com">hello@SoapStudionaturals.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- COL 2: Shop Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Home 1</h4>
+        <ul class="footer-links">
+          <li><a href="shop.html"><i class="fa-solid fa-chevron-right"></i> All Products</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Best Sellers</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> New Arrivals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Offers &amp; Deals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Gift Sets</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Bundles</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 4: Social + Mini Newsletter -->
+      <div class="footer-col footer-col--social">
+        <h4 class="footer-heading">Follow Us</h4>
+        <p class="footer-social-sub">Follow us for skincare tips, behind-the-scenes, and exclusive offers.</p>
+
+        <div class="footer-socials">
+          <a href="#" class="social-btn social-btn--ig" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--fb" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--wa" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--yt" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--pin" aria-label="Pinterest">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+        </div>
+
+        <!-- Mini newsletter -->
+        <div class="footer-mini-nl">
+          <p class="footer-mini-nl-label"><i class="fa-solid fa-envelope"></i> Quick Subscribe</p>
+          <form class="footer-nl-form" id="footerNlForm" novalidate>
+            <input type="email" placeholder="Your email" class="footer-nl-input" id="footerNlEmail" />
+            <button type="submit" class="footer-nl-btn" aria-label="Subscribe">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <p class="footer-nl-msg" id="footerNlMsg"></p>
+        </div>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <!-- ── BOTTOM BAR ── -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p class="footer-copy">&copy; 2026 <strong>Soap Studio</strong>. All rights reserved. Made with <i class="fa-solid fa-heart footer-heart"></i> in India.</p>
+      </div>
+      <div class="footer-bottom-right">
+        <!-- Payment icons -->
+        <div class="footer-payments">
+          <span class="pay-icon" title="Visa"><i class="fa-brands fa-cc-visa"></i></span>
+          <span class="pay-icon" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></span>
+          <span class="pay-icon" title="PayPal"><i class="fa-brands fa-cc-paypal"></i></span>
+          <span class="pay-icon" title="Razorpay"><i class="fa-solid fa-mobile-screen-button"></i></span>
+          <span class="pay-icon" title="UPI"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script>
+  /* ── Back to top ── */
+  const btt = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', window.scrollY > 400);
+  });
+  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* ── Footer mini newsletter ── */
+  document.getElementById('footerNlForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const val = document.getElementById('footerNlEmail').value.trim();
+    const msg = document.getElementById('footerNlMsg');
+    const rx  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!rx.test(val)) {
+      msg.textContent = 'Enter a valid email.';
+      msg.style.color = '#e07b5a';
+      return;
+    }
+    msg.textContent = '✓ Subscribed! Thank you.';
+    msg.style.color = '#3caea3';
+    this.reset();
+  });
+</script>
+
+<script>
+  // HERO SLIDER FADE
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  let heroIndex = 0;
+
+  function showHeroSlide(index) {
+    heroSlides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextHeroSlide() {
+    heroIndex = (heroIndex + 1) % heroSlides.length;
+    showHeroSlide(heroIndex);
+  }
+
+  if (heroSlides.length > 1) {
+    setInterval(nextHeroSlide, 2000); // 5s per slide
+  }
+
+  // Optional: prevent button from scrolling to top
+  document.querySelectorAll('.hero-content button').forEach(btn => {
+    btn.addEventListener('click', e => e.preventDefault());
+  });
+</script>
+
+
+
+<script>
+  const colGrid = document.getElementById('collectionGrid');
+  const colPrev = document.getElementById('colPrev');
+  const colNext = document.getElementById('colNext');
+
+  if (colGrid && colPrev && colNext) {
+    const scrollAmount = 250; // adjust if needed
+
+    colNext.addEventListener('click', () => {
+      colGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    colPrev.addEventListener('click', () => {
+      colGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+  }
+</script>
+
+
+
+<script>
+  function scrollKits(direction) {
+    const grid = document.getElementById('kitGrid');
+    const amount = 260; // adjust based on card width
+    grid.scrollBy({ left: direction * amount, behavior: 'smooth' });
+  }
+</script>
+
+
+
+<script>
+  const hotspotTriggers = document.querySelectorAll('.hotspot-trigger');
+
+  hotspotTriggers.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = btn.getAttribute('data-target');
+      const card = document.getElementById(targetId);
+      if (!card) return;
+
+      const isOpen = card.classList.contains('open');
+
+      // close all first
+      document.querySelectorAll('.hotspot-card').forEach(c => c.classList.remove('open'));
+      document.querySelectorAll('.hotspot-trigger').forEach(b => {
+        b.classList.remove('active');
+        const span = b.querySelector('span');
+        if (span) span.textContent = '+'; // reset to +
+      });
+
+      // if it was not open, open and set to -
+      if (!isOpen) {
+        card.classList.add('open');
+        btn.classList.add('active');
+        const span = btn.querySelector('span');
+        if (span) span.textContent = '−'; // minus
+      }
+    });
+  });
+
+  // optional: click outside to close
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.hotspot-item')) {
+      document.querySelectorAll('.hotspot-card').forEach(c => c.classList.remove('open'));
+      document.querySelectorAll('.hotspot-trigger').forEach(b => {
+        b.classList.remove('active');
+        const span = b.querySelector('span');
+        if (span) span.textContent = '+';
+      });
+    }
+  });
+</script>
+
+
+<script>
+  const wsSlides = document.querySelectorAll('.workshop-slide');
+  const wsDots = document.querySelectorAll('.workshop-dots .dot');
+  let wsIndex = 0;
+
+  function showWorkshopSlide(index) {
+    if (!wsSlides.length) return;
+
+    if (index < 0) index = wsSlides.length - 1;
+    if (index >= wsSlides.length) index = wsSlides.length - 1; // or 0 if you want loop
+    wsIndex = index;
+
+    wsSlides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === wsIndex);
+    });
+
+    wsDots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === wsIndex);
+    });
+  }
+
+  function moveSlide(step) {
+    let next = wsIndex + step;
+    if (next < 0) next = wsSlides.length - 1;
+    if (next >= wsSlides.length) next = 0;
+    showWorkshopSlide(next);
+  }
+
+  function currentSlide(n) {
+    showWorkshopSlide(n - 1); // because your dots call currentSlide(1..3)
+  }
+
+  // expose for inline onclick
+  window.moveSlide = moveSlide;
+  window.currentSlide = currentSlide;
+
+  // initial slide
+  showWorkshopSlide(0);
+</script>
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
+
+

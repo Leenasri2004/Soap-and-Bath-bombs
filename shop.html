@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Shop - Natural Soap Collection | Soap Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/dark.css">
+</head>
+<body class="page-shop">
+
+<header class="site-header">
+  <div class="header-container">
+
+
+     <a href="index.html" class="logo">
+      <img src="images/logo-1.png" alt="Soap Studio Logo" class="logo-img">
+    </a>
+
+
+    <!-- LEFT: Navigation -->
+    <nav class="nav-left">
+      <ul>
+         <li class="dropdown">
+            <a href="#">Home ▾</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home-2.html">Home2</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- CENTER: Logo -->
+  
+
+    <!-- RIGHT: Icons -->
+    <div class="nav-right">
+      <a href="#" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+      <a href="cart.html" title="Cart" class="cart-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">3</span>
+      </a>
+    </div>
+
+    <!-- MOBILE: Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+      <button id="rtl-toggle" class="rtl-btn" aria-label="Toggle RTL">
+        <span id="rtl-icon">LTR</span>
+      </button>
+
+      <!-- BUY NOW RIGHT -->
+      <a href="login.html" class="mobile-login-btn">Login</a>
+  </div>
+
+  <!-- MOBILE: Dropdown Nav -->
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="home-2.html">Home2</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="service.html">Services</a></li>
+       <li><a href="shop.html">Shop</a></li>
+       <li><a href="blog.html">Blog</a></li>
+       <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<!-- ═══ COLLECTION HEADER ═══ -->
+<div class="collection-header">
+    <div class="container">
+        <h1>Natural Soap Collection</h1>
+        <p class="collection-subtitle">Handcrafted with love, made with natural ingredients</p>
+    </div>
+</div>
+
+<!-- ════════════════════════════════
+     MAIN LAYOUT (SHOP SECTION)
+════════════════════════════════ -->
+<div class="main-layout">
+    <div class="container">
+        
+        <!-- LEFT SIDEBAR - FILTERS -->
+        <aside class="filter-sidebar">
+            
+            <!-- Collection Categories -->
+            <div class="filter-section">
+                <h3 class="filter-title">Collections</h3>
+                <div class="collection-list">
+                    <div class="collection-item" data-collection="all">
+                        <div class="collection-title">All Products</div>
+                        <div class="collection-subtitle">Complete Collection</div>
+                        <div class="collection-count">24 products</div>
+                    </div>
+                    
+                    <div class="collection-item" data-collection="ayurvedic">
+                        <div class="collection-title">Ayurvedic</div>
+                        <div class="collection-subtitle">Ayurvedic Bars</div>
+                        <div class="collection-count">3 products</div>
+                    </div>
+                    
+                    <div class="collection-item" data-collection="charcoal">
+                        <div class="collection-title">Charcoal</div>
+                        <div class="collection-subtitle">Charcoal Soaps</div>
+                        <div class="collection-count">2 products</div>
+                    </div>
+                    
+                    <div class="collection-item" data-collection="exfoliating">
+                        <div class="collection-title">Exfoliating</div>
+                        <div class="collection-subtitle">Exfoliating Scrub Bars</div>
+                        <div class="collection-count">3 products</div>
+                    </div>
+                    
+                    <div class="collection-item" data-collection="floral">
+                        <div class="collection-title">Floral</div>
+                        <div class="collection-subtitle">Floral Essence Soaps</div>
+                        <div class="collection-count">6 products</div>
+                    </div>
+                    
+                    <div class="collection-item" data-collection="kids">
+                        <div class="collection-title">Kids</div>
+                        <div class="collection-subtitle">Kids Gentle Soaps</div>
+                        <div class="collection-count">2 products</div>
+                    </div>
+                    
+                    <div class="collection-item" data-collection="organic">
+                        <div class="collection-title">Organic</div>
+                        <div class="collection-subtitle">Organic Facial Bars</div>
+                        <div class="collection-count">8 products</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Availability Filter -->
+            <div class="filter-section">
+                <h3 class="filter-title">Availability</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="availability" value="in-stock">
+                        <span class="checkmark"></span>
+                        In stock (15)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="availability" value="out-stock">
+                        <span class="checkmark"></span>
+                        Out of stock (10)
+                    </label>
+                </div>
+            </div>
+
+            <!-- Price Filter -->
+            <div class="filter-section">
+                <h3 class="filter-title">Price</h3>
+                <div class="price-range">
+                    <div class="price-display">₹ 0 — ₹ 25.00</div>
+                    <div class="range-container">
+                        <input type="range" class="price-slider" min="0" max="25" value="25" step="0.5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Filter -->
+            <div class="filter-section">
+                <h3 class="filter-title">Brand</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="ayurearth">
+                        <span class="checkmark"></span>
+                        AyurEarth Naturals (1)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="bareearth">
+                        <span class="checkmark"></span>
+                        BareEarth Goods (1)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="clayskin">
+                        <span class="checkmark"></span>
+                        ClaySkin Naturals (1)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="earthglow">
+                        <span class="checkmark"></span>
+                        EarthGlow Naturals (1)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="ecoessence">
+                        <span class="checkmark"></span>
+                        EcoEssence (1)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="ecoluxe">
+                        <span class="checkmark"></span>
+                        EcoLuxe Naturals (1)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="greensoul">
+                        <span class="checkmark"></span>
+                        GreenSoul Organics (1)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="herbroot">
+                        <span class="checkmark"></span>
+                        Herb & Root (1)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="mineralme">
+                        <span class="checkmark"></span>
+                        MineralMe Organics (1)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="morningroots">
+                        <span class="checkmark"></span>
+                        MorningRoots (1)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="naturenest">
+                        <span class="checkmark"></span>
+                        NatureNest Soaps (1)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="purebloom">
+                        <span class="checkmark"></span>
+                        PureBloom Naturals (1)
+                    </label>
+                </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-section">
+                <h3 class="filter-title">Category</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="fragrance">
+                        <span class="checkmark"></span>
+                        Fragrance Oil
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="haircare">
+                        <span class="checkmark"></span>
+                        Hair Care
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="bathbombs">
+                        <span class="checkmark"></span>
+                        Bath Bombs
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="skincare">
+                        <span class="checkmark"></span>
+                        Skin Care
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="bodycare">
+                        <span class="checkmark"></span>
+                        Body Care
+                    </label>
+                </div>
+            </div>
+
+            <!-- Color Filter -->
+            <div class="filter-section">
+                <h3 class="filter-title">Color</h3>
+                <div class="color-options">
+                    <div class="color-swatch" data-color="black" style="background-color: #000000;" title="Black"></div>
+                    <div class="color-swatch" data-color="blue" style="background-color: #0066CC;" title="Blue"></div>
+                    <div class="color-swatch" data-color="burgundy" style="background-color: #800020;" title="Burgundy"></div>
+                    <div class="color-swatch" data-color="camel" style="background-color: #C19A6B;" title="Camel"></div>
+                    <div class="color-swatch" data-color="chili" style="background-color: #C21807;" title="Chili"></div>
+                    <div class="color-swatch" data-color="forest" style="background-color: #228B22;" title="Forest"></div>
+                    <div class="color-swatch" data-color="fuchsia" style="background-color: #FF00FF;" title="Fuchsia"></div>
+                    <div class="color-swatch" data-color="grey" style="background-color: #808080;" title="Grey"></div>
+                    <div class="color-swatch" data-color="hibiscus" style="background-color: #B43757;" title="Hibiscus"></div>
+                    <div class="color-swatch" data-color="ivory" style="background-color: #FFFFF0;" title="Ivory"></div>
+                    <div class="color-swatch" data-color="mango" style="background-color: #FFCC5C;" title="Mango"></div>
+                    <div class="color-swatch" data-color="mulberry" style="background-color: #C54B8C;" title="Mulberry"></div>
+                </div>
+            </div>
+
+            <!-- Material Filter -->
+            <div class="filter-section">
+                <h3 class="filter-title">Material</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="material" value="hyaluronic">
+                        <span class="checkmark"></span>
+                        Hyaluronic
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="material" value="jojoba">
+                        <span class="checkmark"></span>
+                        Jojoba Oil
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="material" value="vitamina">
+                        <span class="checkmark"></span>
+                        Vitamin A
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="material" value="vitaminc">
+                        <span class="checkmark"></span>
+                        Vitamin C
+                    </label>
+                </div>
+            </div>
+
+            <!-- More Filters -->
+            <div class="filter-section">
+                <h3 class="filter-title">More Filters</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="acne">
+                        <span class="checkmark"></span>
+                        Acne
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="aloe">
+                        <span class="checkmark"></span>
+                        Aloe Vera
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="antiinflammatory">
+                        <span class="checkmark"></span>
+                        Anti-inflammatory
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="antibacterial">
+                        <span class="checkmark"></span>
+                        Antibacterial
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="ayurvedic">
+                        <span class="checkmark"></span>
+                        Ayurvedic
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="babysafe">
+                        <span class="checkmark"></span>
+                        Baby Safe
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="babysoap">
+                        <span class="checkmark"></span>
+                        Baby Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="basil">
+                        <span class="checkmark"></span>
+                        Basil
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="blemish">
+                        <span class="checkmark"></span>
+                        Blemish
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="body">
+                        <span class="checkmark"></span>
+                        Body
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="brightening">
+                        <span class="checkmark"></span>
+                        Brightening
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="more" value="calendula">
+                        <span class="checkmark"></span>
+                        Calendula
+                    </label>
+                </div>
+            </div>
+
+            <!-- Product Type Filter -->
+            <div class="filter-section">
+                <h3 class="filter-title">Product Type</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="acnesoap">
+                        <span class="checkmark"></span>
+                        Acne Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="babysoap">
+                        <span class="checkmark"></span>
+                        Baby Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="bodysoap">
+                        <span class="checkmark"></span>
+                        Body Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="detoxsoap">
+                        <span class="checkmark"></span>
+                        Detox Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="exfoliatingsoap">
+                        <span class="checkmark"></span>
+                        Exfoliating Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="facesoap">
+                        <span class="checkmark"></span>
+                        Face Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="herbalsoap">
+                        <span class="checkmark"></span>
+                        Herbal Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="hydratingsoap">
+                        <span class="checkmark"></span>
+                        Hydrating Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="nourishingsoap">
+                        <span class="checkmark"></span>
+                        Nourishing Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="scentedsoap">
+                        <span class="checkmark"></span>
+                        Scented Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="scrubsoap">
+                        <span class="checkmark"></span>
+                        Scrub Soap
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="producttype" value="seasonalsoap">
+                        <span class="checkmark"></span>
+                        Seasonal Soap
+                    </label>
+                </div>
+            </div>
+
+            <!-- Size Filter -->
+            <div class="filter-section">
+                <h3 class="filter-title">Size</h3>
+                <div class="size-pills">
+                    <label class="size-pill">
+                        <input type="checkbox" name="size" value="ss">
+                        <span class="pill-text">SS</span>
+                    </label>
+                    <label class="size-pill">
+                        <input type="checkbox" name="size" value="mm">
+                        <span class="pill-text">MM</span>
+                    </label>
+                    <label class="size-pill">
+                        <input type="checkbox" name="size" value="l">
+                        <span class="pill-text">L</span>
+                    </label>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- RIGHT CONTENT AREA -->
+        <main class="content-area">
+            
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="product-count">24 products</div>
+                <div class="sort-container">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select" class="sort-select">
+                        <option value="alphabetical-az">Alphabetically, A–Z</option>
+                        <option value="alphabetical-za">Alphabetically, Z–A</option>
+                        <option value="price-low-high">Price, low to high</option>
+                        <option value="price-high-low">Price, high to low</option>
+                        <option value="newest">Newest</option>
+                        <option value="best-selling">Best Selling</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid">
+                
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/lavender.jpg" alt="Lavender Bliss Bar" class="main-image">
+                        <img src="images/lavender-2.jpg" alt="Lavender Bliss Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Lavender Bliss Bar</h3>
+                        <div class="product-price">₹299</div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/rose.webp" alt="Rose Petal Glow" class="main-image">
+                        <img src="images/rose-2.jpg" alt="Rose Petal Glow" class="hover-image">
+                        <span class="product-badge">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Rose Petal Glow</h3>
+                        <div class="product-price">₹349</div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/citrus.webp" alt="Citrus Burst Bar" class="main-image">
+                        <img src="images/citrus-2.webp" alt="Citrus Burst Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Citrus Burst Bar</h3>
+                        <div class="product-price">₹279</div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/charcoal.webp" alt="Charcoal Detox Bar" class="main-image">
+                        <img src="images/charcoal-2.webp" alt="Charcoal Detox Bar" class="hover-image">
+                        <span class="product-badge">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Charcoal Detox Bar</h3>
+                        <div class="product-price">₹329</div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/honey.webp" alt="Honey Glow Bar" class="main-image">
+                        <img src="images/honey-2.webp" alt="Honey Glow Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Honey Glow Bar</h3>
+                        <div class="product-price">₹379</div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/oats.webp" alt="Oat & Milk Soothe" class="main-image">
+                        <img src="images/oats-2.webp" alt="Oat & Milk Soothe" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Oat & Milk Soothe</h3>
+                        <div class="product-price">₹259</div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/vanilla.webp" alt="Vanilla Dream Bar" class="main-image">
+                        <img src="images/vanilla-2.webp" alt="Vanilla Dream Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Vanilla Dream Bar</h3>
+                        <div class="product-price">₹319</div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/tea tree.png" alt="Tea Tree Clear Bar" class="main-image">
+                        <img src="images/tea tree-2.avif" alt="Tea Tree Clear Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Tea Tree Clear Bar</h3>
+                        <div class="product-price">₹289</div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/handmade.webp" alt="Coconut Cream Bar" class="main-image">
+                        <img src="images/natural.webp" alt="Coconut Cream Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Coconut Cream Bar</h3>
+                        <div class="product-price">₹339</div>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/green.webp" alt="Eucalyptus Fresh Bar" class="main-image">
+                        <img src="images/natural.webp" alt="Eucalyptus Fresh Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Eucalyptus Fresh Bar</h3>
+                        <div class="product-price">₹269</div>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/natural.webp" alt="Shea Butter Luxury Bar" class="main-image">
+                        <img src="images/handmade.webp" alt="Shea Butter Luxury Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Shea Butter Luxury Bar</h3>
+                        <div class="product-price">₹399</div>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/orange.webp" alt="Lemon Mint Refresh Bar" class="main-image">
+                        <img src="images/citrus.webp" alt="Lemon Mint Refresh Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Lemon Mint Refresh Bar</h3>
+                        <div class="product-price">₹249</div>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/pink.webp" alt="Jasmine Night Bar" class="main-image">
+                        <img src="images/rose.webp" alt="Jasmine Night Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Jasmine Night Bar</h3>
+                        <div class="product-price">₹359</div>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/green.webp" alt="Aloe Vera Soothe Bar" class="main-image">
+                        <img src="images/natural.webp" alt="Aloe Vera Soothe Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Aloe Vera Soothe Bar</h3>
+                        <div class="product-price">₹289</div>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/orange.webp" alt="Grapefruit Energize Bar" class="main-image">
+                        <img src="images/citrus.webp" alt="Grapefruit Energize Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Grapefruit Energize Bar</h3>
+                        <div class="product-price">₹259</div>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/natural.webp" alt="Goat Milk Luxury Bar" class="main-image">
+                        <img src="images/handmade.webp" alt="Goat Milk Luxury Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Goat Milk Luxury Bar</h3>
+                        <div class="product-price">₹419</div>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/green.webp" alt="Neem Purifying Bar" class="main-image">
+                        <img src="images/natural.webp" alt="Neem Purifying Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Neem Purifying Bar</h3>
+                        <div class="product-price">₹299</div>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/spies.webp" alt="Turmeric Glow Bar" class="main-image">
+                        <img src="images/yellow.webp" alt="Turmeric Glow Bar" class="hover-image">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Turmeric Glow Bar</h3>
+                        <div class="product-price">₹329</div>
+                    </div>
+                </div>
+
+                <!-- Product 19 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/making.webp" alt="Mint Fresh Bar" class="main-image">
+                        <img src="images/green.webp" alt="Mint Fresh Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Mint Fresh Bar</h3>
+                        <div class="product-price">₹279</div>
+                    </div>
+                </div>
+
+                <!-- Product 20 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/layer.webp" alt="Sandalwood Luxury Bar" class="main-image">
+                        <img src="images/natural.webp" alt="Sandalwood Luxury Bar" class="hover-image">
+                        <span class="product-badge">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Sandalwood Luxury Bar</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹299</span>
+                            <span class="old-price">₹399</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 21 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/heart.webp" alt="Coconut Milk Bar" class="main-image">
+                        <img src="images/natural.webp" alt="Coconut Milk Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Coconut Milk Bar</h3>
+                        <div class="product-price">₹319</div>
+                    </div>
+                </div>
+
+                <!-- Product 22 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/colourful.jpg" alt="Papaya Brightening Bar" class="main-image">
+                        <img src="images/orange.webp" alt="Papaya Brightening Bar" class="hover-image">
+                        <span class="product-badge">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Papaya Brightening Bar</h3>
+                        <div class="product-price">₹349</div>
+                    </div>
+                </div>
+
+                <!-- Product 23 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/design.webp" alt="Cucumber Cool Bar" class="main-image">
+                        <img src="images/green.webp" alt="Cucumber Cool Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cucumber Cool Bar</h3>
+                        <div class="product-price">₹269</div>
+                    </div>
+                </div>
+
+                <!-- Product 24 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/soapiii.webp" alt="Avocado Nourish Bar" class="main-image">
+                        <img src="images/natural.webp" alt="Avocado Nourish Bar" class="hover-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Avocado Nourish Bar</h3>
+                        <div class="product-price">₹389</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn prev-btn" disabled>
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="page-btn page-number active">1</button>
+                <button class="page-btn page-number">2</button>
+                <button class="page-btn page-number">3</button>
+                <button class="page-btn next-btn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+<!-- ════════════════════════════════
+     Trending Articles
+════════════════════════════════ -->
+<section class="tr-section">
+  <div class="tr-container">
+
+    <!-- Header -->
+    <div class="tr-header">
+      <div class="tr-header-left">
+        <span class="tr-eyebrow"><i class="fa-solid fa-fire-flame-curved"></i> This Week</span>
+        <h2 class="tr-title">Trending Articles</h2>
+      </div>
+      <a href="blog.html" class="tr-view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <!-- Grid: 1 hero + 4 small -->
+    <div class="tr-grid">
+
+      <!-- HERO card (large, left) -->
+      <article class="tr-card tr-card--hero">
+        <div class="tr-img-wrap">
+          <img src="images/rose.webp" alt="Commercial vs organic soap" class="tr-img" />
+          <div class="tr-img-overlay"></div>
+          <span class="tr-badge"><i class="fa-solid fa-fire"></i> #1 Trending</span>
+          <div class="tr-stats">
+            <span><i class="fa-regular fa-eye"></i> 4.2k</span>
+            <span><i class="fa-regular fa-heart"></i> 143</span>
+          </div>
+        </div>
+        <div class="tr-body">
+          <span class="tr-cat tr-cat--purple">Brand Stories</span>
+          <h3 class="tr-card-title">Commercial vs Organic Soap: What Changes When You Switch to Soap Studio</h3>
+          <p class="tr-excerpt">Moving away from synthetic fragrances and harsh detergents can transform your routine and support healthier skin every day. Commercial soaps are often made with chemical surfactants, artificial colors, and preservatives that may strip your skin of its natural oils. While they create a rich lather and strong fragrance, they can leave your skin feeling dry, irritated, and unbalanced over time.
+
+In contrast, organic soaps from Soap Studio are carefully handcrafted using natural ingredients like plant-based oils, butters, and essential oils. These soaps retain glycerin — a naturally occurring humectant that helps your skin stay hydrated and soft. Instead of harsh cleansing, they offer a gentle, nourishing experience that supports your skin’s natural barrier.</p>
+          <div class="tr-footer">
+            <span class="tr-date"><i class="fa-regular fa-calendar"></i> Mar 22, 2025</span>
+            <a href="blog.html" class="tr-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Small cards column -->
+      <div class="tr-small-col">
+
+        <article class="tr-card tr-card--small">
+          <div class="tr-small-img-wrap">
+            <img src="images/charcoal.webp" alt="Charcoal" class="tr-img" />
+            <span class="tr-badge tr-badge--sm"><i class="fa-solid fa-fire"></i> #2</span>
+          </div>
+          <div class="tr-body">
+            <span class="tr-cat tr-cat--dark">Skincare Tips</span>
+            <h3 class="tr-card-title">The Science of Soap: Why Organic Bars Feel Better Than Commercial Cleansers</h3>
+            <div class="tr-footer">
+              <span class="tr-date"><i class="fa-regular fa-eye"></i> 3.1k &nbsp;<i class="fa-regular fa-heart"></i> 87</span>
+              <a href="blog.html" class="tr-read-more">Read <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tr-card tr-card--small">
+          <div class="tr-small-img-wrap">
+            <img src="images/honey.webp" alt="Honey" class="tr-img" />
+            <span class="tr-badge tr-badge--sm"><i class="fa-solid fa-fire"></i> #3</span>
+          </div>
+          <div class="tr-body">
+            <span class="tr-cat tr-cat--gold">DIY &amp; Recipes</span>
+            <h3 class="tr-card-title">DIY Soap at Home: A Creative Organic Skincare Ritual</h3>
+            <div class="tr-footer">
+              <span class="tr-date"><i class="fa-regular fa-eye"></i> 2.8k &nbsp;<i class="fa-regular fa-heart"></i> 112</span>
+              <a href="blog.html" class="tr-read-more">Read <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tr-card tr-card--small">
+          <div class="tr-small-img-wrap">
+            <img src="images/lavender.jpg" alt="Lavender" class="tr-img" />
+            <span class="tr-badge tr-badge--sm"><i class="fa-solid fa-fire"></i> #4</span>
+          </div>
+          <div class="tr-body">
+            <span class="tr-cat tr-cat--teal">Ingredients</span>
+            <h3 class="tr-card-title">Organic Ingredients That Make Soap Studio Bars Gentle and Effective</h3>
+            <div class="tr-footer">
+              <span class="tr-date"><i class="fa-regular fa-eye"></i> 2.4k &nbsp;<i class="fa-regular fa-heart"></i> 94</span>
+              <a href="blog.html" class="tr-read-more">Read <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tr-card tr-card--small">
+          <div class="tr-small-img-wrap">
+            <img src="images/tea tree.png" alt="Tea Tree" class="tr-img" />
+            <span class="tr-badge tr-badge--sm"><i class="fa-solid fa-fire"></i> #5</span>
+          </div>
+          <div class="tr-body">
+            <span class="tr-cat tr-cat--dark">Skincare Tips</span>
+            <h3 class="tr-card-title">Eco-Friendly Soap and the Everyday Ritual of Sustainable Skincare</h3>
+            <div class="tr-footer">
+              <span class="tr-date"><i class="fa-regular fa-eye"></i> 2.1k &nbsp;<i class="fa-regular fa-heart"></i> 76</span>
+              <a href="blog.html" class="tr-read-more">Read <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /tr-small-col -->
+    </div><!-- /tr-grid -->
+
+    <!-- Bottom row: 3 equal cards -->
+    <div class="tr-bottom-row">
+
+      <article class="tr-card tr-card--mid">
+        <div class="tr-mid-img-wrap">
+          <img src="images/oats.webp" alt="Oats" class="tr-img" />
+          <span class="tr-cat tr-cat--teal">Ingredients</span>
+        </div>
+        <div class="tr-body">
+          <h3 class="tr-card-title">Why Handmade Soap Feels More Luxurious Than Mass-Produced Bars</h3>
+          <p class="tr-excerpt">Handmade bars preserve rich natural ingredients for a softer, more indulgent cleansing experience.</p>
+          <div class="tr-footer">
+            <span class="tr-date"><i class="fa-regular fa-eye"></i> 1.9k</span>
+            <a href="blog.html" class="tr-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tr-card tr-card--mid">
+        <div class="tr-mid-img-wrap">
+          <img src="images/vanilla.webp" alt="Vanilla" class="tr-img" />
+          <span class="tr-cat tr-cat--purple">Wellness</span>
+        </div>
+        <div class="tr-body">
+          <h3 class="tr-card-title">Relaxation Soap Rituals with Lavender, Chamomile, and Slow Evening Care</h3>
+          <p class="tr-excerpt">Soothing scents and gentle lather turn everyday bathing into a more calming wellness ritual.</p>
+          <div class="tr-footer">
+            <span class="tr-date"><i class="fa-regular fa-eye"></i> 1.7k</span>
+            <a href="blog.html" class="tr-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tr-card tr-card--mid">
+        <div class="tr-mid-img-wrap">
+          <img src="images/citrus.webp" alt="Citrus" class="tr-img" />
+          <span class="tr-cat tr-cat--gold">DIY &amp; Recipes</span>
+        </div>
+        <div class="tr-body">
+          <h3 class="tr-card-title">Moisturizing Soaps with Honey, Milk, and Botanical Oils for Lasting Softness</h3>
+          <p class="tr-excerpt">Natural moisture-rich ingredients help cleanse while keeping skin soft, smooth, and refreshed.</p>
+          <div class="tr-footer">
+            <span class="tr-date"><i class="fa-regular fa-eye"></i> 1.5k</span>
+            <a href="blog.html" class="tr-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /tr-bottom-row -->
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- ════════════════════════════════
+     Footer
+════════════════════════════════ -->
+<footer class="site-footer">
+
+  <!-- Top accent line -->
+  <div class="footer-accent"></div>
+
+  <div class="footer-container">
+
+    <!-- ── MAIN GRID ── -->
+    <div class="footer-grid">
+
+      <!-- COL 1: Brand -->
+      <div class="footer-col footer-col--brand">
+        <a href="index.html" class="footer-logo">
+          <img src="images/white logo.png" alt="Soap Studio Logo" class="logo-img">
+        </a>
+        <p class="footer-about">
+          Small-batch, handcrafted soap bars made with 100% natural botanicals,
+          essential oils, and zero harsh chemicals. Gentle on skin, kind to the planet.
+        </p>
+        <!-- Contact -->
+        <ul class="footer-contact">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>12, Green Lane, Coimbatore, Tamil Nadu 641001</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:hello@SoapStudionaturals.com">hello@SoapStudionaturals.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- COL 2: Shop Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Shop</h4>
+        <ul class="footer-links">
+          <li><a href="shop.html"><i class="fa-solid fa-chevron-right"></i> All Products</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Best Sellers</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> New Arrivals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Offers &amp; Deals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Gift Sets</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Bundles</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 4: Social + Mini Newsletter -->
+      <div class="footer-col footer-col--social">
+        <h4 class="footer-heading">Follow Us</h4>
+        <p class="footer-social-sub">Follow us for skincare tips, behind-the-scenes, and exclusive offers.</p>
+
+        <div class="footer-socials">
+          <a href="#" class="social-btn social-btn--ig" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--fb" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--wa" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--yt" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--pin" aria-label="Pinterest">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+        </div>
+
+        <!-- Mini newsletter -->
+        <div class="footer-mini-nl">
+          <p class="footer-mini-nl-label"><i class="fa-solid fa-envelope"></i> Quick Subscribe</p>
+          <form class="footer-nl-form" id="footerNlForm" novalidate>
+            <input type="email" placeholder="Your email" class="footer-nl-input" id="footerNlEmail" />
+            <button type="submit" class="footer-nl-btn" aria-label="Subscribe">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <p class="footer-nl-msg" id="footerNlMsg"></p>
+        </div>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <!-- ── BOTTOM BAR ── -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p class="footer-copy">&copy; 2026 <strong>Soap Studio</strong>. All rights reserved. Made with <i class="fa-solid fa-heart footer-heart"></i> in India.</p>
+      </div>
+      <div class="footer-bottom-right">
+        <!-- Payment icons -->
+        <div class="footer-payments">
+          <span class="pay-icon" title="Visa"><i class="fa-brands fa-cc-visa"></i></span>
+          <span class="pay-icon" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></span>
+          <span class="pay-icon" title="PayPal"><i class="fa-brands fa-cc-paypal"></i></span>
+          <span class="pay-icon" title="Razorpay"><i class="fa-solid fa-mobile-screen-button"></i></span>
+          <span class="pay-icon" title="UPI"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="shop.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>
+
+
