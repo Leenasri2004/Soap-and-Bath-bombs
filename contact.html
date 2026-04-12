@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Contact Us - Soap & Bath Bomb Workshop Studio</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body class="page-contact">
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" class="logo">
+      <img src="images/logo-1.png" alt="Soap Studio Logo" class="logo-img">
+    </a>
+
+    <nav class="nav-left">
+      <ul>
+        <li class="dropdown">
+          <a href="#">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home -1</a></li>
+            <li><a href="home-2.html">Home -2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <a href="#" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+      <a href="cart.html" title="Cart" class="cart-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">3</span>
+      </a>
+    </div>
+
+    <!-- MOBILE: Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+    <button id="rtl-toggle" class="rtl-btn" aria-label="Toggle RTL">
+      <span id="rtl-icon">LTR</span>
+    </button>
+
+    <a href="login.html" class="mobile-login-btn">Login</a>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+       <li><a href="index.html">Home -1</a></li>
+       <li><a href="home-2.html">Home -2</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="service.html">Services</a></li>
+       <li><a href="shop.html">Shop</a></li>
+       <li><a href="blog.html">Blog</a></li>
+       <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+    <header class="contact-header">
+        <div class="header-overlay">
+            <div class="container">
+                <h1 class="header-title">Get In Touch</h1>
+                <p class="header-subtitle">We'd love to hear from you and help with all your soap-making needs</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Methods Section -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Reach Us</h2>
+                <p>Multiple ways to connect with our soap studio</p>
+            </div>
+            <div class="methods-grid">
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+91 8825826702</p>
+                    <span class="availability">Mon-Fri 9AM-6PM</span>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>info@soapstudio.in</p>
+                    <span class="availability">24/7 Response</span>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Studio</h3>
+                    <p>Thiruvanmiyur, Chennai</p>
+                    <span class="availability">By Appointment</span>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>+91 8825826702</p>
+                    <span class="availability">Quick Response</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="form-container">
+                    <h2>Send Us a Message</h2>
+                    <p class="form-description">Fill out the form below and we'll get back to you within 24 hours</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="workshop">Workshop Inquiry</option>
+                                <option value="custom-order">Custom Soap Order</option>
+                                <option value="wholesale">Wholesale Partnership</option>
+                                <option value="booking">Workshop Booking</option>
+                                <option value="general">General Question</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for soap-making tips and workshop updates</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>Studio Hours</h3>
+                        <div class="hours-list">
+                            <div class="hour-item">
+                                <span>Monday - Friday</span>
+                                <span>9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>Saturday</span>
+                                <span>10:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>Sunday</span>
+                                <span>Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h3>What to Expect</h3>
+                        <ul class="expect-list">
+                            <li><i class="fas fa-check"></i> Response within 24 hours</li>
+                            <li><i class="fas fa-check"></i> Personalized consultation</li>
+                            <li><i class="fas fa-check"></i> Expert soap-making advice</li>
+                            <li><i class="fas fa-check"></i> Custom solution recommendations</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Workshop Info</h3>
+                        <ul class="expect-list">
+                            <li><i class="fas fa-users"></i> Min 4 participants</li>
+                            <li><i class="fas fa-calendar"></i> Weekends: Sat-Sun 10AM-2PM</li>
+                            <li><i class="fas fa-gift"></i> Take home your creations</li>
+                            <li><i class="fas fa-star"></i> 4.9★ average rating</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Booking Section -->
+    <section class="workshop-booking">
+        <div class="container">
+            <div class="booking-header">
+                <h2>Book a Workshop</h2>
+                <p>Join our hands-on soap making and bath bomb workshops in Chennai</p>
+            </div>
+            <div class="workshop-cards">
+                <div class="workshop-card">
+                    <div class="workshop-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Soap Making</h3>
+                    <p class="price">₹1,500</p>
+                    <p class="duration">3 hours</p>
+                    <ul>
+                        <li>All materials included</li>
+                        <li>Take home 4 custom soaps</li>
+                        <li>Expert guidance</li>
+                        <li>Recipe notes provided</li>
+                    </ul>
+                    <a href="tel:+918825826702" class="book-btn">Book Now</a>
+                </div>
+                <div class="workshop-card">
+                    <div class="workshop-icon">
+                        <i class="fas fa-bath"></i>
+                    </div>
+                    <h3>Bath Bombs</h3>
+                    <p class="price">₹1,200</p>
+                    <p class="duration">2.5 hours</p>
+                    <ul>
+                        <li>Make 6 bath bombs</li>
+                        <li>Custom scents & colors</li>
+                        <li>Kid-friendly activity</li>
+                        <li>Perfect for parties</li>
+                    </ul>
+                    <a href="tel:+918825826702" class="book-btn">Book Now</a>
+                </div>
+                <div class="workshop-card featured">
+                    <div class="workshop-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Combo Session</h3>
+                    <p class="price">₹2,500</p>
+                    <p class="duration">5 hours</p>
+                    <ul>
+                        <li>Save ₹200 (Best Value!)</li>
+                        <li>Group 20% discount</li>
+                        <li>Lunch included</li>
+                        <li>Full day experience</li>
+                    </ul>
+                    <a href="tel:+918825826702" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our workshops and services</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do I need any prior experience for workshops?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No experience needed at all! We start from basics and guide you step by step. Our workshops are designed for beginners and we provide all materials and instructions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I place custom soap orders for events?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We create custom soaps for weddings, corporate gifts, and special events. Contact us with your requirements and we'll provide a quote. Minimum order quantities apply.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you deliver across Chennai?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we deliver our handcrafted soaps across Chennai. Free delivery on orders over ₹500. For workshop bookings, our studio is located in Thiruvanmiyur.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Are your soaps suitable for sensitive skin?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Many of our soaps are formulated for sensitive skin using natural, gentle ingredients. We avoid harsh chemicals and use cold-pressed oils. Contact us for specific recommendations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What's the minimum age for workshop participation?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kids above 7 years can join our workshops. For younger children, we suggest a parent or guardian to accompany them. Our bath bomb workshops are especially popular with families!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do I confirm my workshop slot?</h4>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Call us at +91 8825826702 or WhatsApp us. We'll check availability and send you payment details to confirm your booking. We usually respond within a few hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Map Section -->
+    <section class="location-section">
+        <div class="container">
+            <div class="location-content">
+                <div class="location-info">
+                    <h2>Visit Our Studio</h2>
+                    <div class="address-card">
+                        <div class="address-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="address-details">
+                            <h4>Soap & Bath Bomb Workshop Studio</h4>
+                            <p>Thiruvanmiyur<br>Chennai, Tamil Nadu 600041<br>India</p>
+                        </div>
+                    </div>
+                    <div class="location-features">
+                        <div class="feature">
+                            <i class="fas fa-parking"></i>
+                            <span>Free Parking Available</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-wheelchair"></i>
+                            <span>Wheelchair Accessible</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-wifi"></i>
+                            <span>Free WiFi</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-camera"></i>
+                            <span>Instagram-worthy Setup</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6404!2d80.2707!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d4f7f974f87%3A0x318b0f1e0b0b0b0b!2sThiruvanmiyur%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="350" 
+                        style="border:0; border-radius: 15px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ════════════════════════════════
+     Footer
+════════════════════════════════ -->
+<footer class="site-footer">
+
+  <!-- Top accent line -->
+  <div class="footer-accent"></div>
+
+  <div class="footer-container">
+
+    <!-- ── MAIN GRID ── -->
+    <div class="footer-grid">
+
+      <!-- COL 1: Brand -->
+      <div class="footer-col footer-col--brand">
+        <a href="index.html" class="footer-logo">
+         <img src="images/white logo.png" alt="Soap Studio Logo" class="logo-img">
+        </a>
+        <p class="footer-about">
+          Small-batch, handcrafted soap bars made with 100% natural botanicals,
+          essential oils, and zero harsh chemicals. Gentle on skin, kind to the planet.
+        </p>
+        <!-- Contact -->
+        <ul class="footer-contact">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>12, Green Lane, Coimbatore, Tamil Nadu 641001</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:hello@SoapStudionaturals.com">hello@SoapStudionaturals.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- COL 2: Shop Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Contact</h4>
+        <ul class="footer-links">
+          <li><a href="shop.html"><i class="fa-solid fa-chevron-right"></i> All Products</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Best Sellers</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> New Arrivals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Offers &amp; Deals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Gift Sets</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Bundles</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 4: Social + Mini Newsletter -->
+      <div class="footer-col footer-col--social">
+        <h4 class="footer-heading">Follow Us</h4>
+        <p class="footer-social-sub">Follow us for skincare tips, behind-the-scenes, and exclusive offers.</p>
+
+        <div class="footer-socials">
+          <a href="#" class="social-btn social-btn--ig" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--fb" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--wa" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--yt" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--pin" aria-label="Pinterest">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+        </div>
+
+        <!-- Mini newsletter -->
+        <div class="footer-mini-nl">
+          <p class="footer-mini-nl-label"><i class="fa-solid fa-envelope"></i> Quick Subscribe</p>
+          <form class="footer-nl-form" id="footerNlForm" novalidate>
+            <input type="email" placeholder="Your email" class="footer-nl-input" id="footerNlEmail" />
+            <button type="submit" class="footer-nl-btn" aria-label="Subscribe">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <p class="footer-nl-msg" id="footerNlMsg"></p>
+        </div>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <!-- ── BOTTOM BAR ── -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p class="footer-copy">&copy; 2026 <strong>Soap Studio</strong>. All rights reserved. Made with <i class="fa-solid fa-heart footer-heart"></i> in India.</p>
+      </div>
+      <div class="footer-bottom-right">
+        <!-- Payment icons -->
+        <div class="footer-payments">
+          <span class="pay-icon" title="Visa"><i class="fa-brands fa-cc-visa"></i></span>
+          <span class="pay-icon" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></span>
+          <span class="pay-icon" title="PayPal"><i class="fa-brands fa-cc-paypal"></i></span>
+          <span class="pay-icon" title="Razorpay"><i class="fa-solid fa-mobile-screen-button"></i></span>
+          <span class="pay-icon" title="UPI"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script>
+  /* ── Back to top ── */
+  const btt = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btt.classList.toggle('visible', window.scrollY > 400);
+  });
+  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* ── Footer mini newsletter ── */
+  document.getElementById('footerNlForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const val = document.getElementById('footerNlEmail').value.trim();
+    const msg = document.getElementById('footerNlMsg');
+    const rx  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!rx.test(val)) {
+      msg.textContent = 'Enter a valid email.';
+      msg.style.color = '#e07b5a';
+      return;
+    }
+    msg.textContent = '✓ Subscribed! Thank you.';
+    msg.style.color = '#3caea3';
+    this.reset();
+  });
+</script>
+
+<script src="js/theme.js"></script>
+</body>
+</html>
+
+
+
+

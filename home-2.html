@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Home - Soap & Bath Bomb Workshop Studio</title>
+    <link rel="stylesheet" href="css/home-2.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body class="page-home2">
+<header class="site-header">
+  <div class="header-container">
+
+
+     <a href="index.html" class="logo">
+      <img src="images/logo-1.png" alt="Soap Studio Logo" class="logo-img">
+    </a>
+
+
+    <!-- LEFT: Navigation -->
+    <nav class="nav-left">
+      <ul>
+         <li class="dropdown">
+            <a href="#">Home ▾</a>
+
+            <ul class="dropdown-menu">
+                <li><a href="index.html">Home -1</a></li>
+                <li><a href="home-2.html">Home -2</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- CENTER: Logo -->
+  
+
+    <!-- RIGHT: Icons -->
+    <div class="nav-right">
+      <a href="#" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+      <a href="cart.html" title="Cart" class="cart-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">3</span>
+      </a>
+    </div>
+
+    <!-- MOBILE: Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+      <button id="rtl-toggle" class="rtl-btn" aria-label="Toggle RTL">
+        <span id="rtl-icon">LTR</span>
+      </button>
+
+      <!-- BUY NOW RIGHT -->
+      <a href="login.html" class="mobile-login-btn">Login</a>
+  </div>
+
+  <!-- MOBILE: Dropdown Nav -->
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+       <li><a href="index.html">Home -1</a></li>
+       <li><a href="home-2.html">Home -2</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="service.html">Services</a></li>
+       <li><a href="shop.html">Shop</a></li>
+       <li><a href="blog.html">Blog</a></li>
+       <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  </header>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/spies.webp');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container">
+                   <center> <div class="hero-text" style="text-align: center;">
+                        <span class="tagline">Natural &amp; Organic</span>
+                        <h1 class="hero-title" style="color: #ffffff;">Handmade Soap for Healthy Skin</h1>
+                        <p class="hero-description">Discover our collection of premium handcrafted soaps made with natural ingredients for radiant, healthy skin.</p>
+                        <a href="shop.html" class="cta-button">Shop Now</a>
+                    </div></center>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+                <p>Explore our handcrafted collection</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/soap.jpg" alt="Handmade Soaps">
+                        <div class="category-overlay">
+                            <h3>Handmade Soaps</h3>
+                            <p>Natural &amp; Organic</p>
+                            <a href="shop.html" class="category-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/bath bombs.jpg" alt="Bath Bombs">
+                        <div class="category-overlay">
+                            <h3>Bath Bombs</h3>
+                            <p>Fizzy &amp; Fragrant</p>
+                            <a href="shop.html" class="category-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/oil.jpg" alt="Essential Oils">
+                        <div class="category-overlay">
+                            <h3>Essential Oils</h3>
+                            <p>Pure &amp; Therapeutic</p>
+                            <a href="shop.html" class="category-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+         
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Our bestselling handcrafted soaps and bath products</p>
+            </div>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/lavender.jpg" alt="Lavender Soap" class="primary-img">
+                        <img src="images/lavender-2.jpg" alt="Lavender Soap" class="secondary-img">
+                        <div class="product-actions">
+                            <button class="quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Lavender Soap</h3>
+                        <p class="price">₹250</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/rose.webp" alt="Rose Soap" class="primary-img">
+                        <img src="images/rose-2.jpg" alt="Rose Soap" class="secondary-img">
+                        <div class="product-actions">
+                            <button class="quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Rose Petal Luxury Soap</h3>
+                        <p class="price">₹320</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/honey.webp" alt="Honey Soap" class="primary-img">
+                        <img src="images/honey-2.webp" alt="Honey Soap" class="secondary-img">
+                        <div class="product-actions">
+                            <button class="quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Manuka Honey Soap</h3>
+                        <p class="price">₹410</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/charcoal.webp" alt="Charcoal Soap" class="primary-img">
+                        <img src="images/charcoal-2.webp" alt="Charcoal Soap" class="secondary-img">
+                        <div class="product-actions">
+                            <button class="quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Activated Charcoal Soap</h3>
+                        <p class="price">₹290</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/oats.webp" alt="Oatmeal Soap" class="primary-img">
+                        <img src="images/oats-2.webp" alt="Oatmeal Soap" class="secondary-img">
+                        <div class="product-actions">
+                            <button class="quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Oatmeal Exfoliating Soap</h3>
+                        <p class="price">₹220</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/tea tree.png" alt="Tea Tree Soap" class="primary-img">
+                        <img src="images/tea tree-2.avif" alt="Tea Tree Soap" class="secondary-img">
+                        <div class="product-actions">
+                            <button class="quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist" title="Add to Wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tea Tree Clear Skin Soap</h3>
+                        <p class="price">₹260</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+
+    </section>
+
+    <!-- About / Story Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/making.webp" alt="Soap Making Process">
+                </div>
+                <div class="about-text">
+                    <span class="discover-btn">Our Story</span>
+                    <h2>Crafting Natural Beauty Since Day One</h2>
+                    <p>At our Chennai studio, we believe in the power of natural ingredients. Every soap is handcrafted with love, using traditional methods passed down through generations. Our cold-process technique ensures that all the natural goodness is preserved.</p>
+                    <p>From sourcing the finest organic oils to the final packaging, every step is done with care for your skin and the environment. Join our workshops to learn the art of soap making and create your own natural skincare products.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Natural Ingredients</p>
+                        </div>
+                        <div class="stat">
+                            <h3>4.9★</h3>
+                            <p>Customer Rating</p>
+                        </div>
+                    </div>
+                    <a href="about.html" class="discover-btn">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Our Products</h2>
+                <p>Quality and care in every handmade bar</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>100% Organic</h3>
+                    <p>Made with certified organic ingredients, free from harmful chemicals and synthetic additives.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Handmade</h3>
+                    <p>Each soap is carefully crafted by hand using traditional cold-process methods for superior .</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Sustainable packaging and environmentally conscious production methods for a greener .</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Skin Safe</h3>
+                    <p>Gentle formulations suitable for all skin types, including sensitive and delicate skin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Banner / Offer Section -->
+    <section class="parallax-banner">
+        <div class="parallax-overlay"></div>
+        <div class="container">
+            <div class="banner-content">
+                <h2>Get 20% Off Natural Products</h2>
+                <p>Limited time offer on our premium handcrafted soap collection</p>
+                <a href="shop.html" class="offer-btn">Shop Now &amp; Save</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from our happy customers</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-image">
+                        <img src="images/customer-3.jpg" alt="Customer">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The lavender soap is absolutely amazing! My skin feels so soft and the fragrance is divine. I've been using it for months and couldn't be happier."</p>
+                        <h4>Priya Sharma</h4>
+                        <span>Chennai</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/new-2.avif" alt="Customer">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Attended the workshop last month and it was incredible! Learned so much about natural soap making. The instructors are very knowledgeable and patient."</p>
+                        <h4>Rajesh Kumar</h4>
+                        <span>Chennai</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="images/profile-2.avif" alt="Customer">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The honey soap is perfect for my sensitive skin. No irritation at all and it leaves my skin feeling moisturized. Highly recommend!"</p>
+                        <h4>Meera Patel</h4>
+                        <span>Chennai</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active" onclick="currentTestimonial(1)"></span>
+                <span class="dot" onclick="currentTestimonial(2)"></span>
+                <span class="dot" onclick="currentTestimonial(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest from Our Blog</h2>
+                <p>Tips, tutorials, and insights about natural skincare</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-1.webp" alt="Blog Post">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">December 15, 2024</span>
+                        <h3>5 Benefits of Using Natural</h3>
+                        <p>Discover why switching to natural soap can transform your skincare routine and improve your skin...</p>
+                        <a href="blog.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-2.webp" alt="Blog Post">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">December 10, 2024</span>
+                        <h3>DIY Soap Making at Home</h3>
+                        <p>Learn the basics of soap making with our step-by-step guide to creating your first handmade soap...</p>
+                        <a href="blog.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-3.webp" alt="Blog Post">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">December 5, 2024</span>
+                        <h3>Essential Oils for Skincare</h3>
+                        <p>Explore the therapeutic benefits of essential oils and how they can enhance your natural beauty...</p>
+                        <a href="blog.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+
+   <!-- ════════════════════════════════
+     Footer
+════════════════════════════════ -->
+<footer class="site-footer">
+
+  <!-- Top accent line -->
+  <div class="footer-accent"></div>
+
+  <div class="footer-container">
+
+    <!-- ── MAIN GRID ── -->
+    <div class="footer-grid">
+
+      <!-- COL 1: Brand -->
+      <div class="footer-col footer-col--brand">
+        <a href="index.html" class="footer-logo">
+          <img src="images/white logo.png" alt="Soap Studio Logo" class="logo-img">
+        </a>
+        <p class="footer-about">
+          Small-batch, handcrafted soap bars made with 100% natural botanicals,
+          essential oils, and zero harsh chemicals. Gentle on skin, kind to the planet.
+        </p>
+        <!-- Contact -->
+        <ul class="footer-contact">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>12, Green Lane, Coimbatore, Tamil Nadu 641001</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:hello@SoapStudionaturals.com">hello@SoapStudionaturals.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- COL 2: Shop Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Home 2</h4>
+        <ul class="footer-links">
+          <li><a href="shop.html"><i class="fa-solid fa-chevron-right"></i> All Products</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Best Sellers</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> New Arrivals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Offers &amp; Deals</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Gift Sets</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Bundles</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 4: Social + Mini Newsletter -->
+      <div class="footer-col footer-col--social">
+        <h4 class="footer-heading">Follow Us</h4>
+        <p class="footer-social-sub">Follow us for skincare tips, behind-the-scenes, and exclusive offers.</p>
+
+        <div class="footer-socials">
+          <a href="#" class="social-btn social-btn--ig" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--fb" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--wa" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--yt" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="social-btn social-btn--pin" aria-label="Pinterest">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+        </div>
+
+        <!-- Mini newsletter -->
+        <div class="footer-mini-nl">
+          <p class="footer-mini-nl-label"><i class="fa-solid fa-envelope"></i> Quick Subscribe</p>
+          <form class="footer-nl-form" id="footerNlForm" novalidate>
+            <input type="email" placeholder="Your email" class="footer-nl-input" id="footerNlEmail" />
+            <button type="submit" class="footer-nl-btn" aria-label="Subscribe">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <p class="footer-nl-msg" id="footerNlMsg"></p>
+        </div>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <!-- ── BOTTOM BAR ── -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p class="footer-copy">&copy; 2026 <strong>Soap Studio</strong>. All rights reserved. Made with <i class="fa-solid fa-heart footer-heart"></i> in India.</p>
+      </div>
+      <div class="footer-bottom-right">
+        <!-- Payment icons -->
+        <div class="footer-payments">
+          <span class="pay-icon" title="Visa"><i class="fa-brands fa-cc-visa"></i></span>
+          <span class="pay-icon" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></span>
+          <span class="pay-icon" title="PayPal"><i class="fa-brands fa-cc-paypal"></i></span>
+          <span class="pay-icon" title="Razorpay"><i class="fa-solid fa-mobile-screen-button"></i></span>
+          <span class="pay-icon" title="UPI"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLeft = document.querySelector('.nav-left');
+        
+        hamburger.addEventListener('click', () => {
+            navLeft.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Hero animation
+        window.addEventListener('load', () => {
+            document.querySelector('.hero-text').classList.add('animate');
+        });
+
+        // Testimonials slider
+        let currentTestimonialIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.testimonial-dots .dot');
+
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonials[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        function currentTestimonial(index) {
+            currentTestimonialIndex = index - 1;
+            showTestimonial(currentTestimonialIndex);
+        }
+
+        // Auto-slide testimonials
+        setInterval(() => {
+            currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+            showTestimonial(currentTestimonialIndex);
+        }, 5000);
+
+        // Newsletter form
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing!');
+            this.reset();
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.parallax-banner');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+    </script>
+<script src="js/theme.js"></script>
+</body>
+</html>
+

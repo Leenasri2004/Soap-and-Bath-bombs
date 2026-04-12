@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Soap Studio – Blog</title>
+  <link rel="stylesheet" href="css/blog.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/dark.css">
+</head>
+<body class="page-blog">
+
+<!-- ════════════════════════════════
+     Header
+════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" class="logo">
+      <img src="images/logo-1.png" alt="Soap Studio Logo" class="logo-img">
+    </a>
+
+    <nav class="nav-left">
+      <ul>
+        <li class="dropdown">
+          <a href="#">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home -1</a></li>
+            <li><a href="home-2.html">Home -2</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <a href="#" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+      <a href="cart.html" title="Cart" class="cart-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">3</span>
+      </a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">D</button>
+    <button id="rtl-toggle" class="rtl-btn" aria-label="Toggle RTL">
+      <span id="rtl-icon">LTR</span>
+    </button>
+
+    <a href="login.html" class="mobile-login-btn">Login</a>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+       <li><a href="index.html">Home -1</a></li>
+       <li><a href="home-2.html">Home -2</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="service.html">Services</a></li>
+       <li><a href="shop.html">Shop</a></li>
+       <li><a href="blog.html">Blog</a></li>
+       <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+
+
+<!-- ════════════════════════════════
+     Blog Grid Section
+════════════════════════════════ -->
+<section class="bg-section">
+  <div class="bg-container">
+
+    <!-- Section header -->
+    <div class="bg-header">
+      <div class="bg-header-left"></div>
+    </div>
+
+    <!-- ── Two-column layout: grid + sidebar ── -->
+    <div class="bg-layout">
+
+      <!-- LEFT: Grid + Pagination -->
+      <div class="bg-main-col">
+
+    <!-- Grid -->
+    <div class="bg-grid" id="bgGrid">
+
+      <!-- Card 2 -->
+      <article class="bg-card" data-cat="skincare">
+        <div class="bg-card-img-wrap">
+          <img src="images/charcoal.webp" alt="Science of organic soap" class="bg-card-img" />
+          <div class="bg-card-overlay"></div>
+          <span class="bg-card-tag bg-card-tag--dark">Soap Science</span>
+          <div class="bg-date-badge">
+            <span class="bg-date-day">14</span>
+            <span class="bg-date-mon">May</span>
+          </div>
+          <div class="bg-card-hover-cta">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="bg-card-body">
+          <div class="bg-card-meta">
+            <img src="images/priya.jpg" alt="Priya Sharma" class="bg-avatar" />
+            <span class="bg-author">Priya Sharma</span>
+            <span class="bg-dot"></span>
+            <span><i class="fa-regular fa-clock"></i> 5 min</span>
+            <span><i class="fa-regular fa-heart"></i> 76</span>
+          </div>
+          <h3 class="bg-card-title">The Science of Soap: Why Organic Bars Feel Better Than Commercial Cleansers</h3>
+          <p class="bg-card-excerpt">Understanding how organic soaps differ from commercial ones helps you make better skincare choices. Natural bars retain glycerin and beneficial oils for deep hydration and a balanced cleanse.</p>
+          <div class="bg-card-footer">
+            <a href="#" class="bg-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="bg-save-btn" aria-label="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="bg-card" data-cat="diy">
+        <div class="bg-card-img-wrap">
+          <img src="images/honey.webp" alt="DIY soap making" class="bg-card-img" />
+          <div class="bg-card-overlay"></div>
+          <span class="bg-card-tag bg-card-tag--gold">DIY &amp; Recipes</span>
+          <div class="bg-date-badge">
+            <span class="bg-date-day">30</span>
+            <span class="bg-date-mon">Apr</span>
+          </div>
+          <div class="bg-card-hover-cta">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="bg-card-body">
+          <div class="bg-card-meta">
+            <img src="images/priya.jpg" alt="Meera Nair" class="bg-avatar" />
+            <span class="bg-author">Meera Nair</span>
+            <span class="bg-dot"></span>
+            <span><i class="fa-regular fa-clock"></i> 3 min</span>
+            <span><i class="fa-regular fa-heart"></i> 112</span>
+          </div>
+          <h3 class="bg-card-title">DIY Soap at Home: A Creative Way to Build Your Own Organic Skincare Ritual</h3>
+          <p class="bg-card-excerpt">Creating your own organic soaps at home is rewarding and personal. With simple ingredients and a little guidance, you can craft bars tailored to your skin while embracing sustainable self-care.</p>
+          <div class="bg-card-footer">
+            <a href="#" class="bg-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="bg-save-btn" aria-label="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="bg-card" data-cat="ingredients">
+        <div class="bg-card-img-wrap">
+          <img src="images/oats.webp" alt="Handmade soap benefits" class="bg-card-img" />
+          <div class="bg-card-overlay"></div>
+          <span class="bg-card-tag bg-card-tag--teal">Handmade Care</span>
+          <div class="bg-date-badge">
+            <span class="bg-date-day">10</span>
+            <span class="bg-date-mon">Apr</span>
+          </div>
+          <div class="bg-card-hover-cta">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="bg-card-body">
+          <div class="bg-card-meta">
+            <img src="images/priya.jpg" alt="Ananya Iyer" class="bg-avatar" />
+            <span class="bg-author">Ananya Iyer</span>
+            <span class="bg-dot"></span>
+            <span><i class="fa-regular fa-clock"></i> 4 min</span>
+            <span><i class="fa-regular fa-heart"></i> 58</span>
+          </div>
+          <h3 class="bg-card-title">Why Handmade Soap Feels More Luxurious Than Mass-Produced Bars</h3>
+          <p class="bg-card-excerpt">Handmade soaps are crafted with care, preserving the richness of natural ingredients in every batch. The result is a gentle cleansing experience that feels both effective and indulgent.</p>
+          <div class="bg-card-footer">
+            <a href="#" class="bg-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="bg-save-btn" aria-label="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="bg-card" data-cat="brand">
+        <div class="bg-card-img-wrap">
+          <img src="images/rose.webp" alt="Commercial vs organic soap" class="bg-card-img" />
+          <div class="bg-card-overlay"></div>
+          <span class="bg-card-tag bg-card-tag--purple">Brand Stories</span>
+          <div class="bg-date-badge">
+            <span class="bg-date-day">22</span>
+            <span class="bg-date-mon">Mar</span>
+          </div>
+          <div class="bg-card-hover-cta">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="bg-card-body">
+          <div class="bg-card-meta">
+            <img src="images/priya.jpg" alt="Priya Sharma" class="bg-avatar" />
+            <span class="bg-author">Priya Sharma</span>
+            <span class="bg-dot"></span>
+            <span><i class="fa-regular fa-clock"></i> 7 min</span>
+            <span><i class="fa-regular fa-heart"></i> 143</span>
+          </div>
+          <h3 class="bg-card-title">Commercial vs Organic Soap: What Changes When You Switch to Soap Studio</h3>
+          <p class="bg-card-excerpt">Moving away from synthetic fragrances and harsh detergents can transform your routine. Organic soap helps maintain skin health while delivering a naturally clean, refreshing experience.</p>
+          <div class="bg-card-footer">
+            <a href="#" class="bg-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="bg-save-btn" aria-label="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="bg-card" data-cat="skincare">
+        <div class="bg-card-img-wrap">
+          <img src="images/tea tree.png" alt="Eco-friendly soap living" class="bg-card-img" />
+          <div class="bg-card-overlay"></div>
+          <span class="bg-card-tag bg-card-tag--dark">Eco Living</span>
+          <div class="bg-date-badge">
+            <span class="bg-date-day">05</span>
+            <span class="bg-date-mon">Mar</span>
+          </div>
+          <div class="bg-card-hover-cta">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="bg-card-body">
+          <div class="bg-card-meta">
+            <img src="images/priya.jpg" alt="Meera Nair" class="bg-avatar" />
+            <span class="bg-author">Meera Nair</span>
+            <span class="bg-dot"></span>
+            <span><i class="fa-regular fa-clock"></i> 5 min</span>
+            <span><i class="fa-regular fa-heart"></i> 87</span>
+          </div>
+          <h3 class="bg-card-title">Eco-Friendly Soap and the Everyday Ritual of Sustainable Skincare</h3>
+          <p class="bg-card-excerpt">Sustainable skincare is more than a trend. Biodegradable ingredients, low-waste routines, and thoughtful formulas make organic soap a kinder choice for your skin and the environment.</p>
+          <div class="bg-card-footer">
+            <a href="#" class="bg-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="bg-save-btn" aria-label="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 7 - NEW -->
+      <article class="bg-card" data-cat="wellness">
+        <div class="bg-card-img-wrap">
+          <img src="images/vanilla.webp" alt="Relaxation soap ritual" class="bg-card-img" />
+          <div class="bg-card-overlay"></div>
+          <span class="bg-card-tag bg-card-tag--purple">Wellness</span>
+          <div class="bg-date-badge">
+            <span class="bg-date-day">18</span>
+            <span class="bg-date-mon">Feb</span>
+          </div>
+          <div class="bg-card-hover-cta">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="bg-card-body">
+          <div class="bg-card-meta">
+            <img src="images/priya.jpg" alt="Ananya Iyer" class="bg-avatar" />
+            <span class="bg-author">Ananya Iyer</span>
+            <span class="bg-dot"></span>
+            <span><i class="fa-regular fa-clock"></i> 6 min</span>
+            <span><i class="fa-regular fa-heart"></i> 92</span>
+          </div>
+          <h3 class="bg-card-title">Relaxation Soap Rituals with Lavender, Chamomile, and Slow Evening Care</h3>
+          <p class="bg-card-excerpt">Indulge in a calming bathing ritual with soaps infused with soothing scents. These gentle formulations help relax the mind and body, turning simple routines into quiet moments of wellness.</p>
+          <div class="bg-card-footer">
+            <a href="#" class="bg-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="bg-save-btn" aria-label="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 8 - NEW -->
+      <article class="bg-card" data-cat="diy">
+        <div class="bg-card-img-wrap">
+          <img src="images/citrus.webp" alt="Moisturizing soap care" class="bg-card-img" />
+          <div class="bg-card-overlay"></div>
+          <span class="bg-card-tag bg-card-tag--gold">Moisture Care</span>
+          <div class="bg-date-badge">
+            <span class="bg-date-day">12</span>
+            <span class="bg-date-mon">Feb</span>
+          </div>
+          <div class="bg-card-hover-cta">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="bg-card-body">
+          <div class="bg-card-meta">
+            <img src="images/priya.jpg" alt="Meera Nair" class="bg-avatar" />
+            <span class="bg-author">Meera Nair</span>
+            <span class="bg-dot"></span>
+            <span><i class="fa-regular fa-clock"></i> 4 min</span>
+            <span><i class="fa-regular fa-heart"></i> 68</span>
+          </div>
+          <h3 class="bg-card-title">Moisturizing Soaps with Honey, Milk, and Botanical Oils for Lasting Softness</h3>
+          <p class="bg-card-excerpt">Hydration is key to healthy skin, and natural soaps enriched with honey, milk, and oils deeply moisturize while cleansing. Skin feels soft, smooth, and refreshed after every wash.</p>
+          <div class="bg-card-footer">
+            <a href="#" class="bg-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="bg-save-btn" aria-label="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 9 - NEW -->
+      <article class="bg-card" data-cat="ingredients">
+        <div class="bg-card-img-wrap">
+          <img src="images/handmade.webp" alt="Herbal soap ingredients" class="bg-card-img" />
+          <div class="bg-card-overlay"></div>
+          <span class="bg-card-tag bg-card-tag--teal">Herbal Care</span>
+          <div class="bg-date-badge">
+            <span class="bg-date-day">28</span>
+            <span class="bg-date-mon">Jan</span>
+          </div>
+          <div class="bg-card-hover-cta">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="bg-card-body">
+          <div class="bg-card-meta">
+            <img src="images/priya.jpg" alt="Priya Sharma" class="bg-avatar" />
+            <span class="bg-author">Priya Sharma</span>
+            <span class="bg-dot"></span>
+            <span><i class="fa-regular fa-clock"></i> 5 min</span>
+            <span><i class="fa-regular fa-heart"></i> 104</span>
+          </div>
+          <h3 class="bg-card-title">Herbal Soap Traditions: Neem, Tulsi, Aloe Vera, and Skin-Loving Botanicals</h3>
+          <p class="bg-card-excerpt">Herbal soaps combine traditional knowledge with modern skincare needs. Ingredients like neem, tulsi, and aloe vera naturally cleanse, protect, and rejuvenate the skin.</p>
+          <div class="bg-card-footer">
+            <a href="#" class="bg-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="bg-save-btn" aria-label="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 10 - NEW -->
+      <article class="bg-card" data-cat="wellness">
+        <div class="bg-card-img-wrap">
+          <img src="images/green.webp" alt="Floral soap story" class="bg-card-img" />
+          <div class="bg-card-overlay"></div>
+          <span class="bg-card-tag bg-card-tag--green">Floral Care</span>
+          <div class="bg-date-badge">
+            <span class="bg-date-day">15</span>
+            <span class="bg-date-mon">Jan</span>
+          </div>
+          <div class="bg-card-hover-cta">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="bg-card-body">
+          <div class="bg-card-meta">
+            <img src="images/priya.jpg" alt="Ananya Iyer" class="bg-avatar" />
+            <span class="bg-author">Ananya Iyer</span>
+            <span class="bg-dot"></span>
+            <span><i class="fa-regular fa-clock"></i> 3 min</span>
+            <span><i class="fa-regular fa-heart"></i> 79</span>
+          </div>
+          <h3 class="bg-card-title">Floral Soaps That Bring Soft Fragrance and Everyday Luxury to Your Routine</h3>
+          <p class="bg-card-excerpt">Floral-infused soaps add a graceful touch to skincare. With delicate fragrances and skin-loving botanicals, they turn daily cleansing into a more elegant and uplifting ritual.</p>
+          <div class="bg-card-footer">
+            <a href="#" class="bg-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="bg-save-btn" aria-label="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 11 - NEW -->
+      <article class="bg-card" data-cat="wellness">
+        <div class="bg-card-img-wrap">
+          <img src="images/lavender-2.jpg" alt="Lavender bedtime soap ritual" class="bg-card-img" />
+          <div class="bg-card-overlay"></div>
+          <span class="bg-card-tag bg-card-tag--purple">Lavender Care</span>
+          <div class="bg-date-badge">
+            <span class="bg-date-day">08</span>
+            <span class="bg-date-mon">Jan</span>
+          </div>
+          <div class="bg-card-hover-cta">Read Article <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="bg-card-body">
+          <div class="bg-card-meta">
+            <img src="images/priya.jpg" alt="Meera Nair" class="bg-avatar" />
+            <span class="bg-author">Meera Nair</span>
+            <span class="bg-dot"></span>
+            <span><i class="fa-regular fa-clock"></i> 4 min</span>
+            <span><i class="fa-regular fa-heart"></i> 84</span>
+          </div>
+          <h3 class="bg-card-title">Lavender Soap Rituals for Better Sleep, Softer Skin, and Slower Evenings</h3>
+          <p class="bg-card-excerpt">A lavender-infused cleansing ritual brings together gentle botanical care and a calming bedtime mood. It is the kind of everyday luxury that helps skin feel comforted and the mind feel quieter.</p>
+          <div class="bg-card-footer">
+            <a href="#" class="bg-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="bg-save-btn" aria-label="Save"><i class="fa-regular fa-bookmark"></i></button>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /bg-grid -->
+
+    <!-- ════ Blog Pagination + Load More ════ -->
+    <div class="blm-wrap">
+
+      <!-- Progress track -->
+      <div class="blm-progress-track">
+        <div class="blm-progress-bar" id="blmBar"></div>
+      </div>
+      <p class="blm-progress-label" id="blmLabel">Showing 6 of 11 articles</p>
+
+      <!-- Load More button -->
+      <button class="blm-load-btn" id="blmLoadBtn">
+        <span class="blm-btn-text">Load More Posts</span>
+        <span class="blm-spinner" aria-hidden="true"></span>
+        <i class="fa-solid fa-arrow-down blm-btn-icon"></i>
+      </button>
+
+      <!-- OR divider -->
+      <div class="blm-divider">
+        <span></span><em>or jump to page</em><span></span>
+      </div>
+
+      <!-- Pagination -->
+      <nav class="blm-pagination" aria-label="Blog pages">
+        <button class="blm-pg-btn blm-prev" id="blmPrev" aria-label="Previous page" disabled>
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="blm-pg-nums" id="blmNums"></div>
+        <button class="blm-pg-btn blm-next" id="blmNext" aria-label="Next page">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </nav>
+
+    </div><!-- /blm-wrap -->
+
+      </div><!-- /bg-main-col -->
+
+      <!-- RIGHT: Sidebar -->
+      <aside class="bs-sidebar">
+
+        <!-- 1. Search -->
+        <div class="bs-widget">
+          <h3 class="bs-widget-title"><i class="fa-solid fa-magnifying-glass"></i> Search</h3>
+          <form class="bs-search-form" id="bsSideSearch" role="search">
+            <div class="bs-search-wrap">
+              <i class="fa-solid fa-magnifying-glass bs-search-icon"></i>
+              <input type="search" id="bsSideInput" class="bs-search-input" placeholder="Search blog articles…" autocomplete="off" />
+              <button type="submit" class="bs-search-btn" aria-label="Search"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </form>
+        </div>
+
+        <!-- 2. Categories -->
+        <div class="bs-widget">
+          <h3 class="bs-widget-title"><i class="fa-solid fa-folder-open"></i> Categories</h3>
+          <ul class="bs-cat-list">
+            <li><a href="#" class="bs-cat-link active" data-cat="all"><span><i class="fa-solid fa-border-all"></i> All Topics</span><em>11</em></a></li>
+            <li><a href="#" class="bs-cat-link" data-cat="skincare"><span><i class="fa-solid fa-spa"></i> Skincare Tips</span><em>2</em></a></li>
+            <li><a href="#" class="bs-cat-link" data-cat="diy"><span><i class="fa-solid fa-flask"></i> DIY Soap</span><em>2</em></a></li>
+            <li><a href="#" class="bs-cat-link" data-cat="ingredients"><span><i class="fa-solid fa-leaf"></i> Ingredients</span><em>3</em></a></li>
+            <li><a href="#" class="bs-cat-link" data-cat="wellness"><span><i class="fa-solid fa-heart-pulse"></i> Wellness</span><em>3</em></a></li>
+            <li><a href="#" class="bs-cat-link" data-cat="brand"><span><i class="fa-solid fa-star"></i> Brand Stories</span><em>1</em></a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Recent Posts -->
+        <div class="bs-widget">
+          <h3 class="bs-widget-title"><i class="fa-solid fa-clock-rotate-left"></i> Recent Posts</h3>
+          <ul class="bs-recent-list">
+            <li class="bs-recent-item">
+              <a href="#" class="bs-recent-thumb-link"><img src="images/lavender.jpg" alt="Lavender" class="bs-recent-thumb" /></a>
+              <div class="bs-recent-info">
+                <a href="#" class="bs-recent-title">Organic Ingredients That Make Soap Studio Bars Gentle and Nourishing</a>
+                <span class="bs-recent-date"><i class="fa-regular fa-calendar"></i> May 28, 2025</span>
+              </div>
+            </li>
+            <li class="bs-recent-item">
+              <a href="#" class="bs-recent-thumb-link"><img src="images/charcoal.webp" alt="Charcoal" class="bs-recent-thumb" /></a>
+              <div class="bs-recent-info">
+                <a href="#" class="bs-recent-title">The Science of Soap: Why Organic Bars Feel Better</a>
+                <span class="bs-recent-date"><i class="fa-regular fa-calendar"></i> May 14, 2025</span>
+              </div>
+            </li>
+            <li class="bs-recent-item">
+              <a href="#" class="bs-recent-thumb-link"><img src="images/honey.webp" alt="Honey" class="bs-recent-thumb" /></a>
+              <div class="bs-recent-info">
+                <a href="#" class="bs-recent-title">DIY Soap at Home for a More Personal Skincare Ritual</a>
+                <span class="bs-recent-date"><i class="fa-regular fa-calendar"></i> Apr 30, 2025</span>
+              </div>
+            </li>
+            <li class="bs-recent-item">
+              <a href="#" class="bs-recent-thumb-link"><img src="images/oats.webp" alt="Oats" class="bs-recent-thumb" /></a>
+              <div class="bs-recent-info">
+                <a href="#" class="bs-recent-title">Why Handmade Soap Feels More Luxurious Than Mass Bars</a>
+                <span class="bs-recent-date"><i class="fa-regular fa-calendar"></i> Apr 10, 2025</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 4. Popular Posts -->
+        <div class="bs-widget">
+          <h3 class="bs-widget-title"><i class="fa-solid fa-fire-flame-curved"></i> Popular Posts</h3>
+          <ul class="bs-popular-list">
+            <li class="bs-popular-item">
+              <span class="bs-popular-num">01</span>
+              <div class="bs-popular-info">
+                <a href="#" class="bs-popular-title">Commercial vs Organic Soap: Why the Switch Matters</a>
+                <span class="bs-popular-meta"><i class="fa-regular fa-heart"></i> 143 &nbsp;<i class="fa-regular fa-comment"></i> 41</span>
+              </div>
+            </li>
+            <li class="bs-popular-item">
+              <span class="bs-popular-num">02</span>
+              <div class="bs-popular-info">
+                <a href="#" class="bs-popular-title">Eco-Friendly Soap and the Ritual of Sustainable Skincare</a>
+                <span class="bs-popular-meta"><i class="fa-regular fa-heart"></i> 87 &nbsp;<i class="fa-regular fa-comment"></i> 29</span>
+              </div>
+            </li>
+            <li class="bs-popular-item">
+              <span class="bs-popular-num">03</span>
+              <div class="bs-popular-info">
+                <a href="#" class="bs-popular-title">Relaxation Soaps with Lavender and Chamomile</a>
+                <span class="bs-popular-meta"><i class="fa-regular fa-heart"></i> 112 &nbsp;<i class="fa-regular fa-comment"></i> 22</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 5. Tags -->
+        <div class="bs-widget">
+          <h3 class="bs-widget-title"><i class="fa-solid fa-tags"></i> Tags</h3>
+          <div class="bs-tags">
+            <a href="#" class="bs-tag">organic</a>
+            <a href="#" class="bs-tag">handmade</a>
+            <a href="#" class="bs-tag">soap</a>
+            <a href="#" class="bs-tag">skincare</a>
+            <a href="#" class="bs-tag">natural</a>
+            <a href="#" class="bs-tag">lavender</a>
+            <a href="#" class="bs-tag">charcoal</a>
+            <a href="#" class="bs-tag">DIY</a>
+            <a href="#" class="bs-tag">wellness</a>
+            <a href="#" class="bs-tag">essential oils</a>
+            <a href="#" class="bs-tag">vegan</a>
+            <a href="#" class="bs-tag">cruelty-free</a>
+          </div>
+        </div>
+
+        <!-- 6. Mini Newsletter -->
+        <div class="bs-widget bs-widget--nl">
+          <div class="bs-nl-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+          <h3 class="bs-nl-heading">Get Weekly Tips</h3>
+          <p class="bs-nl-sub">Natural skincare insights delivered to your inbox.</p>
+          <form class="bs-nl-form" id="bsSideNlForm" novalidate>
+            <input type="email" id="bsSideNlEmail" class="bs-nl-input" placeholder="Your email address" autocomplete="email" required />
+            <button type="submit" class="bs-nl-btn">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+          <p class="bs-nl-msg" id="bsSideNlMsg"></p>
+        </div>
+
+        <!-- 7. Social Follow -->
+        <div class="bs-widget">
+          <h3 class="bs-widget-title"><i class="fa-solid fa-share-nodes"></i> Follow Us</h3>
+          <div class="bs-socials">
+            <a href="#" class="bs-social bs-social--ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+            <a href="#" class="bs-social bs-social--fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i><span>Facebook</span></a>
+            <a href="#" class="bs-social bs-social--pin" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i><span>Pinterest</span></a>
+            <a href="#" class="bs-social bs-social--yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a>
+          </div>
+        </div>
+
+      </aside><!-- /bs-sidebar -->
+
+    </div><!-- /bg-layout -->
+
+  </div>
+</section>
+
+
+
+
+
+<script>
+  /* ── Blog Newsletter ── */
+  const bnlForm    = document.getElementById('bnlForm');
+  const bnlEmailEl = document.getElementById('bnlEmail');
+  const bnlErrorEl = document.getElementById('bnlError');
+  const bnlSuccess = document.getElementById('bnlSuccess');
+  const emailRx    = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (bnlForm && bnlEmailEl && bnlErrorEl && bnlSuccess) {
+    bnlForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const val = bnlEmailEl.value.trim();
+
+      if (!val) {
+        bnlErrorEl.textContent = 'Please enter your email address.';
+        bnlEmailEl.classList.add('bnl-input--error');
+        return;
+      }
+      if (!emailRx.test(val)) {
+        bnlErrorEl.textContent = 'Please enter a valid email address.';
+        bnlEmailEl.classList.add('bnl-input--error');
+        return;
+      }
+
+      bnlErrorEl.textContent = '';
+      bnlEmailEl.classList.remove('bnl-input--error');
+
+      const btn = this.querySelector('.bnl-btn');
+      btn.disabled = true;
+      btn.classList.add('bnl-btn--loading');
+      btn.querySelector('.bnl-btn-text').textContent = 'Subscribing…';
+
+      setTimeout(() => {
+        bnlForm.style.display = 'none';
+        const perks = document.querySelector('.bnl-perks');
+        if (perks) perks.style.display = 'none';
+        bnlSuccess.classList.add('visible');
+      }, 1000);
+    });
+
+    bnlEmailEl.addEventListener('input', function() {
+      this.classList.remove('bnl-input--error');
+      bnlErrorEl.textContent = '';
+    });
+  }
+</script>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script>
+  /* ── Hamburger ── */
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+  }
+
+  /* ── Search bar ── */
+  const searchBar   = document.getElementById('searchBar');
+  const searchInput = document.getElementById('searchInput');
+  const searchToggle = document.getElementById('searchToggle');
+  const searchClose = document.getElementById('searchClose');
+  
+  if (searchToggle && searchBar && searchInput) {
+    searchToggle.addEventListener('click', () => {
+      searchBar.classList.toggle('open');
+      if (searchBar.classList.contains('open')) searchInput.focus();
+    });
+  }
+  
+  if (searchClose && searchBar) {
+    searchClose.addEventListener('click', () => {
+      searchBar.classList.remove('open');
+    });
+  }
+  
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && searchBar) searchBar.classList.remove('open');
+  });
+
+  /* ── Sticky header shadow ── */
+  const siteHeader = document.getElementById('siteHeader') || document.querySelector('.site-header');
+  if (siteHeader) {
+    window.addEventListener('scroll', () => {
+      siteHeader.classList.toggle('scrolled', window.scrollY > 10);
+    });
+  }
+
+  /* ── Blog category filter ── */
+  document.querySelectorAll('.blog-cat').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.blog-cat').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  /* ── Featured Post Slider ── */
+  const slides   = document.querySelectorAll('.fp-slide');
+  const dotsWrap = document.getElementById('fpDots');
+  const prevBtn  = document.getElementById('fpPrev');
+  const nextBtn  = document.getElementById('fpNext');
+  let   current  = 0;
+  let   autoTimer;
+
+  if (slides.length > 0 && dotsWrap) {
+    /* Build dots */
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'fp-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    });
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dotsWrap.children[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dotsWrap.children[current].classList.add('active');
+      if (prevBtn) prevBtn.disabled = false;
+      if (nextBtn) nextBtn.disabled = false;
+    }
+
+    function startAuto() {
+      autoTimer = setInterval(() => goTo(current + 1), 5500);
+    }
+
+    function stopAuto() { clearInterval(autoTimer); }
+
+    /* Init first slide */
+    slides[0].classList.add('active');
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
+
+    /* Keyboard navigation */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft')  { stopAuto(); goTo(current - 1); startAuto(); }
+      if (e.key === 'ArrowRight') { stopAuto(); goTo(current + 1); startAuto(); }
+    });
+
+    /* Touch swipe */
+    let touchX = 0;
+    const fpTrack = document.getElementById('fpTrack');
+    if (fpTrack) {
+      fpTrack.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      fpTrack.addEventListener('touchend', e => {
+        const diff = touchX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) { stopAuto(); goTo(current + (diff > 0 ? 1 : -1)); startAuto(); }
+      });
+    }
+
+    startAuto();
+  }
+
+  /* ── Blog Filter Bar ── */
+  function applyBfbFilter(cat) {
+    /* sync both desktop tabs and mobile cats */
+    document.querySelectorAll('.bfb-tab').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
+    document.querySelectorAll('.bfb-mob-cat').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
+    /* also sync old bg-tab if any remain */
+    document.querySelectorAll('.bg-tab').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
+
+    /* update label + count */
+    const activeBtn = document.querySelector('.bfb-tab.active');
+    const bfbActiveLabel = document.getElementById('bfbActiveLabel');
+    const bfbCount = document.getElementById('bfbCount');
+    
+    if (bfbActiveLabel) {
+      bfbActiveLabel.textContent = activeBtn ? activeBtn.dataset.label : 'All Topics';
+    }
+    
+    const count = activeBtn ? activeBtn.dataset.count : '10';
+    if (bfbCount) {
+      bfbCount.textContent = count + ' Article' + (count !== '1' ? 's' : '');
+    }
+
+    /* filter cards */
+    document.querySelectorAll('.bg-card').forEach(card => {
+      const show = cat === 'all' || card.dataset.cat === cat;
+      card.style.display = show ? '' : 'none';
+      if (show) card.classList.add('bg-card--visible');
+    });
+
+    /* show/hide mobile dot */
+    const bfbMobileDot = document.getElementById('bfbMobileDot');
+    if (bfbMobileDot) {
+      bfbMobileDot.style.display = cat !== 'all' ? 'block' : 'none';
+    }
+  }
+
+  /* Desktop tabs */
+  document.querySelectorAll('.bfb-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyBfbFilter(btn.dataset.cat);
+      const bfbMobilePanel = document.getElementById('bfbMobilePanel');
+      if (bfbMobilePanel) bfbMobilePanel.classList.remove('open');
+    });
+  });
+
+  /* Mobile cats */
+  document.querySelectorAll('.bfb-mob-cat').forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyBfbFilter(btn.dataset.cat);
+      const bfbMobilePanel = document.getElementById('bfbMobilePanel');
+      if (bfbMobilePanel) bfbMobilePanel.classList.remove('open');
+    });
+  });
+
+  /* Mobile toggle */
+  const bfbMobileToggle = document.getElementById('bfbMobileToggle');
+  if (bfbMobileToggle) {
+    bfbMobileToggle.addEventListener('click', () => {
+      const bfbMobilePanel = document.getElementById('bfbMobilePanel');
+      if (bfbMobilePanel) bfbMobilePanel.classList.toggle('open');
+    });
+  }
+
+  /* Search */
+  const bfbInput = document.getElementById('bfbSearchInput');
+  const bfbClear = document.getElementById('bfbSearchClear');
+
+  if (bfbInput && bfbClear) {
+    bfbInput.addEventListener('input', function() {
+      const q = this.value.trim().toLowerCase();
+      bfbClear.style.display = q ? 'flex' : 'none';
+      document.querySelectorAll('.bg-card').forEach(card => {
+        const title = card.querySelector('.bg-card-title').textContent.toLowerCase();
+        const show  = !q || title.includes(q);
+        card.style.display = show ? '' : 'none';
+        if (show) card.classList.add('bg-card--visible');
+      });
+      const vis = [...document.querySelectorAll('.bg-card')].filter(c => c.style.display !== 'none').length;
+      const bfbCount = document.getElementById('bfbCount');
+      if (bfbCount) bfbCount.textContent = vis + ' Article' + (vis !== 1 ? 's' : '');
+    });
+
+    bfbClear.addEventListener('click', () => {
+      bfbInput.value = '';
+      bfbClear.style.display = 'none';
+      applyBfbFilter('all');
+      bfbInput.focus();
+    });
+  }
+
+  /* Scroll fade hints on tab strip */
+  const tabStrip = document.getElementById('bfbTabs');
+  const fadeL    = document.getElementById('bfbFadeL');
+  const fadeR    = document.getElementById('bfbFadeR');
+  
+  if (tabStrip && fadeL && fadeR) {
+    function updateFades() {
+      fadeL.style.opacity = tabStrip.scrollLeft > 8 ? '1' : '0';
+      fadeR.style.opacity = tabStrip.scrollLeft < tabStrip.scrollWidth - tabStrip.clientWidth - 8 ? '1' : '0';
+    }
+    tabStrip.addEventListener('scroll', updateFades);
+    window.addEventListener('resize', updateFades);
+    updateFades();
+  }
+
+  /* Init */
+  applyBfbFilter('all');
+
+  /* ── Blog Pagination + Load More ── */
+  const BLM_TOTAL  = 11;
+  const BLM_PAGES  = 2;
+  const BLM_BATCH  = 6;
+  let   blmShown   = 10;
+  let   blmPage    = 1;
+
+  const blmBar     = document.getElementById('blmBar');
+  const blmLabel   = document.getElementById('blmLabel');
+  const blmLoadBtn = document.getElementById('blmLoadBtn');
+  const blmPrev    = document.getElementById('blmPrev');
+  const blmNext    = document.getElementById('blmNext');
+  const blmNums    = document.getElementById('blmNums');
+
+  function blmUpdateProgress() {
+    if (!blmBar || !blmLabel || !blmLoadBtn) return;
+    
+    const pct = Math.min((blmShown / BLM_TOTAL) * 100, 100);
+    blmBar.style.width = pct + '%';
+    blmLabel.textContent = 'Showing ' + blmShown + ' of ' + BLM_TOTAL + ' articles';
+    
+    if (blmShown >= BLM_TOTAL) {
+      blmLoadBtn.disabled = true;
+      const btnText = blmLoadBtn.querySelector('.blm-btn-text');
+      const btnIcon = blmLoadBtn.querySelector('.blm-btn-icon');
+      if (btnText) btnText.textContent = 'All Posts Loaded';
+      if (btnIcon) btnIcon.style.display = 'none';
+    } else {
+      blmLoadBtn.disabled = false;
+      const btnText = blmLoadBtn.querySelector('.blm-btn-text');
+      const btnIcon = blmLoadBtn.querySelector('.blm-btn-icon');
+      if (btnText) btnText.textContent = 'Load More Posts';
+      if (btnIcon) btnIcon.style.display = '';
+    }
+  }
+
+  function blmRenderPages() {
+    if (!blmNums || !blmPrev || !blmNext) return;
+    
+    blmNums.innerHTML = '';
+    for (let i = 1; i <= BLM_PAGES; i++) {
+      const btn = document.createElement('button');
+      btn.className = 'blm-pg-num' + (i === blmPage ? ' active' : '');
+      btn.textContent = i;
+      btn.setAttribute('aria-label', 'Page ' + i);
+      btn.addEventListener('click', () => blmGoTo(i));
+      blmNums.appendChild(btn);
+    }
+    blmPrev.disabled = blmPage === 1;
+    blmNext.disabled = blmPage === BLM_PAGES;
+  }
+
+  function blmGoTo(n) {
+    blmPage  = n;
+    blmShown = Math.min(n * BLM_BATCH, BLM_TOTAL);
+    blmRenderPages();
+    blmUpdateProgress();
+    const bgSection = document.querySelector('.bg-section');
+    if (bgSection) bgSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  if (blmLoadBtn) {
+    blmLoadBtn.addEventListener('click', () => {
+      if (blmLoadBtn.disabled) return;
+      blmLoadBtn.classList.add('blm-loading');
+      const btnText = blmLoadBtn.querySelector('.blm-btn-text');
+      if (btnText) btnText.textContent = 'Loading…';
+      
+      setTimeout(() => {
+        blmShown  = Math.min(blmShown + BLM_BATCH, BLM_TOTAL);
+        blmPage   = Math.min(Math.ceil(blmShown / BLM_BATCH), BLM_PAGES);
+        blmLoadBtn.classList.remove('blm-loading');
+        blmRenderPages();
+        blmUpdateProgress();
+      }, 1100);
+    });
+  }
+
+  if (blmPrev) blmPrev.addEventListener('click', () => { if (blmPage > 1) blmGoTo(blmPage - 1); });
+  if (blmNext) blmNext.addEventListener('click', () => { if (blmPage < BLM_PAGES) blmGoTo(blmPage + 1); });
+
+  blmRenderPages();
+  blmUpdateProgress();
+
+  /* ── Scroll fade-in for grid cards ── */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('bg-card--visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.bg-card').forEach(c => observer.observe(c));
+
+  /* ── Save / like toggle ── */
+  document.querySelectorAll('.bg-save-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const icon = this.querySelector('i');
+      icon.classList.toggle('fa-regular');
+      icon.classList.toggle('fa-solid');
+      this.classList.toggle('saved');
+    });
+  });
+
+  /* ── Sidebar: category links sync with filter bar ── */
+  document.querySelectorAll('.bs-cat-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const cat = link.dataset.cat;
+      document.querySelectorAll('.bs-cat-link').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+      applyBfbFilter(cat);
+      const bgSection = document.querySelector('.bg-section');
+      if (bgSection) bgSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  /* ── Sidebar: search ── */
+  const bsSideSearch = document.getElementById('bsSideSearch');
+  if (bsSideSearch) {
+    bsSideSearch.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const bsSideInput = document.getElementById('bsSideInput');
+      if (!bsSideInput) return;
+      
+      const q = bsSideInput.value.trim().toLowerCase();
+      if (!q) return;
+      
+      document.querySelectorAll('.bg-card').forEach(card => {
+        const titleEl = card.querySelector('.bg-card-title');
+        if (!titleEl) return;
+        
+        const title = titleEl.textContent.toLowerCase();
+        const show  = title.includes(q);
+        card.style.display = show ? '' : 'none';
+        if (show) card.classList.add('bg-card--visible');
+      });
+      
+      const bgSection = document.querySelector('.bg-section');
+      if (bgSection) bgSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  /* ── Sidebar: mini newsletter ── */
+  const bsSideNlForm = document.getElementById('bsSideNlForm');
+  if (bsSideNlForm) {
+    bsSideNlForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const bsSideNlEmail = document.getElementById('bsSideNlEmail');
+      const bsSideNlMsg = document.getElementById('bsSideNlMsg');
+      
+      if (!bsSideNlEmail || !bsSideNlMsg) return;
+      
+      const val = bsSideNlEmail.value.trim();
+      const rx  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+      if (!rx.test(val)) { 
+        bsSideNlMsg.textContent = 'Enter a valid email.'; 
+        bsSideNlMsg.style.color = '#e07b5a'; 
+        return; 
+      }
+      
+      bsSideNlMsg.textContent = '\u2713 Subscribed!';
+      bsSideNlMsg.style.color = '#3caea3';
+      this.reset();
+    });
+  }
+
+  /* ── Trending cards scroll fade-in ── */
+  const trObserver = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('tr-visible'), i * 80);
+        trObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.tr-card').forEach(c => trObserver.observe(c));
+
+  /* ── Dark Mode ── */
+  const darkToggle = document.getElementById('darkToggle');
+  
+  function applyDark(on) {
+    document.documentElement.classList.toggle('dark-mode', on);
+    const icon = on ? 'fa-sun' : 'fa-moon';
+    const label = on ? 'Light Mode' : 'Dark Mode';
+    
+    if (darkToggle) {
+      const darkIcon = darkToggle.querySelector('i');
+      if (darkIcon) darkIcon.className = 'fa-solid ' + icon;
+      darkToggle.title = label;
+    }
+    
+    localStorage.setItem('foamy-dark', on ? '1' : '0');
+  }
+
+  /* Restore saved preference */
+  if (localStorage.getItem('foamy-dark') === '1') applyDark(true);
+
+  if (darkToggle) {
+    darkToggle.addEventListener('click', () => applyDark(!document.documentElement.classList.contains('dark-mode')));
+  }
+
+  /* ── RTL Mode ── */
+  const rtlToggle = document.getElementById('rtlToggle');
+  
+  function applyRtl(on) {
+    document.documentElement.setAttribute('dir', on ? 'rtl' : 'ltr');
+    const label = on ? 'LTR Mode' : 'RTL Mode';
+    
+    if (rtlToggle) {
+      rtlToggle.textContent = on ? 'LTR' : 'RTL';
+      rtlToggle.title = label;
+    }
+    
+    localStorage.setItem('foamy-rtl', on ? '1' : '0');
+  }
+
+  /* Restore saved preference */
+  if (localStorage.getItem('foamy-rtl') === '1') applyRtl(true);
+
+  if (rtlToggle) {
+    rtlToggle.addEventListener('click', () => applyRtl(document.documentElement.getAttribute('dir') !== 'rtl'));
+  }
+
+  /* ── Back to top ── */
+  const btt = document.getElementById('backToTop');
+  if (btt) {
+    window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400));
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+
+  /* ── Footer newsletter ── */
+  const blogFooterNlForm = document.getElementById('blogFooterNlForm');
+  if (blogFooterNlForm) {
+    blogFooterNlForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const blogFooterNlEmail = document.getElementById('blogFooterNlEmail');
+      const blogFooterNlMsg = document.getElementById('blogFooterNlMsg');
+      
+      if (!blogFooterNlEmail || !blogFooterNlMsg) return;
+      
+      const val = blogFooterNlEmail.value.trim();
+      const rx  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+      if (!rx.test(val)) { 
+        blogFooterNlMsg.textContent = 'Enter a valid email.'; 
+        blogFooterNlMsg.style.color = '#e07b5a'; 
+        return; 
+      }
+      
+      blogFooterNlMsg.textContent = '\u2713 Subscribed! Thank you.';
+      blogFooterNlMsg.style.color = '#3caea3';
+      this.reset();
+    });
+  }
+</script>
+
+<!-- ════════════════════════════════
+     Blog Footer
+════════════════════════════════ -->
+<footer class="bf-footer">
+
+  <!-- Top gradient accent -->
+  <div class="bf-accent"></div>
+
+  <div class="bf-container">
+
+    <!-- ── Main grid ── -->
+    <div class="bf-grid">
+
+      <!-- COL 1: Brand -->
+      <div class="bf-col bf-col--brand">
+        <a href="index.html" class="bf-logo">
+          <img src="images/white logo.png" alt="Soap Studio Logo" class="logo-img">
+        </a>
+        <p class="bf-about">Crafting natural, handmade soaps with care for your skin and the planet. Every bar is small-batch made with botanicals, essential oils, and zero harsh chemicals.</p>
+        <ul class="bf-contact">
+          <li><i class="fa-solid fa-envelope"></i><a href="mailto:hello@SoapStudionaturals.com">hello@SoapStudionaturals.com</a></li>
+          <li><i class="fa-solid fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+          <li><i class="fa-solid fa-location-dot"></i><span>12, Green Lane, Coimbatore, TN 641001</span></li>
+        </ul>
+      </div>
+
+      <!-- COL 2: Blog Links -->
+      <div class="bf-col">
+        <h4 class="bf-heading">Blog</h4>
+        <ul class="bf-links">
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog Home</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Latest Articles</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Skincare Tips</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> DIY Soap Guides</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Ingredients</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Brand Stories</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: Quick Links -->
+      <div class="bf-col">
+        <h4 class="bf-heading">Quick Links</h4>
+        <ul class="bf-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="shop.html"><i class="fa-solid fa-chevron-right"></i> Shop</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 4: Social + Mini Newsletter -->
+      <div class="bf-col bf-col--social">
+        <h4 class="bf-heading">Follow Us</h4>
+        <p class="bf-social-sub">Follow us for skincare tips, behind-the-scenes, and exclusive offers.</p>
+        <div class="bf-socials">
+          <a href="#" class="bf-social bf-social--ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="bf-social bf-social--fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="bf-social bf-social--yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="bf-social bf-social--pin" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" class="bf-social bf-social--wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+
+        <!-- Mini newsletter -->
+        <div class="bf-mini-nl">
+          <p class="bf-mini-nl-label"><i class="fa-solid fa-envelope"></i> Quick Subscribe</p>
+          <form class="bf-nl-form" id="blogFooterNlForm" novalidate>
+            <input type="email" id="blogFooterNlEmail" class="bf-nl-input" placeholder="Your email" autocomplete="email" />
+            <button type="submit" class="bf-nl-btn" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <p class="bf-nl-msg" id="blogFooterNlMsg"></p>
+        </div>
+      </div>
+
+    </div><!-- /bf-grid -->
+
+    <!-- ── Bottom bar ── -->
+    <div class="bf-bottom">
+      <p class="bf-copy">&copy; 2026 <strong>Soap Studio</strong>. All rights reserved. Made with <i class="fa-solid fa-heart bf-heart"></i> in India.</p>
+      <div class="bf-payments">
+        <span class="bf-pay" title="Visa"><i class="fa-brands fa-cc-visa"></i></span>
+        <span class="bf-pay" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></span>
+        <span class="bf-pay" title="PayPal"><i class="fa-brands fa-cc-paypal"></i></span>
+        <span class="bf-pay" title="UPI"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="js/theme.js"></script>
+</body>
+</html>
+
+
+
