@@ -5,11 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/my-logo.png">
 <title>Home - Soap & Bath Bomb Workshop Studio</title>
-    <link rel="stylesheet" href="css/home-2.css">
-    <link rel="stylesheet" href="css/dark.css">
+    <link rel="stylesheet" href="css/home-2.css?v=2">
+    <link rel="stylesheet" href="css/dark.css?v=6">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+      body.page-home2 .parallax-banner {
+        min-height: 360px !important;
+        height: auto !important;
+        padding: 80px 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        isolation: isolate !important;
+        overflow: hidden !important;
+        text-align: center !important;
+        background:
+          linear-gradient(rgba(35, 22, 47, 0.64), rgba(35, 22, 47, 0.64)),
+          url("images/natural-soap-sale.jpg") center/cover no-repeat !important;
+      }
+
+      body.page-home2 .parallax-banner .container,
+      body.page-home2 .parallax-banner .banner-content {
+        position: relative !important;
+        z-index: 2 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        width: 100% !important;
+        max-width: 680px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+      }
+
+      body.page-home2 .parallax-banner .parallax-overlay {
+        position: absolute !important;
+        inset: 0 !important;
+        z-index: 1 !important;
+        background: rgba(123, 79, 163, 0.22) !important;
+        pointer-events: none !important;
+      }
+
+      body.page-home2 .parallax-banner h2,
+      body.page-home2 .parallax-banner p {
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+      }
+
+      body.page-home2 .parallax-banner p {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      body.page-home2 .parallax-banner .offer-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #ffffff !important;
+        color: #7b4fa3 !important;
+      }
+
+      @media (max-width: 768px) {
+        body.page-home2 .parallax-banner {
+          min-height: 260px !important;
+          padding: 52px 16px !important;
+          background-attachment: scroll !important;
+        }
+
+        body.page-home2 .parallax-banner .container,
+        body.page-home2 .parallax-banner .banner-content {
+          max-width: 320px !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          text-align: center !important;
+        }
+
+        body.page-home2 .parallax-banner h2 {
+          font-size: 1.55rem !important;
+          line-height: 1.2 !important;
+          text-align: center !important;
+        }
+
+        body.page-home2 .parallax-banner p {
+          font-size: 0.92rem !important;
+          line-height: 1.5 !important;
+          text-align: center !important;
+        }
+      }
+    </style>
 </head>
 <body class="page-home2">
 <header class="site-header">
@@ -342,17 +434,6 @@
         </div>
     </section>
 
-    <!-- Parallax Banner / Offer Section -->
-    <section class="parallax-banner">
-        <div class="parallax-overlay"></div>
-        <div class="container">
-            <div class="banner-content">
-                <h2>Get 20% Off Natural Products</h2>
-                <p>Limited time offer on our premium handcrafted soap collection</p>
-                <a href="shop.html" class="offer-btn">Shop Now &amp; Save</a>
-            </div>
-        </div>
-    </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials-section">
@@ -422,6 +503,8 @@
         </div>
     </section>
 
+    
+
     <!-- Blog Section -->
     <section class="blog-section">
         <div class="container">
@@ -460,6 +543,17 @@
                         <span class="blog-date">December 5, 2024</span>
                         <h3>Essential Oils for Skincare</h3>
                         <p>Explore the therapeutic benefits of essential oils and how they can enhance your natural beauty...</p>
+                        <a href="blog.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-4.webp" alt="Blog Post">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">December 1, 2024</span>
+                        <h3>Choosing Soap for Skin</h3>
+                        <p>Find the right handmade soap for dry, oily, sensitive, and combination skin types...</p>
                         <a href="blog.html" class="read-more">Read More</a>
                     </div>
                 </article>
@@ -591,6 +685,10 @@
   </div>
 </footer>
 
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
     <script>
         // Hero animation
         window.addEventListener('load', () => {
@@ -622,11 +720,14 @@
         }, 5000);
 
         // Newsletter form
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for subscribing!');
-            this.reset();
-        });
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for subscribing!');
+                this.reset();
+            });
+        }
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -650,7 +751,20 @@
                 parallax.style.transform = `translateY(${speed}px)`;
             }
         });
+
+        // Back to top
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            const toggleBackToTop = () => {
+                backToTop.classList.toggle('visible', window.scrollY > 400);
+            };
+            toggleBackToTop();
+            window.addEventListener('scroll', toggleBackToTop);
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
     </script>
-<script src="js/theme.js"></script>
+<script src="js/theme.js?v=2"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="images/my-logo.png">
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="css/dark.css">
+    <link rel="stylesheet" href="css/dark.css?v=6">
 </head>
 <body class="page-product">
 
@@ -821,9 +821,16 @@
   /* ── Sticky bar ── */
   const stickyBar = document.getElementById('phStickyBar');
   if (stickyBar) {
-    window.addEventListener('scroll', () => {
-      stickyBar.classList.toggle('ph-sticky-visible', window.scrollY > 320);
-    });
+    const footer = document.querySelector('footer');
+    const updateStickyBar = () => {
+      const footerTop = footer ? footer.getBoundingClientRect().top : Infinity;
+      const shouldShow = window.scrollY > 320 && footerTop > 180;
+      stickyBar.classList.toggle('ph-sticky-visible', shouldShow);
+    };
+
+    window.addEventListener('scroll', updateStickyBar, { passive: true });
+    window.addEventListener('resize', updateStickyBar);
+    updateStickyBar();
   }
 
   /* ── Sticky bar qty ── */

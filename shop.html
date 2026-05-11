@@ -9,28 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/shop.css">
-    <link rel="stylesheet" href="css/dark.css">
+    <link rel="stylesheet" href="css/dark.css?v=6">
 </head>
 <body class="page-shop">
 
 <header class="site-header">
   <div class="header-container">
-
-
-     <a href="index.html" class="logo">
+    <a href="index.html" class="logo">
       <img src="images/my-logo.png" alt="Soap Studio Logo" class="logo-img">
     </a>
 
-
-    <!-- LEFT: Navigation -->
     <nav class="nav-left">
       <ul>
-         <li class="dropdown">
-            <a href="#" class="dropdown-trigger">Home <span class="dropdown-caret">▾</span></a>
-            <ul class="dropdown-menu">
-                <li><a href="index.html">Home 1</a></li>
-                <li><a href="home-2.html">Home 2</a></li>
-            </ul>
+        <li class="dropdown">
+          <a href="#" class="dropdown-trigger">Home <span class="dropdown-caret">&#9662;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+          </ul>
         </li>
         <li><a href="about.html">About</a></li>
         <li><a href="service.html">Services</a></li>
@@ -40,10 +36,6 @@
       </ul>
     </nav>
 
-    <!-- CENTER: Logo -->
-  
-
-    <!-- RIGHT: Icons -->
     <div class="nav-right">
       <a href="#" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
       <a href="cart.html" title="Cart" class="cart-icon">
@@ -52,42 +44,38 @@
       </a>
     </div>
 
-    <!-- MOBILE: Hamburger -->
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
 
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">&#127769;</button>
+    <button id="rtl-toggle" class="rtl-btn" aria-label="Toggle RTL">
+      <span id="rtl-icon">LTR</span>
+    </button>
 
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
-      <button id="rtl-toggle" class="rtl-btn" aria-label="Toggle RTL">
-        <span id="rtl-icon">LTR</span>
-      </button>
-
-      <!-- BUY NOW RIGHT -->
-      <a href="login.html" class="mobile-login-btn">Login</a>
+    <a href="login.html" class="mobile-login-btn">Login</a>
   </div>
 
-  <!-- MOBILE: Dropdown Nav -->
   <nav class="mobile-nav" id="mobileNav">
     <ul>
-       <li class="mobile-dropdown">
-         <button class="mobile-dropdown-toggle" type="button" aria-expanded="false">
-           <span>Home</span>
-           <span class="mobile-dropdown-caret">&#9662;</span>
-         </button>
-         <ul class="mobile-submenu">
-           <li><a href="index.html">Home 1</a></li>
-           <li><a href="home-2.html">Home 2</a></li>
-         </ul>
-       </li>
-       <li><a href="about.html">About</a></li>
-       <li><a href="service.html">Services</a></li>
-       <li><a href="shop.html">Shop</a></li>
-       <li><a href="blog.html">Blog</a></li>
-       <li><a href="contact.html">Contact</a></li>
+      <li class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" type="button" aria-expanded="false">
+          <span>Home</span>
+          <span class="mobile-dropdown-caret">&#9662;</span>
+        </button>
+        <ul class="mobile-submenu">
+          <li><a href="index.html">Home 1</a></li>
+          <li><a href="home-2.html">Home 2</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="mobile-nav-icons">
-      <button class="theme-btn mobile-toggle-btn mobile-theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="theme-btn mobile-toggle-btn mobile-theme-toggle" aria-label="Toggle theme">&#127769;</button>
       <button class="rtl-btn mobile-toggle-btn mobile-rtl-toggle" aria-label="Toggle RTL">
         <span class="mobile-rtl-icon">LTR</span>
       </button>
@@ -99,7 +87,6 @@
       <a href="login.html" class="mobile-login-btn mobile-login-btn--menu">Login</a>
     </div>
   </nav>
-
 </header>
 
 <!-- ═══ COLLECTION HEADER ═══ -->
@@ -1120,6 +1107,10 @@ In contrast, organic soaps from Soap Studio are carefully handcrafted using natu
 
   </div>
 </footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
 
 <script src="shop.js"></script>
 <script src="js/theme.js"></script>

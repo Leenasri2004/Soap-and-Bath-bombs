@@ -6,8 +6,8 @@
     <link rel="icon" type="image/png" href="images/my-logo.png">
 <title>Soap & Bath Bomb Workshop Studio - Chennai</title>
     <!-- ✅ CSS LINK - THIS IS CORRECT -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/dark.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/dark.css?v=6">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
@@ -636,6 +636,14 @@
                 </div>
             </article>
 
+            <article class="kit-card">
+                <img src="images/making.webp">
+                <div class="kit-copy">
+                    <h3>Melt & Pour Kit</h3>
+                    <p>Beginner-friendly tools for custom soap bars.</p>
+                </div>
+            </article>
+
         </div>
 
         <button class="kit-btn right" onclick="scrollKits(1)">&#10095;</button>
@@ -835,6 +843,19 @@
 
 
 
+<!-- Parallax Banner / Offer Section -->
+<section class="parallax-banner">
+    <div class="parallax-overlay"></div>
+    <div class="container">
+        <div class="banner-content">
+            <h2>Get 20% Off Natural Products</h2>
+            <p>Limited time offer on our premium handcrafted soap collection</p>
+            <a href="shop.html" class="offer-btn">Shop Now &amp; Save</a>
+        </div>
+    </div>
+</section>
+
+
 <!-- Why People Love Our Studio -->
 <section class="love-section">
     <div class="container">
@@ -854,7 +875,7 @@
             <div class="love-stats">
                 <div class="love-card">
                     <h3>500+</h3>
-                    <p>Happy crafters across Chennai</p>
+                    <p>Happy crafters in Chennai</p>
                 </div>
                 <div class="love-card">
                     <h3>4.9★</h3>
@@ -888,7 +909,7 @@
                     <i class="fas fa-birthday-cake"></i>
                 </div>
                 <h3>Birthday Specials</h3>
-                <p>Turn birthdays into a creative soap & bath bomb party instead of a regular cake‑cutting.</p>
+                <p>Turn birthdays into a creative soap & bath bomb party instead of cake‑cutting.</p>
             </div>
 
             <div class="perfect-card">
@@ -1275,7 +1296,10 @@
 <script>
   function scrollKits(direction) {
     const grid = document.getElementById('kitGrid');
-    const amount = 260; // adjust based on card width
+    if (!grid) return;
+    const card = grid.querySelector('.kit-card');
+    const gap = parseFloat(getComputedStyle(grid).gap) || 0;
+    const amount = card ? card.getBoundingClientRect().width + gap : 260;
     grid.scrollBy({ left: direction * amount, behavior: 'smooth' });
   }
 </script>
@@ -1366,7 +1390,7 @@
   showWorkshopSlide(0);
 </script>
     <script src="js/script.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="js/theme.js?v=2"></script>
 </body>
 </html>
 
