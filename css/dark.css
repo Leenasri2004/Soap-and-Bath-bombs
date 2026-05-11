@@ -8308,3 +8308,1419 @@ html.dark-mode .divider span {
     word-break: normal !important;
   }
 }
+
+/* Final mobile menu + footer left alignment */
+@media (max-width: 992px) {
+  .site-header .mobile-nav,
+  header.site-header .mobile-nav {
+    position: fixed !important;
+    top: 64px !important;
+    left: 0 !important;
+    right: auto !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    transform: none !important;
+    background: #f4efea !important;
+    text-align: left !important;
+  }
+
+  .site-header .mobile-nav.open,
+  .site-header .mobile-nav.active,
+  .site-header .mobile-nav.menu-open {
+    max-height: calc(100vh - 64px) !important;
+    overflow-y: auto !important;
+  }
+
+  .site-header .mobile-nav > ul {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 14px 18px 8px !important;
+    margin: 0 !important;
+    align-items: stretch !important;
+    text-align: left !important;
+  }
+
+  .site-header .mobile-nav li,
+  .site-header .mobile-dropdown {
+    width: 100% !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .site-header .mobile-nav a,
+  .site-header .mobile-dropdown-toggle {
+    width: 100% !important;
+    min-height: 42px !important;
+    padding: 10px 0 !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: left !important;
+  }
+
+  .site-header .mobile-submenu {
+    width: 100% !important;
+    padding: 0 0 8px 14px !important;
+    align-items: stretch !important;
+  }
+
+  .site-header .mobile-submenu a {
+    justify-content: flex-start !important;
+    min-height: 34px !important;
+    padding: 8px 0 !important;
+  }
+
+  .site-header .mobile-nav .mobile-nav-icons {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 12px 18px 18px !important;
+    margin: 0 !important;
+  }
+
+  .site-header .mobile-nav .mobile-nav-icons a,
+  .site-header .mobile-nav .mobile-nav-icons button {
+    flex: 0 0 40px !important;
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 0 !important;
+  }
+
+  .site-header .mobile-nav .mobile-login-btn--menu {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 260px !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer,
+  .site-footer .footer-grid,
+  .site-footer .footer-col,
+  .site-footer .footer-bottom,
+  .site-footer .footer-bottom-left,
+  .site-footer .footer-bottom-right {
+    text-align: left !important;
+  }
+
+  .site-footer .footer-container {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    align-items: start !important;
+  }
+
+  .site-footer .footer-col,
+  .site-footer .footer-bottom,
+  .site-footer .footer-bottom-left,
+  .site-footer .footer-bottom-right {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+
+  .site-footer .footer-about,
+  .site-footer .footer-social-sub,
+  .site-footer .footer-mini-nl,
+  .site-footer .footer-nl-form,
+  .site-footer .footer-copy {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .site-footer .footer-contact,
+  .site-footer .footer-links,
+  .site-footer .footer-socials,
+  .site-footer .footer-payments {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+  }
+
+  .site-footer .footer-contact li,
+  .site-footer .footer-links a,
+  .site-footer .footer-mini-nl-label {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  .site-footer .footer-bottom {
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+}
+
+/* Final 360px full-site responsive alignment */
+@media (max-width: 360px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box !important;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100% !important;
+  }
+
+  .container,
+  .header-container,
+  .footer-container,
+  .bg-container,
+  .bf-container,
+  .tr-container,
+  .rp-container,
+  .ib-container,
+  .pp-container,
+  .cart-hero-inner,
+  .cart-shell,
+  .contact-content,
+  .story-layout,
+  .mission-content,
+  .sustainability-content,
+  .location-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .site-header,
+  header.site-header {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .site-header .header-container,
+  header.site-header .header-container {
+    height: 64px !important;
+    min-height: 64px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .site-header .logo-img,
+  header.site-header .logo-img {
+    height: 48px !important;
+    max-width: 82px !important;
+    object-fit: contain !important;
+  }
+
+  .mobile-nav,
+  .site-header .mobile-nav,
+  header.site-header .mobile-nav {
+    position: fixed !important;
+    top: 64px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    text-align: left !important;
+    overflow-x: hidden !important;
+  }
+
+  .mobile-nav.open,
+  .mobile-nav.active,
+  .mobile-nav.menu-open,
+  .site-header .mobile-nav.open,
+  .site-header .mobile-nav.active,
+  .site-header .mobile-nav.menu-open {
+    max-height: calc(100vh - 64px) !important;
+    overflow-y: auto !important;
+  }
+
+  .mobile-nav > ul,
+  .site-header .mobile-nav > ul {
+    width: 100% !important;
+    padding: 12px 16px 6px !important;
+    margin: 0 !important;
+    align-items: stretch !important;
+    text-align: left !important;
+  }
+
+  .mobile-nav li,
+  .mobile-dropdown,
+  .mobile-nav a,
+  .mobile-dropdown-toggle {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+
+  .mobile-nav a,
+  .mobile-dropdown-toggle {
+    min-height: 40px !important;
+    padding: 9px 0 !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    line-height: 1.25 !important;
+  }
+
+  .mobile-submenu {
+    width: 100% !important;
+    padding-left: 14px !important;
+    padding-bottom: 6px !important;
+  }
+
+  .mobile-submenu a {
+    justify-content: flex-start !important;
+    min-height: 32px !important;
+    padding: 7px 0 !important;
+  }
+
+  .mobile-nav .mobile-nav-icons,
+  .site-header .mobile-nav .mobile-nav-icons {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 9px !important;
+    width: 100% !important;
+    padding: 10px 16px 16px !important;
+    margin: 0 !important;
+  }
+
+  .mobile-nav .mobile-nav-icons a,
+  .mobile-nav .mobile-nav-icons button,
+  .site-header .mobile-nav .mobile-nav-icons a,
+  .site-header .mobile-nav .mobile-nav-icons button {
+    flex: 0 0 38px !important;
+    width: 38px !important;
+    min-width: 38px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    padding: 0 !important;
+  }
+
+  .mobile-nav .mobile-login-btn--menu,
+  .site-header .mobile-nav .mobile-login-btn--menu {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 40px !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  h1,
+  .hero-title,
+  .header-title,
+  .collection-header h1,
+  .shop-title {
+    font-size: clamp(1.8rem, 11vw, 2.15rem) !important;
+    line-height: 1.15 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  h2,
+  .section-title,
+  .section-header h2,
+  .story-content h2,
+  .mission-content h2,
+  .cta-content h2,
+  .bg-title,
+  .rp-title,
+  .ib-title {
+    font-size: clamp(1.45rem, 9vw, 1.8rem) !important;
+    line-height: 1.2 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  p,
+  li,
+  a,
+  label,
+  input,
+  textarea,
+  select,
+  button {
+    max-width: 100% !important;
+  }
+
+  .hero,
+  .hero-slide,
+  .hero-banner,
+  .hero-section,
+  .contact-header,
+  .cart-hero {
+    min-height: auto !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .products-grid,
+  .product-grid,
+  .values-grid,
+  .process-grid,
+  .team-grid,
+  .gallery-grid,
+  .testimonials-grid,
+  .methods-grid,
+  .workshop-cards,
+  .faq-grid,
+  .bg-grid,
+  .bf-grid,
+  .tr-grid,
+  .tr-bottom-row,
+  .rp-grid,
+  .ib-grid,
+  .ib-ing-grid,
+  .main-layout,
+  .bg-layout,
+  .cart-layout,
+  .story-layout,
+  .mv-grid,
+  .love-layout,
+  .skin-layout,
+  .contact-content,
+  .location-content,
+  .why-choose-content,
+  .mission-content,
+  .sustainability-content,
+  .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .product-card,
+  .kit-card,
+  .hotspot-card,
+  .perfect-card,
+  .love-card,
+  .skin-card,
+  .value-card,
+  .process-step,
+  .team-member,
+  .gallery-item,
+  .testimonial-card,
+  .method-card,
+  .workshop-card,
+  .workshop-card-horizontal,
+  .bg-card,
+  .tr-card,
+  .rp-card,
+  .ib-card,
+  .ib-ing-card,
+  .mv-card,
+  .address-card,
+  .info-card,
+  .cart-items-panel,
+  .cart-summary-card,
+  .cart-note-card,
+  .form-container,
+  .form-box,
+  .reg-form-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .collection-header,
+  .hotspot-header,
+  .rp-header,
+  .ib-header,
+  .tr-header,
+  .bg-header,
+  .book-header,
+  .booking-header,
+  .cart-header-inner,
+  .top-bar,
+  .sort-container,
+  .cart-item,
+  .cart-item-bottom,
+  .form-row,
+  .reg-btn-row {
+    align-items: stretch !important;
+    text-align: left !important;
+  }
+
+  .form-row,
+  .pp-details-grid,
+  .cart-item,
+  .cart-item-bottom {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100% !important;
+  }
+
+  .site-footer,
+  .site-footer * {
+    text-align: left !important;
+  }
+
+  .site-footer .footer-container {
+    padding: 40px 16px 0 !important;
+  }
+
+  .site-footer .footer-grid {
+    padding-bottom: 34px !important;
+    align-items: start !important;
+  }
+
+  .site-footer .footer-col,
+  .site-footer .footer-bottom,
+  .site-footer .footer-bottom-left,
+  .site-footer .footer-bottom-right,
+  .site-footer .footer-mini-nl {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  .site-footer .footer-about,
+  .site-footer .footer-social-sub,
+  .site-footer .footer-mini-nl,
+  .site-footer .footer-nl-form,
+  .site-footer .footer-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .site-footer .footer-contact,
+  .site-footer .footer-links,
+  .site-footer .footer-socials,
+  .site-footer .footer-payments {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  .site-footer .footer-contact li,
+  .site-footer .footer-links a,
+  .site-footer .footer-mini-nl-label {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  .site-footer .footer-nl-form {
+    display: flex !important;
+    align-items: center !important;
+    max-width: 100% !important;
+  }
+
+  .site-footer .footer-bottom {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+}
+
+/* Final 360px collection/button/theme polish */
+@media (max-width: 360px) {
+  :root {
+    --mobile-bg: #0f1726;
+    --mobile-panel: #121a28;
+    --mobile-card: #182234;
+    --mobile-primary: #7b4fa3;
+    --mobile-primary-2: #8d5ec0;
+    --mobile-accent: #98d8c8;
+    --mobile-text: #f8fafc;
+    --mobile-muted: #cbd5e1;
+  }
+
+  body.page-home .collection {
+    background: var(--mobile-bg) !important;
+    padding: 34px 0 40px !important;
+  }
+
+  body.page-home .collection .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  body.page-home .collection .collection-header {
+    gap: 12px !important;
+    margin-bottom: 18px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  body.page-home .collection .collection-header h2 {
+    color: var(--mobile-text) !important;
+    font-size: 1.35rem !important;
+    line-height: 1.18 !important;
+  }
+
+  .view-all,
+  .collection-header .view-all,
+  body.page-home .collection .collection-header .view-all {
+    width: auto !important;
+    min-width: 118px !important;
+    max-width: max-content !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    padding: 0 18px !important;
+    border-radius: 8px !important;
+    font-size: 11px !important;
+    line-height: 36px !important;
+    letter-spacing: 1.1px !important;
+    align-self: center !important;
+    background: linear-gradient(180deg, var(--mobile-primary-2), var(--mobile-primary)) !important;
+    box-shadow: 0 8px 18px rgba(123, 79, 163, 0.26) !important;
+  }
+
+  body.page-home .collection-wrapper {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 0 44px !important;
+    overflow: visible !important;
+  }
+
+  body.page-home .collection-grid {
+    display: flex !important;
+    width: 100% !important;
+    gap: 14px !important;
+    padding: 0 !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-padding-left: 0 !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  body.page-home .collection-item {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 178px !important;
+    border-radius: 10px !important;
+    background: var(--mobile-card) !important;
+    scroll-snap-align: start !important;
+  }
+
+  body.page-home .collection-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  body.page-home .col-btn,
+  body.page-home .col-btn:hover,
+  body.page-home .col-btn:active,
+  body.page-home .col-btn:focus {
+    position: absolute !important;
+    top: 50% !important;
+    z-index: 5 !important;
+    display: inline-flex !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    padding: 0 !important;
+    border-radius: 10px !important;
+    transform: translateY(-50%) !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22) !important;
+  }
+
+  body.page-home #colPrev {
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  body.page-home #colNext {
+    right: 0 !important;
+    left: auto !important;
+  }
+
+  body.page-home .col-btn i {
+    font-size: 13px !important;
+  }
+
+  .naturals-section,
+  .product-section,
+  .diy-kits,
+  .hotspot-showcase,
+  .workshops,
+  .love-section,
+  .perfect-section,
+  .skin-section,
+  .faq-section,
+  .book-big,
+  .journal-section {
+    background-color: var(--mobile-bg) !important;
+  }
+
+  .npill {
+    padding: 7px 12px !important;
+    font-size: 11px !important;
+    border: 1px solid rgba(248, 250, 252, 0.08) !important;
+    box-shadow: none !important;
+  }
+
+  .npill--pink,
+  .npill--rose {
+    background: rgba(123, 79, 163, 0.18) !important;
+    color: #f3e8ff !important;
+  }
+
+  .npill--blue,
+  .npill--sky {
+    background: rgba(152, 216, 200, 0.16) !important;
+    color: #d7fff4 !important;
+  }
+
+  .npill--peach {
+    background: rgba(224, 123, 90, 0.16) !important;
+    color: #ffe4d8 !important;
+  }
+
+  .npill--green {
+    background: rgba(152, 216, 200, 0.2) !important;
+    color: #d7fff4 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.page-home .collection .collection-header,
+  body.dark.page-home .collection .collection-header,
+  body.dark-mode.page-home .collection .collection-header {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  body.page-home .collection .collection-header .view-all,
+  body.dark.page-home .collection .collection-header .view-all,
+  body.dark-mode.page-home .collection .collection-header .view-all {
+    align-self: center !important;
+    width: auto !important;
+  }
+}
+
+/* Final spacing/card polish */
+.section-header {
+  margin-bottom: 32px !important;
+}
+
+.featured-products,
+.category-section,
+.product-section,
+.blog-section,
+.journal-section {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+.about-section {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+.products-grid,
+.blog-grid {
+  gap: 24px !important;
+  align-items: stretch !important;
+}
+
+.product-card,
+.blog-card {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.product-card:hover,
+.blog-card:hover {
+  transform: translateY(-6px) !important;
+}
+
+.image-container,
+.product-image,
+.blog-image {
+  flex-shrink: 0 !important;
+}
+
+.product-image img,
+.image-container .product-image,
+.product-image.default,
+.product-image.hover,
+.primary-img,
+.secondary-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.secondary-img,
+.product-image.hover {
+  inset: 0 !important;
+}
+
+.product-card:hover .primary-img,
+.product-card:hover .product-image.default {
+  transform: none !important;
+}
+
+.product-info,
+.blog-content {
+  display: flex !important;
+  flex: 1 !important;
+  flex-direction: column !important;
+}
+
+.price,
+.blog-content p {
+  margin-top: auto !important;
+}
+
+.section-tag {
+  margin-bottom: 16px !important;
+  line-height: 1.2 !important;
+}
+
+.about-text h2 {
+  margin-top: 0 !important;
+  line-height: 1.18 !important;
+}
+
+.read-more,
+.read-btn {
+  background: #7b4fa3 !important;
+  color: #ffffff !important;
+  border-color: #7b4fa3 !important;
+}
+
+.read-more:hover,
+.read-btn:hover {
+  background: #5f3b84 !important;
+  color: #ffffff !important;
+  border-color: #5f3b84 !important;
+}
+
+.site-header .mobile-login-btn,
+.mobile-login-btn,
+.mobile-login-btn--menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 74px;
+  min-height: 36px;
+  padding: 0 14px !important;
+  border-radius: 16px !important;
+  line-height: 1 !important;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .featured-products,
+  .category-section,
+  .product-section,
+  .blog-section,
+  .journal-section {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+
+  .product-section .section-header,
+  .section-header {
+    margin-bottom: 24px !important;
+  }
+
+  .product-image img,
+  .blog-image img,
+  .image-container .product-image,
+  .product-image.default,
+  .product-image.hover {
+    height: 100% !important;
+  }
+
+  .mobile-nav .mobile-nav-icons .mobile-login-btn--menu {
+    width: min(100%, 260px) !important;
+    min-height: 40px !important;
+    padding: 0 18px !important;
+  }
+}
+
+/* Final About page polish: dark contrast, spacing, button alignment and image fit. */
+body.page-about.dark,
+body.page-about.dark-mode {
+  background: #07101d !important;
+  color: #ffffff !important;
+}
+
+body.page-about.dark .hero-subtitle,
+body.page-about.dark-mode .hero-subtitle,
+html.dark-mode body.page-about .hero-subtitle {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55) !important;
+}
+
+body.page-about.dark .our-story,
+body.page-about.dark .mission-vision,
+body.page-about.dark .values,
+body.page-about.dark .process,
+body.page-about.dark .gallery,
+body.page-about.dark .team,
+body.page-about.dark .testimonials,
+body.page-about.dark-mode .our-story,
+body.page-about.dark-mode .mission-vision,
+body.page-about.dark-mode .values,
+body.page-about.dark-mode .process,
+body.page-about.dark-mode .gallery,
+body.page-about.dark-mode .team,
+body.page-about.dark-mode .testimonials,
+html.dark-mode body.page-about .our-story,
+html.dark-mode body.page-about .mission-vision,
+html.dark-mode body.page-about .values,
+html.dark-mode body.page-about .process,
+html.dark-mode body.page-about .gallery,
+html.dark-mode body.page-about .team,
+html.dark-mode body.page-about .testimonials {
+  background: #07101d !important;
+}
+
+body.page-about .story-layout {
+  align-items: stretch !important;
+}
+
+body.page-about .story-image,
+body.page-about .gallery-item,
+body.page-about .member-image {
+  background: transparent !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+body.page-about .story-image img,
+body.page-about .gallery-item img,
+body.page-about .member-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+body.page-about .story-image {
+  min-height: 420px !important;
+}
+
+body.page-about.dark .story-content,
+body.page-about.dark-mode .story-content,
+html.dark-mode body.page-about .story-content {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+body.page-about .story-content h2 {
+  display: block !important;
+  width: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 0 28px !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  text-align: left !important;
+  line-height: 1.18 !important;
+}
+
+body.page-about .story-content p {
+  margin-bottom: 20px !important;
+}
+
+body.page-about .discover-btn,
+body.page-about .btn-primary,
+body.page-about .btn-secondary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  min-width: 128px !important;
+  min-height: 44px !important;
+  padding: 11px 24px !important;
+  line-height: 1.1 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+body.page-about .discover-btn {
+  margin-top: 14px !important;
+}
+
+body.page-about .btn-primary,
+body.page-about .btn-secondary {
+  min-width: 132px !important;
+}
+
+body.page-about .cta-banner {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background: #3f245f !important;
+}
+
+body.page-about .cta-bg {
+  background:
+    linear-gradient(rgba(47, 25, 72, 0.74), rgba(47, 25, 72, 0.74)),
+    url("../images/natural-soap-sale.jpg") center/cover no-repeat !important;
+}
+
+body.page-about .cta-overlay {
+  background: rgba(12, 7, 20, 0.18) !important;
+}
+
+body.page-about .cta-content p {
+  margin-bottom: 28px !important;
+}
+
+body.page-about .cta-buttons {
+  gap: 18px !important;
+  align-items: center !important;
+}
+
+body.page-about.dark .testimonial-content,
+body.page-about.dark-mode .testimonial-content,
+html.dark-mode body.page-about .testimonial-content {
+  background: #151f2e !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+body.page-about .testimonial-nav {
+  left: 0 !important;
+  right: 0 !important;
+}
+
+body.page-about .testimonial-nav .nav-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 768px) {
+  body.page-about .our-story,
+  body.page-about .testimonials {
+    padding-top: 58px !important;
+    padding-bottom: 58px !important;
+  }
+
+  body.page-about .story-layout {
+    gap: 22px !important;
+  }
+
+  body.page-about .story-image {
+    min-height: 0 !important;
+    height: 240px !important;
+    border-radius: 14px !important;
+  }
+
+  body.page-about .story-content {
+    text-align: center !important;
+  }
+
+  body.page-about .story-content h2 {
+    margin-bottom: 18px !important;
+    text-align: center !important;
+  }
+
+  body.page-about .story-content h2::after {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  body.page-about .story-content p {
+    margin-bottom: 14px !important;
+  }
+
+  body.page-about .discover-btn {
+    max-width: none !important;
+    margin-top: 10px !important;
+  }
+
+  body.page-about .testimonial-track {
+    height: 390px !important;
+  }
+
+  body.page-about .testimonial-content {
+    padding: 44px 22px 34px !important;
+  }
+
+  body.page-about .testimonial-content p {
+    margin: 22px 0 !important;
+    font-size: 0.96rem !important;
+    line-height: 1.55 !important;
+  }
+
+  body.page-about .testimonial-author {
+    margin-top: 22px !important;
+  }
+
+  body.page-about .testimonial-nav {
+    top: 54% !important;
+  }
+
+  body.page-about .testimonial-nav .nav-btn {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 10px !important;
+  }
+
+  body.page-about .cta-banner {
+    padding: 72px 0 !important;
+  }
+
+  body.page-about .cta-content p {
+    margin-bottom: 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.page-about .story-image {
+    height: 218px !important;
+  }
+
+  body.page-about .discover-btn,
+  body.page-about .btn-primary,
+  body.page-about .btn-secondary {
+    min-width: 118px !important;
+    min-height: 40px !important;
+    padding: 10px 20px !important;
+    font-size: 0.86rem !important;
+  }
+
+  body.page-about .cta-buttons {
+    gap: 14px !important;
+  }
+}
+
+/* Final cross-page visual fixes */
+html.dark-mode,
+html.dark-mode body,
+body.dark,
+body.dark-mode {
+  background: #081120 !important;
+  background-color: #081120 !important;
+  color: #f8fafc !important;
+}
+
+body.dark::before,
+body.dark-mode::before {
+  background: transparent !important;
+}
+
+body.dark main,
+body.dark-mode main,
+html.dark-mode body main,
+body.dark section,
+body.dark-mode section,
+html.dark-mode body section,
+body.dark .container,
+body.dark-mode .container,
+html.dark-mode body .container {
+  background-color: transparent !important;
+}
+
+body.dark .site-header,
+body.dark-mode .site-header,
+html.dark-mode body .site-header,
+body.dark .mobile-nav,
+body.dark-mode .mobile-nav,
+html.dark-mode body .mobile-nav {
+  background: #101826 !important;
+}
+
+body.dark .hero-section,
+body.dark-mode .hero-section,
+html.dark-mode body .hero-section,
+body.dark .story-section,
+body.dark-mode .story-section,
+html.dark-mode body .story-section,
+body.dark .values-section,
+body.dark-mode .values-section,
+html.dark-mode body .values-section,
+body.dark .why-choose-section,
+body.dark-mode .why-choose-section,
+html.dark-mode body .why-choose-section,
+body.dark .process-section,
+body.dark-mode .process-section,
+html.dark-mode body .process-section,
+body.dark .team-section,
+body.dark-mode .team-section,
+html.dark-mode body .team-section,
+body.dark .gallery-section,
+body.dark-mode .gallery-section,
+html.dark-mode body .gallery-section,
+body.dark .mission-section,
+body.dark-mode .mission-section,
+html.dark-mode body .mission-section,
+body.dark .testimonials-section,
+body.dark-mode .testimonials-section,
+html.dark-mode body .testimonials-section,
+body.dark .sustainability-section,
+body.dark-mode .sustainability-section,
+html.dark-mode body .sustainability-section,
+body.dark .main-layout,
+body.dark-mode .main-layout,
+html.dark-mode body .main-layout,
+body.dark .collection-header,
+body.dark-mode .collection-header,
+html.dark-mode body .collection-header,
+body.dark .breadcrumb,
+body.dark-mode .breadcrumb,
+html.dark-mode body .breadcrumb {
+  background: #081120 !important;
+}
+
+.btn-primary,
+.btn-secondary,
+.primary-btn,
+.secondary-btn,
+.hero-content button,
+.offer-btn,
+.book-btn,
+.view-all,
+.naturals-cta,
+.discover-btn,
+.read-more,
+.read-btn,
+.add-to-cart,
+.btn-main,
+.submit-btn,
+.cart-checkout-btn,
+.reg-btn-primary,
+.fp-btn-primary,
+.mobile-login-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 154px !important;
+  min-height: 44px !important;
+  padding: 0 24px !important;
+  border-radius: 10px !important;
+  line-height: 1.1 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+.btn-primary,
+.primary-btn,
+.hero-content button,
+.offer-btn,
+.book-btn,
+.view-all,
+.naturals-cta,
+.discover-btn,
+.read-more,
+.read-btn,
+.add-to-cart,
+.btn-main,
+.submit-btn,
+.cart-checkout-btn,
+.reg-btn-primary,
+.fp-btn-primary,
+.mobile-login-btn {
+  background: #7b4fa3 !important;
+  border-color: #7b4fa3 !important;
+  color: #ffffff !important;
+}
+
+.btn-secondary,
+.secondary-btn {
+  background: transparent !important;
+  border: 1px solid currentColor !important;
+  color: inherit !important;
+}
+
+.cta-buttons,
+.hero-buttons,
+.button-group,
+.reg-btn-row {
+  align-items: center !important;
+  gap: 14px !important;
+}
+
+.col-btn,
+.kit-btn,
+.nav-btn,
+.testimonial-nav .nav-btn,
+.workshop-nav .nav-btn,
+.page-btn.prev-btn,
+.page-btn.next-btn,
+.back-to-top {
+  width: 38px !important;
+  min-width: 38px !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  padding: 0 !important;
+  border-radius: 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+}
+
+.col-btn i,
+.kit-btn i,
+.nav-btn i,
+.testimonial-nav .nav-btn i,
+.workshop-nav .nav-btn i,
+.page-btn.prev-btn i,
+.page-btn.next-btn i,
+.back-to-top i {
+  font-size: 13px !important;
+  line-height: 1 !important;
+}
+
+body.page-service .story-image,
+body.page-service .why-choose-image,
+body.page-service .sustainability-image,
+body.page-service .member-image,
+body.page-service .gallery-item,
+body.page-service .testimonial-author {
+  overflow: hidden !important;
+}
+
+body.page-service .story-image,
+body.page-service .why-choose-image,
+body.page-service .sustainability-image {
+  border-radius: 18px !important;
+}
+
+body.page-service .story-image img,
+body.page-service .why-choose-image img,
+body.page-service .sustainability-image img {
+  display: block !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 11 !important;
+  height: auto !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 18px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.page-service .gallery-grid {
+  gap: 18px !important;
+}
+
+body.page-service .gallery-item {
+  border-radius: 16px !important;
+}
+
+body.page-service .gallery-item img,
+body.page-service .member-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 16px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.page-service .cta-section {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(rgba(8, 17, 32, 0.76), rgba(8, 17, 32, 0.82)),
+    url("../images/workshop.jpg") center/cover no-repeat !important;
+}
+
+body.page-service .cta-section .container,
+body.page-service .cta-content {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary,
+  .primary-btn,
+  .secondary-btn,
+  .hero-content button,
+  .offer-btn,
+  .book-btn,
+  .view-all,
+  .naturals-cta,
+  .discover-btn,
+  .read-more,
+  .read-btn,
+  .add-to-cart,
+  .btn-main,
+  .submit-btn,
+  .cart-checkout-btn,
+  .reg-btn-primary,
+  .fp-btn-primary,
+  .mobile-login-btn {
+    min-width: 144px !important;
+    min-height: 40px !important;
+    padding: 0 18px !important;
+    font-size: 12px !important;
+  }
+
+  .col-btn,
+  .kit-btn,
+  .nav-btn,
+  .testimonial-nav .nav-btn,
+  .workshop-nav .nav-btn,
+  .page-btn.prev-btn,
+  .page-btn.next-btn,
+  .back-to-top {
+    width: 34px !important;
+    min-width: 34px !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    border-radius: 9px !important;
+  }
+
+  body.page-service .story-content,
+  body.page-service .why-choose-content,
+  body.page-service .sustainability-content {
+    gap: 22px !important;
+  }
+
+  body.page-service .story-image img,
+  body.page-service .why-choose-image img,
+  body.page-service .sustainability-image img,
+  body.page-service .gallery-item img {
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+  }
+
+  body.page-service .cta-section {
+    padding: 72px 0 !important;
+  }
+}
