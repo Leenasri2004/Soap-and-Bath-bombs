@@ -1798,6 +1798,15 @@ body.page-home .collection .collection-header .view-all {
 
 .kit-copy {
   padding: 14px 16px 16px;
+  text-align: center;
+}
+
+.kit-copy h3,
+.kit-copy p {
+  margin: 0;
+  width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .kit-copy h3 {
