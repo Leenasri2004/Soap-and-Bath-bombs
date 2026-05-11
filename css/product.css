@@ -1498,18 +1498,18 @@ html.ph-dark .ph-dark-btn { color: #f5c842; }
 ════════════════════════════════ */
 .ph-sticky-bar {
   position: fixed;
-  top: 0;
+  top: 72px;
   left: 0;
   right: 0;
   z-index: 290;
   background: var(--ph-card);
   box-shadow: 0 4px 20px rgba(45,31,26,.12);
-  transform: translateY(-100%);
+  transform: translateY(calc(-100% - 72px));
   transition: transform .35s ease;
   border-bottom: 1px solid var(--ph-border);
 }
 
-.ph-sticky-bar.ph-sticky-visible { transform: translateY(72px); }
+.ph-sticky-bar.ph-sticky-visible { transform: translateY(0); }
 
 .ph-sticky-inner {
   max-width: 1200px;
@@ -3332,5 +3332,54 @@ img, video, iframe {
   .ib-card-title,
   .ib-ing-name {
     overflow-wrap: anywhere;
+  }
+}
+
+/* ===== SITEWIDE MOBILE/TABLET RESPONSIVE POLISH ===== */
+@media (max-width: 1024px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img, video, iframe { max-width: 100%; height: auto; }
+  .header-container, .pp-container, .rp-container, .ib-container, .footer-container { width: 100%; max-width: 100%; padding-left: 24px; padding-right: 24px; }
+  .pp-main-grid, .rp-grid, .ib-grid, .footer-grid { gap: 24px; }
+}
+
+@media (max-width: 768px) {
+  .header-container, .pp-container, .rp-container, .ib-container, .footer-container { padding-left: 16px; padding-right: 16px; }
+  .pp-main-grid, .rp-grid, .ib-grid, .footer-grid, .pp-details-grid { grid-template-columns: 1fr !important; }
+  .pp-name, .rp-title, .ib-title { font-size: clamp(1.65rem, 8vw, 2.25rem); line-height: 1.2; }
+  .rp-card, .ib-card, .ib-ing-card { max-width: 430px; width: 100%; margin-left: auto; margin-right: auto; }
+  .pp-actions, .pp-option-row, .pp-price-row { flex-wrap: wrap; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 360px) {
+  .header-container, .pp-container, .rp-container, .ib-container, .footer-container { padding-left: 12px; padding-right: 12px; }
+  .pp-name, .rp-title, .ib-title { font-size: clamp(1.45rem, 9vw, 1.85rem); }
+  .pp-actions > *, .pp-add-cart, .pp-buy-now { width: 100%; }
+}
+
+/* Final mobile header divider cleanup */
+@media (max-width: 600px) {
+  .site-header,
+  header.site-header,
+  .header-container,
+  .mobile-nav,
+  .site-header .mobile-nav,
+  header.site-header .mobile-nav,
+  .site-header .mobile-nav.open,
+  .site-header .mobile-nav.active,
+  .site-header .mobile-nav.menu-open {
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .site-header + *,
+  header.site-header + *,
+  .hero,
+  .hero-section,
+  .bg-header,
+  .pp-section {
+    border-top: 0 !important;
   }
 }

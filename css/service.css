@@ -544,7 +544,7 @@ body.rtl .nav-left ul {
 .values-grid {
   margin-top: 16px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -566,7 +566,13 @@ body.rtl .nav-left ul {
   color: #7b4fa3;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
   .values-grid {
     grid-template-columns: 1fr;
   }
@@ -1390,5 +1396,51 @@ img, video, iframe {
   .hero-title,
   .section-title {
     overflow-wrap: anywhere;
+  }
+}
+
+/* ===== SITEWIDE MOBILE/TABLET RESPONSIVE POLISH ===== */
+@media (max-width: 1024px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img, video, iframe { max-width: 100%; height: auto; }
+  .container, .header-container, .footer-container { width: 100%; max-width: 100%; padding-left: 24px; padding-right: 24px; }
+  .story-section .container, .mission-section .container, .team-grid, .gallery-grid, .testimonials-grid, .footer-grid { gap: 24px; }
+}
+
+@media (max-width: 768px) {
+  .container, .header-container, .footer-container { padding-left: 16px; padding-right: 16px; }
+  .story-section .container, .mission-section .container, .team-grid, .gallery-grid, .testimonials-grid, .footer-grid { grid-template-columns: 1fr !important; }
+  .hero-title, .section-title, .story-content h2, .mission-content h2 { font-size: clamp(1.65rem, 8vw, 2.25rem); line-height: 1.2; }
+  .team-member, .gallery-item, .testimonial-card { max-width: 430px; width: 100%; margin-left: auto; margin-right: auto; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 360px) {
+  .container, .header-container, .footer-container { padding-left: 12px; padding-right: 12px; }
+  .hero-title, .section-title, .story-content h2, .mission-content h2 { font-size: clamp(1.45rem, 9vw, 1.85rem); }
+}
+
+/* Final mobile header divider cleanup */
+@media (max-width: 600px) {
+  .site-header,
+  header.site-header,
+  .header-container,
+  .mobile-nav,
+  .site-header .mobile-nav,
+  header.site-header .mobile-nav,
+  .site-header .mobile-nav.open,
+  .site-header .mobile-nav.active,
+  .site-header .mobile-nav.menu-open {
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .site-header + *,
+  header.site-header + *,
+  .hero,
+  .hero-section,
+  .bg-header {
+    border-top: 0 !important;
   }
 }

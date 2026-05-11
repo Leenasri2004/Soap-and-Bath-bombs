@@ -1442,3 +1442,51 @@ img, video, iframe {
     overflow-wrap: anywhere;
   }
 }
+
+/* ===== SITEWIDE MOBILE/TABLET RESPONSIVE POLISH ===== */
+@media (max-width: 1024px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img, video, iframe { max-width: 100%; height: auto; }
+  .container, .header-container, .footer-container { width: 100%; max-width: 100%; padding-left: 24px; padding-right: 24px; }
+  .cart-shell, .footer-grid { gap: 24px; }
+}
+
+@media (max-width: 768px) {
+  .container, .header-container, .footer-container { padding-left: 16px; padding-right: 16px; }
+  .cart-shell, .footer-grid { grid-template-columns: 1fr !important; }
+  .cart-title, .cart-panel-label { font-size: clamp(1.65rem, 8vw, 2.25rem); line-height: 1.2; }
+  .cart-item { grid-template-columns: 1fr !important; align-items: start; }
+  .cart-summary, .cart-panel { max-width: 430px; width: 100%; margin-left: auto; margin-right: auto; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 360px) {
+  .container, .header-container, .footer-container { padding-left: 12px; padding-right: 12px; }
+  .cart-title, .cart-panel-label { font-size: clamp(1.45rem, 9vw, 1.85rem); }
+}
+
+/* Final mobile header divider cleanup */
+@media (max-width: 600px) {
+  .site-header,
+  header.site-header,
+  .header-container,
+  .mobile-nav,
+  .site-header .mobile-nav,
+  header.site-header .mobile-nav,
+  .site-header .mobile-nav.open,
+  .site-header .mobile-nav.active,
+  .site-header .mobile-nav.menu-open {
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .site-header + *,
+  header.site-header + *,
+  .hero,
+  .hero-section,
+  .bg-header,
+  .cart-section {
+    border-top: 0 !important;
+  }
+}

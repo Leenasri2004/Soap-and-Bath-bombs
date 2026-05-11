@@ -1919,3 +1919,80 @@ img, video, iframe {
     text-align: center;
   }
 }
+
+/* ===== SITEWIDE MOBILE/TABLET RESPONSIVE POLISH ===== */
+@media (max-width: 1024px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img, video, iframe { max-width: 100%; height: auto; }
+  .container, .header-container, .footer-container { width: 100%; max-width: 100%; padding-left: 24px; padding-right: 24px; }
+  .values-grid, .team-grid, .gallery-grid, .testimonials-grid, .footer-grid { gap: 24px; }
+}
+
+@media (max-width: 768px) {
+  .container, .header-container, .footer-container { padding-left: 16px; padding-right: 16px; }
+  .about-content, .values-grid, .team-grid, .gallery-grid, .testimonials-grid, .footer-grid { grid-template-columns: 1fr !important; }
+  .hero-title, .section-title, .story-content h2, .mission-content h2 { font-size: clamp(1.65rem, 8vw, 2.25rem); line-height: 1.2; }
+  .value-card, .team-member, .testimonial-card, .gallery-item { max-width: 420px; width: 100%; margin-left: auto; margin-right: auto; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 360px) {
+  .container, .header-container, .footer-container { padding-left: 12px; padding-right: 12px; }
+  .hero-title, .section-title, .story-content h2, .mission-content h2 { font-size: clamp(1.45rem, 9vw, 1.85rem); }
+}
+
+/* About footer: remove horizontal divider lines */
+body.page-about .footer-accent {
+  display: none !important;
+}
+
+body.page-about .footer-grid,
+body.page-about .footer-heading {
+  border-bottom: 0 !important;
+}
+
+/* About header: remove the long/active underline */
+body.page-about .site-header,
+body.page-about .mobile-nav {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+body.page-about .nav-left a::after,
+body.page-about .nav-left .dropdown.active > a::after {
+  display: none !important;
+  width: 0 !important;
+}
+
+body.page-about .nav-left a,
+body.page-about .dropdown-menu a,
+body.page-about .mobile-nav a,
+body.page-about .mobile-dropdown {
+  border-bottom: 0 !important;
+}
+
+/* Final mobile header divider cleanup */
+@media (max-width: 600px) {
+  .site-header,
+  header.site-header,
+  .header-container,
+  .mobile-nav,
+  .site-header .mobile-nav,
+  header.site-header .mobile-nav,
+  .site-header .mobile-nav.open,
+  .site-header .mobile-nav.active,
+  .site-header .mobile-nav.menu-open {
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .site-header + *,
+  header.site-header + *,
+  .hero,
+  .hero-section,
+  .bg-header,
+  .about-hero {
+    border-top: 0 !important;
+  }
+}

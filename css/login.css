@@ -169,11 +169,21 @@ body {
   font-weight: 500;
   color: #374151;
   cursor: pointer;
-  display: flex;
+  display: grid;
+  grid-template-columns: 20px max-content;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  column-gap: 10px;
+  line-height: 1.2;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.social-btn i {
+  width: 20px;
+  min-width: 20px;
+  font-size: 1rem;
+  line-height: 1;
+  text-align: center;
 }
 
 .social-btn:hover {
@@ -182,9 +192,9 @@ body {
   box-shadow: 0 4px 14px rgba(255,82,82,0.12);
 }
 
-.social-btn .fa-google { color: rgb(149, 149, 201); }
+.social-btn .fa-google { color: #ea4335; }
 .social-btn .fa-facebook-f { color: #1877f2; }
-.social-btn .fa-apple { color: #ffffff; }
+.social-btn .fa-apple { color: #111827; }
 
 /* ===== DIVIDER ===== */
 .divider {
@@ -301,8 +311,10 @@ body {
 /* ===== FORM META ===== */
 .form-meta {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   margin-top: 1rem;
   margin-bottom: 0;
 }
@@ -311,6 +323,7 @@ body {
   display: flex;
   align-items: center;
   gap: 7px;
+  white-space: nowrap;
   font-size: 0.85rem;
   color: #4b5563;
   cursor: pointer;
@@ -324,6 +337,8 @@ body {
 }
 
 .forgot {
+  display: inline-block;
+  white-space: nowrap;
   font-size: 0.85rem;
   color: rgb(142, 142, 192);
   text-decoration: none;
@@ -502,8 +517,9 @@ body {
   }
 
   .form-meta {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 0.6rem;
     margin-top: 0.75rem;
   }
@@ -523,7 +539,7 @@ body {
     line-height: 1.35;
     text-align: center;
     white-space: normal;
-    gap: 7px;
+    column-gap: 7px;
     font-size: 0.77rem;
     border-radius: 9px;
   }
@@ -541,4 +557,50 @@ html, body {
 
 img, video, iframe {
   max-width: 100%;
+}
+
+/* ===== ACCOUNT PAGES MOBILE/TABLET RESPONSIVE POLISH ===== */
+@media (max-width: 1024px) {
+  .login-page, .login-form-panel, .login-visual { max-width: 100%; }
+  .login-form-panel { padding-left: 32px; padding-right: 32px; }
+}
+
+@media (max-width: 768px) {
+  .login-page { grid-template-columns: 1fr !important; min-height: 100vh; }
+  .login-visual { display: none !important; }
+  .login-form-panel { width: 100%; min-height: 100vh; padding: 32px 18px; }
+  .login-card { width: 100%; max-width: 430px; margin: 0 auto; }
+  .login-title { font-size: clamp(1.7rem, 8vw, 2.2rem); line-height: 1.2; }
+}
+
+@media (max-width: 360px) {
+  .login-form-panel { padding-left: 12px; padding-right: 12px; }
+  .login-title { font-size: clamp(1.45rem, 9vw, 1.85rem); }
+}
+
+/* Keep remember/forgot links on one straight line */
+.form-meta {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remember,
+.forgot {
+  margin-left: 0;
+}
+
+/* Final mobile header divider cleanup */
+@media (max-width: 600px) {
+  .auth-header,
+  .mobile-brand {
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .auth-header + *,
+  .mobile-brand + * {
+    border-top: 0 !important;
+  }
 }
