@@ -312,9 +312,13 @@ setInterval(() => {
 
 function scrollKits(direction) {
     const container = document.getElementById("kitGrid");
+    if (!container) return;
+    const card = container.querySelector(".kit-card");
+    const gap = parseFloat(getComputedStyle(container).gap) || 0;
+    const amount = card ? card.getBoundingClientRect().width + gap : 260;
 
     container.scrollBy({
-        left: direction * 320,
+        left: direction * amount,
         behavior: "smooth"
     });
 }

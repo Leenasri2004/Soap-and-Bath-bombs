@@ -140,9 +140,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (hamburger && mobileNav) {
     hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      mobileNav.classList.toggle("active");
-      mobileNav.classList.toggle("open");
+      const isOpen = !mobileNav.classList.contains("menu-open");
+      hamburger.classList.toggle("active", isOpen);
+      mobileNav.classList.toggle("active", isOpen);
+      mobileNav.classList.toggle("open", isOpen);
+      mobileNav.classList.toggle("menu-open", isOpen);
+      mobileNav.setAttribute("aria-hidden", String(!isOpen));
+
+      if (isOpen) {
+        mobileNav.style.setProperty("display", "block", "important");
+        mobileNav.style.setProperty("max-height", "calc(100vh - 70px)", "important");
+        mobileNav.style.setProperty("min-height", "300px", "important");
+        mobileNav.style.setProperty("overflow-y", "auto", "important");
+        mobileNav.style.setProperty("opacity", "1", "important");
+        mobileNav.style.setProperty("visibility", "visible", "important");
+        mobileNav.querySelectorAll("ul, li, a, .mobile-dropdown-toggle").forEach((item) => {
+          const displayValue = item.tagName === "UL" ? "flex" : item.tagName === "LI" ? "block" : "flex";
+          item.style.setProperty("display", displayValue, "important");
+          item.style.setProperty("opacity", "1", "important");
+          item.style.setProperty("visibility", "visible", "important");
+        });
+        const topList = mobileNav.querySelector("ul");
+        if (topList) {
+          topList.style.setProperty("display", "flex", "important");
+          topList.style.setProperty("flex-direction", "column", "important");
+        }
+      } else {
+        mobileNav.style.setProperty("max-height", "0", "important");
+        mobileNav.style.setProperty("min-height", "0", "important");
+        mobileNav.style.setProperty("overflow", "hidden", "important");
+      }
     });
   }
 
