@@ -923,7 +923,7 @@ body.rtl .nav-left ul {
    Footer
 ════════════════════════════════ */
 .site-footer {
-  background: #1e1410;
+  background: #07111f;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   position: relative;
@@ -931,10 +931,7 @@ body.rtl .nav-left ul {
 
 /* Top gradient accent line */
 .footer-accent {
-  height: 3px;
-  background: linear-gradient(90deg, #7b4fa3, #7b4fa3, #c4a882, #3caea3, #7b4fa3);
-  background-size: 200% 100%;
-  animation: accentShift 6s linear infinite;
+  display: none;
 }
 
 @keyframes accentShift {

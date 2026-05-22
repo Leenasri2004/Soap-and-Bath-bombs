@@ -659,8 +659,12 @@ body.rtl .nav-left ul {
 
 /* Hero button width fix */
 .hero-content button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 14px 30px;
-  background: #a8d5d1;
+  background: #7b4fa3;
+  color: #ffffff;
   border: none;
   border-radius: 999px;
   cursor: pointer;
@@ -769,9 +773,9 @@ body {
 }
 
 .hero-content button:hover {
-  background: #8fc4b9;
+  background: #6a4190;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(168,213,209,0.4);
+  box-shadow: 0 10px 30px rgba(123, 79, 163, 0.35);
 }
 
 .hero-img {
@@ -972,6 +976,65 @@ body {
 
 .col-btn i {
     font-size: 14px;
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .collection {
+        padding: 72px 40px;
+    }
+
+    .collection-header,
+    .collection-wrapper {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .collection-header {
+        margin-bottom: 34px;
+    }
+
+    .collection-wrapper {
+        display: block;
+        position: relative;
+    }
+
+    .collection-grid {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% - 40px) / 3);
+        gap: 20px;
+        padding: 10px 0;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .collection-item {
+        min-width: 0;
+        width: 100%;
+        height: clamp(210px, 28vw, 280px);
+        scroll-snap-align: start;
+    }
+
+    .collection .col-btn {
+        position: absolute;
+        top: 50%;
+        z-index: 20;
+        transform: translateY(-50%);
+    }
+
+    .collection .col-btn:hover {
+        transform: translateY(-50%);
+    }
+
+    .collection .col-btn:first-of-type {
+        left: -18px;
+    }
+
+    .collection .col-btn:last-of-type {
+        right: -18px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -2283,15 +2346,17 @@ body.page-home .collection .collection-header .view-all {
 /* price + duration */
 .workshop-price-duration {
   display: flex;
-  gap: 1.8rem;
+  gap: 1.25rem;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 1.2rem;
   width: 100%;
 }
 
 .workshop-price-duration .price {
   font-size: 2.2rem;
+  line-height: 1;
   font-weight: 800;
   color: #7b4fa3;
   background: linear-gradient(135deg, #7b4fa3, #7b4fa3);
@@ -2306,23 +2371,33 @@ body.page-home .collection .collection-header .view-all {
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 /* feature list */
 .features {
   list-style: none;
   margin-bottom: 1.8rem;
+  display: grid;
+  justify-content: center;
+  gap: 0.55rem;
 }
 
 .features li {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: center;
+  width: min(245px, 100%);
   color: #555;
-  margin-bottom: 0.5rem;
   font-size: 0.95rem;
+  text-align: left;
 }
 
 .features i {
   color: #27ae60;
-  margin-right: 8px;
+  margin-right: 0;
+  text-align: center;
 }
 
 /* CTA */
@@ -2430,6 +2505,78 @@ body.page-home .collection .collection-header .view-all {
 
   .workshop-content h3 {
     font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  body.page-home .workshops {
+    padding: 64px 0 56px;
+  }
+
+  body.page-home .workshops h2 {
+    margin-bottom: 34px;
+    font-size: 2rem;
+  }
+
+  body.page-home .workshops-horizontal {
+    width: min(100%, 780px);
+    height: 390px;
+    min-height: 390px;
+    margin: 0 auto 26px;
+    overflow: hidden;
+    border-radius: 18px;
+  }
+
+  body.page-home .workshop-slide {
+    position: absolute;
+    inset: 0;
+    display: block;
+    opacity: 0;
+    transform: translateX(36px);
+    pointer-events: none;
+  }
+
+  body.page-home .workshop-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  body.page-home .workshop-card-horizontal {
+    flex-direction: row;
+    height: 100%;
+    border-radius: 18px;
+  }
+
+  body.page-home .workshop-image {
+    flex: 0 0 52%;
+    width: 52%;
+    height: 100%;
+  }
+
+  body.page-home .workshop-content {
+    width: auto;
+    min-width: 0;
+    height: 100%;
+    padding: 30px 26px;
+  }
+
+  body.page-home .workshop-content h3 {
+    font-size: 1.45rem;
+  }
+
+  body.page-home .workshop-content p {
+    font-size: .86rem;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  body.page-home .workshop-price-duration .price {
+    font-size: 1.75rem;
+  }
+
+  body.page-home .features li {
+    font-size: .78rem;
   }
 }
 
@@ -3313,7 +3460,7 @@ body.page-home .collection .collection-header .view-all {
    Footer
 ════════════════════════════════ */
 .site-footer {
-  background: #1e1410;
+  background: #07111f;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   position: relative;

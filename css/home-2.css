@@ -1189,9 +1189,13 @@ body.dark-mode .hero-section .hero-overlay {
 .about-text h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    margin-bottom: 25px;
+    margin-bottom: 34px;
     color: var(--black);
     max-width: none;
+}
+
+.about-text > .discover-btn:first-of-type {
+    margin-bottom: 28px;
 }
 
 .about-text p {
@@ -1609,7 +1613,7 @@ body.dark-mode .hero-section .hero-overlay {
    Footer
 ════════════════════════════════ */
 .site-footer {
-  background: #1e1410;
+  background: #07111f;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   position: relative;
@@ -1617,10 +1621,7 @@ body.dark-mode .hero-section .hero-overlay {
 
 /* Top gradient accent line */
 .footer-accent {
-  height: 3px;
-  background: linear-gradient(90deg, #7b4fa3, #3caea3, #c4a882, #3caea3, #7b4fa3);
-  background-size: 200% 100%;
-  animation: accentShift 6s linear infinite;
+  display: none;
 }
 
 @keyframes accentShift {
@@ -2230,7 +2231,7 @@ img, video, iframe {
   .about-text h2 {
     font-size: 1.55rem;
     line-height: 1.25;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
     overflow-wrap: anywhere;
   }
 

@@ -717,7 +717,7 @@ body.dark textarea::placeholder {
 body.dark .site-footer,
 body.dark .footer-container,
 body.dark .footer-grid {
-  background: #0b1220 !important;
+  background: #07111f !important;
 }
 
 body.dark .footer-col,
@@ -1422,7 +1422,7 @@ body.dark .cart-summary-card {
 
 /* Footer fully dark theme */
 body.dark .site-footer {
-  background: #0b1220 !important;
+  background: #07111f !important;
 }
 
 body.dark .footer-mini-nl,
@@ -1466,7 +1466,7 @@ body.dark .footer-grid,
 body.dark .footer-col,
 body.dark .footer-col--brand,
 body.dark .footer-col--social {
-  background: #0b1220 !important;
+  background: #07111f !important;
 }
 
 body.dark .footer-accent {
@@ -3380,7 +3380,7 @@ body.dark .expect-list li {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .form-container h2 {
     font-size: 24px;
   }
@@ -6441,7 +6441,7 @@ body.dark-mode .mobile-nav .mobile-nav-icons button {
 /* Unified footer style for every page */
 .site-footer,
 .bf-footer {
-  background: #1e1410 !important;
+  background: #07111f !important;
   color: #ffffff !important;
   font-family: 'Poppins', sans-serif !important;
   position: relative !important;
@@ -6451,9 +6451,7 @@ body.dark-mode .mobile-nav .mobile-nav-icons button {
 
 .footer-accent,
 .bf-accent {
-  height: 3px !important;
-  background: linear-gradient(90deg, #7b4fa3, #9b6bd3, #7b4fa3, #9b6bd3, #7b4fa3) !important;
-  background-size: 200% 100% !important;
+  display: none !important;
 }
 
 .footer-container,
@@ -6681,6 +6679,69 @@ body.dark-mode .mobile-nav .mobile-nav-icons button {
 .bf-pay {
   color: #6b5a4f !important;
   font-size: 22px !important;
+}
+
+/* Blog footer should visually match the Home 1 footer. */
+body.page-blog .bf-footer {
+  background: #07111f !important;
+  color: #ffffff !important;
+}
+
+body.page-blog .bf-container,
+body.page-blog .bf-grid,
+body.page-blog .bf-col,
+body.page-blog .bf-bottom {
+  background: transparent !important;
+}
+
+body.page-blog .bf-accent {
+  display: none !important;
+}
+
+body.page-blog .bf-heart {
+  color: #e07b5a !important;
+}
+
+body.page-blog .bf-social--ig:hover {
+  background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888) !important;
+  box-shadow: 0 6px 18px rgba(220,39,67,.35) !important;
+}
+
+body.page-blog .bf-social--fb:hover {
+  background: #1877f2 !important;
+  box-shadow: 0 6px 18px rgba(24,119,242,.35) !important;
+}
+
+body.page-blog .bf-social--wa:hover {
+  background: #25d366 !important;
+  box-shadow: 0 6px 18px rgba(37,211,102,.35) !important;
+}
+
+body.page-blog .bf-social--yt:hover {
+  background: #ff0000 !important;
+  box-shadow: 0 6px 18px rgba(255,0,0,.35) !important;
+}
+
+body.page-blog .bf-social--pin:hover {
+  background: #e60023 !important;
+  box-shadow: 0 6px 18px rgba(230,0,35,.35) !important;
+}
+
+/* Contact footer uses the same navy footer color. */
+body.page-contact .site-footer {
+  background: #07111f !important;
+  color: #ffffff !important;
+}
+
+body.page-contact .footer-container,
+body.page-contact .footer-grid,
+body.page-contact .footer-col,
+body.page-contact .footer-bottom {
+  background: transparent !important;
+}
+
+body.page-contact .footer-accent {
+  display: none !important;
 }
 
 @media (max-width: 1024px) {
@@ -6960,6 +7021,125 @@ body.page-blog .mobile-nav {
   }
 }
 
+/* Home workshops: iPad mini should match the iPad Pro horizontal carousel. */
+@media (min-width: 700px) and (max-width: 900px) {
+  body.page-home .workshops {
+    padding: 64px 0 56px !important;
+  }
+
+  body.page-home .workshops h2 {
+    margin-bottom: 34px !important;
+    font-size: 2rem !important;
+  }
+
+  body.page-home .workshops-horizontal {
+    width: min(100%, 780px) !important;
+    height: 390px !important;
+    min-height: 390px !important;
+    margin: 0 auto 26px !important;
+    overflow: hidden !important;
+    border-radius: 18px !important;
+  }
+
+  body.page-home .workshop-slide {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    opacity: 0 !important;
+    transform: translateX(36px) !important;
+    pointer-events: none !important;
+    transition: opacity .45s ease, transform .45s ease !important;
+  }
+
+  body.page-home .workshop-slide.active {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    pointer-events: auto !important;
+  }
+
+  body.page-home .workshop-card-horizontal {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    border-radius: 18px !important;
+    background: #ffffff !important;
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.16) !important;
+  }
+
+  body.page-home .workshop-image {
+    flex: 0 0 52% !important;
+    width: 52% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    display: block !important;
+    overflow: hidden !important;
+  }
+
+  body.page-home .workshop-image img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  body.page-home .workshop-content {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: 100% !important;
+    padding: 30px 26px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  body.page-home .workshop-content h3 {
+    font-size: 1.45rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  body.page-home .workshop-content p {
+    font-size: .86rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 16px !important;
+  }
+
+  body.page-home .workshop-price-duration {
+    gap: 10px !important;
+    margin-bottom: 14px !important;
+  }
+
+  body.page-home .workshop-price-duration .price {
+    font-size: 1.75rem !important;
+  }
+
+  body.page-home .workshop-price-duration .duration {
+    padding: 6px 14px !important;
+    font-size: .75rem !important;
+  }
+
+  body.page-home .features {
+    gap: 7px !important;
+    margin-bottom: 16px !important;
+  }
+
+  body.page-home .features li {
+    width: min(220px, 100%) !important;
+    font-size: .78rem !important;
+  }
+
+  body.page-home .book-btn {
+    padding: 11px 24px !important;
+    font-size: .85rem !important;
+  }
+}
+
 @media (max-width: 992px) {
   body.page-contact .site-header,
   body.page-contact .header-container,
@@ -6974,4 +7154,1819 @@ body.page-blog .mobile-nav {
     border-left: 0 !important;
     box-shadow: none !important;
   }
+}
+
+/* Final portrait-tablet pass for the 768 x 1024 responsive preview. */
+@media (min-width: 641px) and (max-width: 900px) {
+  body.page-home {
+    overflow-x: hidden;
+  }
+
+  body.page-home .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    height: 68px !important;
+    min-height: 68px !important;
+    background: #f4efea !important;
+    z-index: 1000 !important;
+  }
+
+  body.page-home .header-container {
+    height: 68px !important;
+    min-height: 68px !important;
+    max-width: 100% !important;
+    padding: 0 24px !important;
+  }
+
+  body.page-home .site-header .logo-img {
+    height: 50px !important;
+    width: auto !important;
+  }
+
+  body.page-home .mobile-nav {
+    position: fixed !important;
+    top: 68px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  body.page-home .mobile-nav.open,
+  body.page-home .mobile-nav.active {
+    max-height: calc(100vh - 68px) !important;
+    overflow-y: auto !important;
+  }
+
+  body.page-home .hero {
+    height: auto !important;
+    min-height: calc(100vh - 68px) !important;
+    padding: 0 !important;
+  }
+
+  body.page-home .hero-slide {
+    position: absolute !important;
+    min-height: calc(100vh - 68px) !important;
+    padding: 68px 40px 54px !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
+    justify-items: center;
+    gap: 28px;
+    text-align: center !important;
+  }
+
+  body.page-home .hero-content {
+    width: 100% !important;
+    max-width: 640px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  body.page-home .hero-content h1 {
+    font-size: clamp(2.25rem, 6vw, 3.1rem) !important;
+    line-height: 1.12 !important;
+    margin: 16px 0 18px !important;
+    overflow-wrap: normal !important;
+  }
+
+  body.page-home .hero-content p {
+    max-width: 580px;
+    margin: 0 auto;
+    font-size: 0.98rem !important;
+    line-height: 1.65 !important;
+    overflow-wrap: normal !important;
+  }
+
+  body.page-home .hero-img {
+    width: min(76vw, 430px) !important;
+    max-width: 430px !important;
+    margin: 0 auto !important;
+  }
+
+  body.page-home .hero-img img {
+    width: 100% !important;
+    max-height: 300px !important;
+    object-fit: contain !important;
+    border-radius: 16px !important;
+  }
+
+  body.page-home .collection,
+  body.page-home .product-section,
+  body.page-home .diy-kits,
+  body.page-home .hotspot-showcase,
+  body.page-home .workshops,
+  body.page-home .love-section,
+  body.page-home .perfect-section,
+  body.page-home .skin-section,
+  body.page-home .faq-section,
+  body.page-home .book-big,
+  body.page-home .journal-section {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+
+  body.page-home .container,
+  body.page-home .collection .container,
+  body.page-home .product-section .container,
+  body.page-home .diy-kits .container,
+  body.page-home .hotspot-showcase .container,
+  body.page-home .workshops .container,
+  body.page-home .love-section .container,
+  body.page-home .perfect-section .container,
+  body.page-home .skin-section .container,
+  body.page-home .faq-section .container,
+  body.page-home .book-big .container,
+  body.page-home .journal-section .container,
+  body.page-home .footer-container {
+    width: 100% !important;
+    max-width: 760px !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  body.page-home .collection-header,
+  body.page-home .product-section .section-header,
+  body.page-home .diy-top {
+    align-items: center !important;
+    gap: 18px !important;
+  }
+
+  body.page-home .collection-header h2,
+  body.page-home .product-section .section-title,
+  body.page-home .diy-top h2,
+  body.page-home .workshops h2,
+  body.page-home .love-text h2,
+  body.page-home .perfect-section h2,
+  body.page-home .skin-section h2,
+  body.page-home .faq-section h2,
+  body.page-home .book-header h2 {
+    font-size: clamp(1.9rem, 4vw, 2.45rem) !important;
+    line-height: 1.2 !important;
+    overflow-wrap: normal !important;
+  }
+
+  body.page-home .collection-grid {
+    gap: 18px !important;
+    padding: 10px 8px !important;
+  }
+
+  body.page-home .collection-item {
+    min-width: 230px !important;
+    width: 230px !important;
+    height: 300px !important;
+  }
+
+  body.page-home .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 26px !important;
+  }
+
+  body.page-home .product-card {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  body.page-home .product-image {
+    height: 245px !important;
+  }
+
+  body.page-home .naturals-inner,
+  body.page-home .hotspot-layout,
+  body.page-home .love-layout {
+    grid-template-columns: 1fr !important;
+    max-width: 760px !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  body.page-home .naturals-img-main,
+  body.page-home .naturals-img-float {
+    flex-basis: 48% !important;
+    width: 48% !important;
+    height: 280px !important;
+  }
+
+  body.page-home .love-stats,
+  body.page-home .perfect-grid,
+  body.page-home .skin-layout,
+  body.page-home .journal-grid,
+  body.page-home .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body.page-home .booking-form-big .form-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.page-home .hero {
+    min-height: 360px !important;
+  }
+
+  body.page-home .products-grid,
+  body.page-home .love-stats,
+  body.page-home .perfect-grid,
+  body.page-home .skin-layout,
+  body.page-home .journal-grid,
+  body.page-home .footer-grid,
+  body.page-home .booking-form-big .form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Home 1: equal tablet padding for iPad Mini/Pro carousel rows. */
+@media (min-width: 641px) and (max-width: 1180px) {
+  body.page-home .collection .container,
+  body.page-home .diy-kits .container {
+    width: 100% !important;
+    max-width: 980px !important;
+    padding-left: clamp(28px, 4vw, 48px) !important;
+    padding-right: clamp(28px, 4vw, 48px) !important;
+  }
+
+  body.page-home .collection-wrapper,
+  body.page-home .kit-wrapper {
+    position: relative !important;
+    gap: 0 !important;
+    padding-left: 46px !important;
+    padding-right: 46px !important;
+    overflow: visible !important;
+  }
+
+  body.page-home .collection-grid,
+  body.page-home .kit-grid {
+    width: 100% !important;
+    gap: 18px !important;
+    padding: 0 !important;
+    scroll-padding-inline: 0 !important;
+  }
+
+  body.page-home .collection-item,
+  body.page-home .kit-card {
+    flex: 0 0 calc((100% - 36px) / 3) !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+
+  body.page-home .kit-card img {
+    width: 100% !important;
+    height: 170px !important;
+    object-fit: cover !important;
+  }
+
+  body.page-home .collection-wrapper .col-btn,
+  body.page-home .kit-wrapper .kit-btn {
+    position: absolute !important;
+    top: 50% !important;
+    z-index: 20 !important;
+    margin: 0 !important;
+    transform: translateY(-50%) !important;
+  }
+
+  body.page-home .collection-wrapper .col-btn:first-child,
+  body.page-home .kit-wrapper .kit-btn.left {
+    left: 0 !important;
+  }
+
+  body.page-home .collection-wrapper .col-btn:last-child,
+  body.page-home .kit-wrapper .kit-btn.right {
+    right: 0 !important;
+  }
+}
+
+/* Home 1: force equal iPad/tablet collection image sizing after global overrides. */
+@media (min-width: 641px) and (max-width: 1024px) {
+  body.page-home .collection {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  body.page-home .collection-header,
+  body.page-home .collection-wrapper {
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.page-home .collection-wrapper {
+    display: block !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body.page-home .collection-grid {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: calc((100% - 40px) / 3) !important;
+    gap: 20px !important;
+    padding: 10px 0 !important;
+    overflow-x: auto !important;
+  }
+
+  body.page-home .collection-item {
+    flex: none !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    height: 220px !important;
+    max-width: none !important;
+  }
+
+  body.page-home .collection-item img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  body.page-home .collection-wrapper .col-btn:first-child {
+    left: -18px !important;
+  }
+
+  body.page-home .collection-wrapper .col-btn:last-child {
+    right: -18px !important;
+  }
+}
+
+/* Home 1: balance the Why Choose Us stat cards on narrow screens. */
+@media (max-width: 360px) {
+  body.page-home .love-section .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  body.page-home .love-stats {
+    gap: 16px !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  body.page-home .love-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 20px 16px !important;
+    border-radius: 10px !important;
+  }
+
+  body.page-home .love-card h3 {
+    margin-bottom: 6px !important;
+  }
+
+  body.page-home .love-card p {
+    margin: 0 !important;
+    line-height: 1.45 !important;
+  }
+}
+
+/* Home 1: keep DIY kit card image spacing even on 360px screens. */
+@media (max-width: 360px) {
+  body.page-home .kit-grid {
+    gap: 14px !important;
+    padding: 6px 0 !important;
+  }
+
+  body.page-home .kit-card {
+    width: 240px !important;
+    min-width: 240px !important;
+    max-width: 240px !important;
+    padding: 12px 12px 0 !important;
+    border-radius: 12px !important;
+  }
+
+  body.page-home .kit-card img {
+    width: 100% !important;
+    height: 170px !important;
+    border-radius: 10px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  body.page-home .kit-copy {
+    padding: 14px 2px 16px !important;
+  }
+}
+
+/* Home 1: equal product card alignment. */
+body.page-home .products-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  gap: 26px !important;
+}
+
+body.page-home .products-grid .product-card {
+  flex: 0 1 calc((100% - 78px) / 4) !important;
+  max-width: calc((100% - 78px) / 4) !important;
+  min-width: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+body.page-home .products-grid .image-container {
+  height: 245px !important;
+  min-height: 245px !important;
+  max-height: 245px !important;
+  overflow: hidden !important;
+}
+
+body.page-home .products-grid .product-image {
+  width: 100% !important;
+  height: 245px !important;
+  min-height: 245px !important;
+  max-height: 245px !important;
+  object-fit: cover !important;
+}
+
+body.page-home .products-grid .product-info {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  min-height: 122px !important;
+}
+
+body.page-home .products-grid .product-title {
+  min-height: 42px !important;
+  margin-bottom: 10px !important;
+}
+
+body.page-home .products-grid .rating {
+  margin-top: auto !important;
+}
+
+/* Home 1: balanced celebration cards. */
+body.page-home .perfect-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  gap: 24px !important;
+}
+
+body.page-home .perfect-card {
+  height: 100% !important;
+  min-height: 190px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+body.page-home .perfect-card p {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 1100px) {
+  body.page-home .perfect-grid {
+    max-width: 760px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.page-home .perfect-grid {
+    max-width: 360px !important;
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  body.page-home .products-grid .product-card {
+    flex-basis: calc((100% - 52px) / 3) !important;
+    max-width: calc((100% - 52px) / 3) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.page-home .products-grid .product-card {
+    flex-basis: calc((100% - 20px) / 2) !important;
+    max-width: calc((100% - 20px) / 2) !important;
+  }
+
+  body.page-home .products-grid {
+    gap: 20px !important;
+  }
+
+  body.page-home .products-grid .image-container,
+  body.page-home .products-grid .product-image {
+    height: 220px !important;
+    min-height: 220px !important;
+    max-height: 220px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.page-home .products-grid {
+    gap: 16px !important;
+  }
+
+  body.page-home .products-grid .product-card {
+    flex-basis: min(100%, 330px) !important;
+    max-width: 330px !important;
+  }
+
+  body.page-home .products-grid .image-container,
+  body.page-home .products-grid .product-image {
+    height: 210px !important;
+    min-height: 210px !important;
+    max-height: 210px !important;
+  }
+}
+
+/* Shared scroll-to-top button fallback for pages without page-specific CSS. */
+.back-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 500;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7b4fa3, #8c58b4);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  box-shadow: 0 8px 24px rgba(123, 79, 163, 0.32);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(123, 79, 163, 0.42);
+}
+
+@media (max-width: 576px) {
+  .back-to-top {
+    right: 20px;
+    bottom: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Home 2: iPad Mini/Pro balanced card rows. */
+@media (min-width: 700px) and (max-width: 1180px) {
+  body.page-home2 .featured-products .products-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 30px !important;
+  }
+
+  body.page-home2 .featured-products .product-card {
+    flex: 0 1 calc((100% - 60px) / 3) !important;
+    max-width: calc((100% - 60px) / 3) !important;
+    min-width: 0 !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.page-home2 .featured-products .product-image {
+    height: 230px !important;
+  }
+
+  body.page-home2 .why-choose-us .features-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    max-width: 720px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.page-home2 .why-choose-us .feature-card {
+    width: 100% !important;
+    min-height: 220px !important;
+    padding: 34px 26px !important;
+  }
+
+  body.page-home2 .blog-section .blog-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 32px !important;
+  }
+
+  body.page-home2 .blog-section .blog-card {
+    flex: 0 1 calc((100% - 32px) / 2) !important;
+    max-width: calc((100% - 32px) / 2) !important;
+    min-width: 0 !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Home 2: offer banner background image with readable overlay. */
+body.page-home2 .parallax-banner {
+  min-height: 400px !important;
+  background-image: url("../images/natural-soap-sale.jpg") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-color: #111827 !important;
+  background-attachment: scroll !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+}
+
+body.page-home2 .parallax-overlay {
+  z-index: 1 !important;
+  background:
+    linear-gradient(90deg, rgba(6, 10, 20, 0.78), rgba(6, 10, 20, 0.58)),
+    rgba(123, 79, 163, 0.28) !important;
+}
+
+body.page-home2 .parallax-banner .container,
+body.page-home2 .banner-content {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+}
+
+body.page-home2 .banner-content h2,
+body.page-home2 .banner-content p {
+  color: #ffffff !important;
+}
+
+body.page-home2 .banner-content {
+  width: 100% !important;
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  text-align: center !important;
+}
+
+body.page-home2 .banner-content p {
+  max-width: 58ch !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.page-home2 .offer-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 170px !important;
+  min-height: 48px !important;
+  padding: 0 28px !important;
+  border-radius: 999px !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 480px) {
+  body.page-home2 .banner-content {
+    padding: 0 16px !important;
+  }
+
+  body.page-home2 .banner-content h2 {
+    font-size: 1.75rem !important;
+  }
+
+  body.page-home2 .banner-content p {
+    max-width: 32ch !important;
+  }
+
+  body.page-home2 .offer-btn {
+    min-width: 150px !important;
+    min-height: 44px !important;
+    padding: 0 22px !important;
+  }
+}
+
+/* Home 2: keep clicked/hover product images equal inside the card. */
+body.page-home2 .featured-products .product-image {
+  position: relative !important;
+  height: 250px !important;
+  min-height: 250px !important;
+  max-height: 250px !important;
+  overflow: hidden !important;
+  background: #eef2ed !important;
+}
+
+body.page-home2 .featured-products .product-image img,
+body.page-home2 .featured-products .primary-img,
+body.page-home2 .featured-products .secondary-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+body.page-home2 .featured-products .primary-img {
+  opacity: 1 !important;
+}
+
+body.page-home2 .featured-products .secondary-img {
+  opacity: 0 !important;
+}
+
+body.page-home2 .featured-products .product-card:hover .primary-img,
+body.page-home2 .featured-products .product-card.is-hovered .primary-img {
+  opacity: 0 !important;
+}
+
+body.page-home2 .featured-products .product-card:hover .secondary-img,
+body.page-home2 .featured-products .product-card.is-hovered .secondary-img {
+  opacity: 1 !important;
+}
+
+@media (min-width: 700px) and (max-width: 1180px) {
+  body.page-home2 .featured-products .product-image {
+    height: 230px !important;
+    min-height: 230px !important;
+    max-height: 230px !important;
+  }
+}
+
+/* Home 2: keep story stats in one straight row. */
+body.page-home2 .about-section .about-stats {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: start !important;
+  gap: 18px !important;
+  width: 100% !important;
+}
+
+body.page-home2 .about-section .stat {
+  min-width: 0 !important;
+  text-align: center !important;
+}
+
+body.page-home2 .about-section .stat h3,
+body.page-home2 .about-section .stat p {
+  white-space: normal !important;
+  overflow-wrap: normal !important;
+}
+
+@media (max-width: 480px) {
+  body.page-home2 .about-section .about-stats {
+    gap: 8px !important;
+  }
+
+  body.page-home2 .about-section .stat {
+    padding: 12px 6px !important;
+  }
+
+  body.page-home2 .about-section .stat h3 {
+    font-size: 1.1rem !important;
+  }
+
+  body.page-home2 .about-section .stat p {
+    font-size: 0.7rem !important;
+    line-height: 1.25 !important;
+  }
+}
+
+/* Home 2: center the last category card on iPad/tablet. */
+@media (min-width: 700px) and (max-width: 1180px) {
+  body.page-home2 .category-section .category-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 30px !important;
+  }
+
+  body.page-home2 .category-section .category-card {
+    flex: 0 1 calc((100% - 30px) / 2) !important;
+    max-width: calc((100% - 30px) / 2) !important;
+    min-width: 0 !important;
+    width: auto !important;
+    margin: 0 !important;
+  }
+}
+
+/* Home 2: remove category image blank/padding gaps. */
+body.page-home2 .category-section .category-card {
+  overflow: hidden !important;
+}
+
+body.page-home2 .category-section .category-image {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  overflow: hidden !important;
+}
+
+body.page-home2 .category-section .category-image img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: none !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+/* About page: CTA image background with overlay. */
+body.page-about .cta-banner {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+body.page-about .cta-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  background-image:
+    linear-gradient(135deg, rgba(54, 30, 78, 0.82), rgba(123, 79, 163, 0.62)),
+    url("../images/handmade-soap-bars-2024-12-07-21-31-31-utc.webp") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+body.page-about .cta-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  background: rgba(6, 10, 20, 0.34) !important;
+}
+
+body.page-about .cta-banner .container,
+body.page-about .cta-content {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+}
+
+/* About page: align team card text consistently. */
+body.page-about .team-grid .team-member {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+body.page-about .team-grid .member-info {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding: 28px 22px 30px !important;
+}
+
+body.page-about .team-grid .member-info h3 {
+  min-height: 2.6em !important;
+  margin-bottom: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1.3 !important;
+}
+
+body.page-about .team-grid .member-role {
+  min-height: 2.8em !important;
+  max-width: 22ch !important;
+  margin: 0 auto 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1.4 !important;
+}
+
+body.page-about .team-grid .member-bio {
+  max-width: 28ch !important;
+  margin: 0 auto !important;
+  line-height: 1.6 !important;
+}
+
+/* About page: keep gallery images evenly filled. */
+body.page-about .gallery-grid .gallery-item {
+  aspect-ratio: 16 / 10 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: hidden !important;
+  background: #1a2332 !important;
+}
+
+body.page-about .gallery-grid .gallery-item img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: none !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+/* About page: center odd process rows cleanly. */
+body.page-about .process-steps {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  gap: 40px !important;
+}
+
+body.page-about .process-steps .process-step {
+  flex: 0 1 calc((100% - 40px) / 2) !important;
+  max-width: calc((100% - 40px) / 2) !important;
+  min-width: 220px !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 1100px) {
+  body.page-about .process-steps .process-step {
+    flex-basis: calc((100% - 40px) / 2) !important;
+    max-width: calc((100% - 40px) / 2) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.page-about .process-steps {
+    gap: 24px !important;
+  }
+
+  body.page-about .process-steps .process-step {
+    flex-basis: calc((100% - 24px) / 2) !important;
+    max-width: calc((100% - 24px) / 2) !important;
+    min-width: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+body.page-about .process-steps .process-step {
+    flex-basis: min(100%, 320px) !important;
+    max-width: 320px !important;
+  }
+}
+
+/* Service page: align values cards with equal padding and height. */
+body.page-service .values-section .values-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  max-width: 980px !important;
+  margin: 18px auto 0 !important;
+}
+
+body.page-service .values-section .value-item {
+  min-height: 220px !important;
+  padding: 26px 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+body.page-service .values-section .value-item h3 {
+  min-height: 2.7em !important;
+  margin-bottom: 14px !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  line-height: 1.35 !important;
+}
+
+body.page-service .values-section .value-item p {
+  margin: 0 !important;
+  line-height: 1.65 !important;
+}
+
+/* Service page gallery: keep every image in an equal box after dark.css image resets. */
+body.page-service .gallery-section .gallery-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+
+body.page-service .gallery-section .gallery-item {
+  position: relative !important;
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden !important;
+  border-radius: 8px !important;
+}
+
+body.page-service .gallery-section .gallery-item img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+}
+
+body.page-service .why-choose-image,
+body.page-service .sustainability-image {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+body.page-service .why-choose-image img,
+body.page-service .sustainability-image img {
+  width: min(100%, 560px) !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 992px) {
+  body.page-service .gallery-section .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 576px) {
+  body.page-service .gallery-section .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  body.page-service .gallery-section .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body.page-service .values-section .values-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  body.page-service .values-section .value-item {
+    min-height: 230px !important;
+    padding: 22px 18px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.page-service .values-section .values-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.page-service .values-section .value-item {
+    min-height: 0 !important;
+  }
+}
+
+/* Blog page mobile cards: equal image padding inside every card. */
+@media (max-width: 768px) {
+  body.page-blog .bg-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  body.page-blog .bg-grid {
+    gap: 20px !important;
+  }
+
+  body.page-blog .bg-card {
+    padding: 0 !important;
+    gap: 0 !important;
+    border-radius: 12px !important;
+  }
+
+  body.page-blog .bg-card-img-wrap {
+    width: calc(100% - 28px) !important;
+    margin: 14px auto 0 !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 8px !important;
+  }
+
+  body.page-blog .bg-card-img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  body.page-blog .bg-card-body {
+    padding: 14px 14px 16px !important;
+  }
+}
+
+/* Shop page mobile product grid: equal card/image padding and aligned columns. */
+@media (max-width: 768px) {
+  body.page-shop .main-layout {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  body.page-shop .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  body.page-shop .product-card {
+    padding: 8px !important;
+    gap: 8px !important;
+    border-radius: 8px !important;
+  }
+
+  body.page-shop .product-image {
+    position: relative !important;
+    aspect-ratio: 1 !important;
+    border-radius: 6px !important;
+    display: grid !important;
+    place-items: center !important;
+    padding: 8px !important;
+  }
+
+  body.page-shop .product-image img {
+    position: absolute !important;
+    inset: 8px !important;
+    width: calc(100% - 16px) !important;
+    height: calc(100% - 16px) !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  body.page-shop .product-image img[src*="citrus"],
+  body.page-shop .product-image img[src*="colour"],
+  body.page-shop .product-image img[src*="soap kit"],
+  body.page-shop .product-image img[src*="kit"] {
+    object-fit: contain !important;
+  }
+
+  body.page-shop .product-image .main-image,
+  body.page-shop .product-image .hover-image {
+    transform: none !important;
+  }
+
+  body.page-shop .product-card:hover .main-image {
+    transform: scale(1.04) !important;
+  }
+
+  body.page-shop .product-card:hover .hover-image {
+    transform: scale(1.02) !important;
+  }
+
+  body.page-shop .product-info {
+    padding: 0 2px 4px !important;
+    gap: 4px !important;
+  }
+
+  body.page-shop .product-name {
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+  }
+
+  body.page-shop .current-price,
+  body.page-shop .old-price {
+    font-size: 11px !important;
+  }
+}
+
+/* Final blog card alignment override. */
+body.page-blog .bg-card {
+  padding: 0 !important;
+  gap: 0 !important;
+}
+
+body.page-blog .bg-card-img-wrap,
+body.page-blog .bg-card--wide .bg-card-img-wrap,
+body.page-blog .bg-main-col .bg-card--wide .bg-card-img-wrap {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+}
+
+body.page-blog .bg-card-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+body.page-blog .bg-card-body,
+body.page-blog .bg-card--wide .bg-card-body,
+body.page-blog .bg-main-col .bg-card--wide .bg-card-body {
+  padding: 14px 14px 16px !important;
+}
+
+/* iPad mini: keep the desktop blog composition in a tighter tablet fit. */
+@media (min-width: 700px) and (max-width: 900px) {
+  body.page-blog .site-header {
+    position: sticky !important;
+    top: 0 !important;
+  }
+
+  body.page-blog .header-container {
+    max-width: none !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    padding: 0 14px !important;
+    gap: 10px !important;
+  }
+
+  body.page-blog .site-header .logo-img {
+    width: auto !important;
+    height: 46px !important;
+  }
+
+  body.page-blog .nav-left {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  body.page-blog .nav-left ul {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+
+  body.page-blog .nav-left a {
+    font-size: 9px !important;
+    letter-spacing: .02em !important;
+    white-space: nowrap !important;
+  }
+
+  body.page-blog .dropdown-caret {
+    margin-left: 3px !important;
+    font-size: 8px !important;
+  }
+
+  body.page-blog .nav-right {
+    display: flex !important;
+    gap: 9px !important;
+  }
+
+  body.page-blog .nav-right a {
+    font-size: 14px !important;
+  }
+
+  body.page-blog .header-container > .theme-btn,
+  body.page-blog .header-container > .rtl-btn,
+  body.page-blog .header-container > .mobile-login-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 26px !important;
+    min-width: 30px !important;
+    padding: 0 10px !important;
+    margin-left: 0 !important;
+    font-size: 9px !important;
+    line-height: 1 !important;
+  }
+
+  body.page-blog .hamburger,
+  body.page-blog .mobile-nav {
+    display: none !important;
+  }
+
+  body.page-blog .bg-section {
+    padding: 18px 14px 64px !important;
+  }
+
+  body.page-blog .bg-container {
+    max-width: none !important;
+  }
+
+  body.page-blog .bg-layout {
+    grid-template-columns: minmax(0, 1fr) 220px !important;
+    gap: 18px !important;
+    align-items: start !important;
+  }
+
+  body.page-blog .bs-sidebar {
+    display: flex !important;
+    position: sticky !important;
+    top: 72px !important;
+    gap: 16px !important;
+  }
+
+  body.page-blog .bs-widget {
+    padding: 16px 14px !important;
+    border-radius: 12px !important;
+  }
+
+  body.page-blog .bs-widget-title {
+    font-size: 9px !important;
+    margin-bottom: 10px !important;
+    padding-bottom: 9px !important;
+  }
+
+  body.page-blog .bs-search-wrap {
+    padding: 7px 10px !important;
+  }
+
+  body.page-blog .bs-search-input,
+  body.page-blog .bs-cat-link,
+  body.page-blog .bs-recent-title,
+  body.page-blog .bs-popular-title {
+    font-size: 11px !important;
+  }
+
+  body.page-blog .bs-recent-thumb {
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  body.page-blog .bg-main-col .bg-grid,
+  body.page-blog .bg-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  body.page-blog .bg-card {
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+  }
+
+  body.page-blog .bg-card--wide,
+  body.page-blog .bg-main-col .bg-card--wide {
+    grid-column: span 2 !important;
+  }
+
+  body.page-blog .bg-card-img-wrap,
+  body.page-blog .bg-card--wide .bg-card-img-wrap,
+  body.page-blog .bg-main-col .bg-card--wide .bg-card-img-wrap {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  body.page-blog .bg-card-body,
+  body.page-blog .bg-card--wide .bg-card-body,
+  body.page-blog .bg-main-col .bg-card--wide .bg-card-body {
+    padding: 12px 12px 14px !important;
+    gap: 8px !important;
+  }
+
+  body.page-blog .bg-card-title {
+    font-size: 14px !important;
+    line-height: 1.25 !important;
+  }
+
+  body.page-blog .bg-card-excerpt {
+    font-size: 10.5px !important;
+    line-height: 1.55 !important;
+    -webkit-line-clamp: 3 !important;
+  }
+
+  body.page-blog .bg-card-meta,
+  body.page-blog .bg-read-more {
+    font-size: 9px !important;
+  }
+
+  body.page-blog .bg-avatar {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  body.page-blog .bg-card-tag {
+    top: 10px !important;
+    left: 10px !important;
+    font-size: 7px !important;
+    padding: 4px 8px !important;
+  }
+
+  body.page-blog .bg-date-badge {
+    bottom: 10px !important;
+    left: 10px !important;
+    min-width: 38px !important;
+    padding: 6px 8px !important;
+  }
+
+  body.page-blog .bg-date-day {
+    font-size: 14px !important;
+  }
+
+  body.page-blog .bg-date-mon {
+    font-size: 7px !important;
+  }
+
+  body.page-blog .bg-card-hover-cta {
+    right: 10px !important;
+    bottom: 10px !important;
+    font-size: 7px !important;
+    padding: 6px 9px !important;
+  }
+
+  body.page-blog .bg-save-btn {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 10px !important;
+  }
+}
+
+/* Product page: keep related product images equal on iPad/tablet/mobile. */
+@media (max-width: 1024px) {
+  body.page-product .rp-img-wrap {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 1 / 1.08 !important;
+    height: auto !important;
+    overflow: hidden !important;
+    background: #f0ebe4 !important;
+  }
+
+  body.page-product .rp-img-main,
+  body.page-product .rp-img-hover {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  body.page-product .rp-card-body {
+    min-height: 120px !important;
+  }
+}
+
+/* About and service page hero banner background images. */
+body.page-about .hero-bg {
+  background:
+    linear-gradient(rgba(45, 31, 26, 0.55), rgba(123, 79, 163, 0.68)),
+    url("../images/handmade-soap-bars-2024-12-07-21-31-31-utc.webp") center / cover no-repeat !important;
+}
+
+body.page-about .hero-overlay {
+  background: rgba(45, 31, 26, 0.18) !important;
+}
+
+body.page-service .hero-section {
+  background:
+    linear-gradient(rgba(45, 31, 26, 0.58), rgba(123, 79, 163, 0.7)),
+    url("../images/workshop.jpg") center / cover no-repeat !important;
+}
+
+/* Contact page hero overlay matched with the about page banner style. */
+body.page-contact .contact-header {
+  background:
+    linear-gradient(rgba(45, 31, 26, 0.55), rgba(123, 79, 163, 0.68)),
+    url("../images/lavender.jpg") center / cover no-repeat !important;
+}
+
+body.page-contact .contact-header::before {
+  background: rgba(45, 31, 26, 0.18) !important;
+  opacity: 1 !important;
+}
+
+/* iPad Pro/tablet header: use hamburger instead of showing the full desktop menu. */
+@media (max-width: 1180px), (max-width: 1366px) and (pointer: coarse) {
+  body:not(.page-login):not(.page-register) .site-header {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    background: #f4efea !important;
+    box-shadow: none !important;
+    z-index: 1000 !important;
+  }
+
+  body:not(.page-login):not(.page-register) .header-container {
+    width: 100% !important;
+    max-width: none !important;
+    height: 68px !important;
+    min-height: 68px !important;
+    padding: 0 18px !important;
+    border-bottom: 1px solid rgba(45, 31, 26, 0.06) !important;
+  }
+
+  body:not(.page-login):not(.page-register) .site-header .logo-img {
+    height: 48px !important;
+    width: auto !important;
+  }
+
+  body:not(.page-login):not(.page-register) .site-header .nav-left,
+  body:not(.page-login):not(.page-register) .site-header .nav-right,
+  body:not(.page-login):not(.page-register) .header-container > .theme-btn,
+  body:not(.page-login):not(.page-register) .header-container > .rtl-btn,
+  body:not(.page-login):not(.page-register) .header-container > .mobile-login-btn {
+    display: none !important;
+  }
+
+  body:not(.page-login):not(.page-register) .hamburger {
+    display: flex !important;
+    width: 42px !important;
+    height: 42px !important;
+    margin-left: auto !important;
+    border: 2px solid #1f1a17 !important;
+    border-radius: 10px !important;
+    background: transparent !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  body:not(.page-login):not(.page-register) .hamburger span {
+    width: 22px !important;
+    height: 2px !important;
+    background: #1f1a17 !important;
+  }
+
+  body:not(.page-login):not(.page-register) .mobile-nav {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    background: #f4efea !important;
+    border-bottom: 1px solid rgba(45, 31, 26, 0.08) !important;
+    box-shadow: none !important;
+  }
+
+  body:not(.page-login):not(.page-register) .mobile-nav.open,
+  body:not(.page-login):not(.page-register) .mobile-nav.active {
+    max-height: 560px !important;
+    overflow-y: auto !important;
+  }
+
+  body:not(.page-login):not(.page-register) .mobile-nav > ul {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 12px 16px 16px !important;
+    list-style: none !important;
+  }
+
+  body:not(.page-login):not(.page-register) .mobile-nav > ul > li:not(.mobile-dropdown) > a,
+  body:not(.page-login):not(.page-register) .mobile-dropdown-toggle {
+    min-height: 44px !important;
+    padding: 0 8px !important;
+    border-bottom: 1px solid rgba(45, 31, 26, 0.08) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 13px !important;
+    color: #2d1f1a !important;
+  }
+
+  body:not(.page-login):not(.page-register) .mobile-nav .mobile-nav-icons {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+    padding: 14px 16px 18px !important;
+  }
+}
+
+/* Final tablet hamburger dropdown visibility fix. */
+@media (max-width: 1180px), (max-width: 1366px) and (pointer: coarse) {
+  body:not(.page-login):not(.page-register) .site-header {
+    overflow: visible !important;
+  }
+
+  body:not(.page-login):not(.page-register) .mobile-nav {
+    display: block !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: fixed !important;
+    top: 68px !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 5000 !important;
+    width: 100% !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    background: #f4efea !important;
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.16) !important;
+    transition: max-height 0.28s ease, opacity 0.2s ease !important;
+  }
+
+  body:not(.page-login):not(.page-register) .mobile-nav.open,
+  body:not(.page-login):not(.page-register) .mobile-nav.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-height: calc(100vh - 68px) !important;
+    overflow-y: auto !important;
+  }
+
+  body:not(.page-login):not(.page-register) .mobile-nav.open > ul,
+  body:not(.page-login):not(.page-register) .mobile-nav.active > ul,
+  body:not(.page-login):not(.page-register) .mobile-nav.open .mobile-nav-icons,
+  body:not(.page-login):not(.page-register) .mobile-nav.active .mobile-nav-icons {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  body:not(.page-login):not(.page-register) .mobile-nav > ul {
+    flex-direction: column !important;
+  }
+
+  body:not(.page-login):not(.page-register) .mobile-nav a,
+  body:not(.page-login):not(.page-register) .mobile-dropdown-toggle {
+    color: #2d1f1a !important;
+    opacity: 1 !important;
+  }
+
+  body.dark:not(.page-login):not(.page-register) .mobile-nav,
+  body.dark-mode:not(.page-login):not(.page-register) .mobile-nav {
+    background: #101827 !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  body.dark:not(.page-login):not(.page-register) .mobile-nav a,
+  body.dark-mode:not(.page-login):not(.page-register) .mobile-nav a,
+  body.dark:not(.page-login):not(.page-register) .mobile-dropdown-toggle,
+  body.dark-mode:not(.page-login):not(.page-register) .mobile-dropdown-toggle {
+    color: #f8fafc !important;
+    opacity: 1 !important;
+  }
+
+  body.dark:not(.page-login):not(.page-register) .mobile-nav a.active,
+  body.dark-mode:not(.page-login):not(.page-register) .mobile-nav a.active,
+  body.dark:not(.page-login):not(.page-register) .mobile-nav a:hover,
+  body.dark-mode:not(.page-login):not(.page-register) .mobile-nav a:hover,
+  body.dark:not(.page-login):not(.page-register) .mobile-dropdown-toggle.active,
+  body.dark-mode:not(.page-login):not(.page-register) .mobile-dropdown-toggle.active {
+    color: #d8b4fe !important;
+  }
+}
+
+/* Dark mode: make small section labels readable on dark backgrounds. */
+body.dark .section-tag,
+body.dark-mode .section-tag,
+body.dark .section-subtitle,
+body.dark-mode .section-subtitle,
+body.dark .naturals-eyebrow,
+body.dark-mode .naturals-eyebrow,
+body.dark .hero-subtitle,
+body.dark-mode .hero-subtitle {
+  color: #f8fafc !important;
+  background: rgba(216, 180, 254, 0.18) !important;
+  border: 1px solid rgba(216, 180, 254, 0.35) !important;
+  border-radius: 999px !important;
+  padding: 5px 12px !important;
+  text-shadow: none !important;
+}
+
+body.dark .section-header h2,
+body.dark-mode .section-header h2,
+body.dark .love-text h2,
+body.dark-mode .love-text h2 {
+  color: #ffffff !important;
+}
+
+/* Home dark mode: keep the Why Choose Us label clear and away from section edges. */
+body.dark.page-home .love-section,
+body.dark-mode.page-home .love-section {
+  padding-top: 90px !important;
+  overflow: visible !important;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+body.dark.page-home .love-layout,
+body.dark-mode.page-home .love-layout {
+  align-items: start !important;
+  overflow: visible !important;
+}
+
+body.dark.page-home .love-text,
+body.dark-mode.page-home .love-text {
+  padding-top: 0 !important;
+  z-index: 5 !important;
+  overflow: visible !important;
+}
+
+body.dark.page-home .love-text .section-tag,
+body.dark-mode.page-home .love-text .section-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  z-index: 10 !important;
+  margin-top: 0 !important;
+  margin-bottom: 16px !important;
+  min-height: 32px !important;
+  line-height: 1.2 !important;
+  overflow: visible !important;
+  color: #ffffff !important;
+  background: rgba(123, 79, 163, 0.82) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Service page: keep Why Choose Us text fully visible in dark mode. */
+body.dark.page-service .why-choose-section,
+body.dark-mode.page-service .why-choose-section {
+  padding-top: 88px !important;
+  padding-bottom: 88px !important;
+  overflow: visible !important;
+}
+
+body.dark.page-service .why-choose-content,
+body.dark-mode.page-service .why-choose-content {
+  align-items: center !important;
+  overflow: visible !important;
+}
+
+body.dark.page-service .why-choose-text,
+body.dark-mode.page-service .why-choose-text {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  overflow: visible !important;
+}
+
+body.dark.page-service .why-choose-text .section-subtitle,
+body.dark-mode.page-service .why-choose-text .section-subtitle {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 30px !important;
+  line-height: 1.2 !important;
+  margin-bottom: 16px !important;
+  color: #ffffff !important;
+  background: rgba(123, 79, 163, 0.14) !important;
+  border: 1px solid rgba(216, 180, 254, 0.55) !important;
+  border-radius: 999px !important;
+  padding: 6px 16px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-shadow: none !important;
+}
+
+body.dark.page-service .why-choose-text .section-title,
+body.dark-mode.page-service .why-choose-text .section-title {
+  color: #ffffff !important;
+  margin-bottom: 14px !important;
+}
+
+body.dark.page-service .why-choose-text > p,
+body.dark-mode.page-service .why-choose-text > p {
+  color: #f8fafc !important;
+  line-height: 1.75 !important;
+}
+
+body.dark.page-service .feature-item,
+body.dark-mode.page-service .feature-item {
+  background: #111c2d !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark.page-service .feature-content h4,
+body.dark-mode.page-service .feature-content h4 {
+  color: #d8b4fe !important;
+}
+
+body.dark.page-service .feature-content p,
+body.dark-mode.page-service .feature-content p {
+  color: #e5e7eb !important;
 }

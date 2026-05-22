@@ -619,7 +619,9 @@ body.rtl .nav-left ul {
 /* Header Section */
 .contact-header {
     height: 60vh;
-    background: linear-gradient(135deg, var(--lavender-primary) 0%, var(--lavender-dark) 100%);
+    background:
+        linear-gradient(rgba(45, 31, 26, 0.55), rgba(123, 79, 163, 0.68)),
+        url('../images/lavender.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -630,12 +632,9 @@ body.rtl .nav-left ul {
 .contact-header::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../images/lavender.jpg') center/cover;
-    opacity: 0.1;
+    inset: 0;
+    background: rgba(45, 31, 26, 0.18);
+    opacity: 1;
     z-index: 1;
 }
 
@@ -677,8 +676,9 @@ body.rtl .nav-left ul {
 
 .methods-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 30px;
+    align-items: stretch;
 }
 
 .method-card {
@@ -689,6 +689,11 @@ body.rtl .nav-left ul {
     box-shadow: 0 10px 30px var(--shadow);
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    min-height: 215px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .method-card:hover {
@@ -732,6 +737,22 @@ body.rtl .nav-left ul {
     color: #666;
     font-style: normal;
     font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+    .methods-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 760px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 620px) {
+    .methods-grid {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+        gap: 22px;
+    }
 }
 
 /* Contact Form Section */
@@ -930,8 +951,9 @@ body.rtl .nav-left ul {
 
 .workshop-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
+    align-items: stretch;
 }
 
 .workshop-card {
@@ -943,11 +965,15 @@ body.rtl .nav-left ul {
     transition: all 0.3s ease;
     border: 2px solid transparent;
     position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .workshop-card.featured {
     border-color: var(--lavender-primary);
-    transform: scale(1.05);
+    transform: none;
 }
 
 .workshop-card.featured::before {
@@ -971,7 +997,7 @@ body.rtl .nav-left ul {
 }
 
 .workshop-card.featured:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: translateY(-10px);
 }
 
 .workshop-icon {
@@ -1011,18 +1037,33 @@ body.rtl .nav-left ul {
 
 .workshop-card ul {
     list-style: none;
-    margin-bottom: 30px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 30px;
+    flex: 1;
 }
 
 .workshop-card li {
     font-family: 'Poppins', sans-serif;
-    padding: 8px 0;
+    padding: 8px 0 9px;
     color: var(--black);
-    border-bottom: 1px solid var(--lavender-pale);
+    border-bottom: 0;
+    position: relative;
 }
 
-.workshop-card li:last-child {
-    border-bottom: none;
+.workshop-card li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: min(170px, 58%);
+    height: 1px;
+    background: var(--lavender-pale);
+    transform: translateX(-50%);
+}
+
+.workshop-card li:last-child::after {
+    display: none;
 }
 
 .book-btn {
@@ -1034,7 +1075,11 @@ body.rtl .nav-left ul {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     transition: all 0.3s ease;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    min-width: 140px;
 }
 
 .book-btn:hover {
@@ -1376,7 +1421,6 @@ body.rtl .nav-left ul {
         grid-template-columns: 1fr;
     }
     
-    .methods-grid,
     .workshop-cards {
         grid-template-columns: 1fr;
     }
@@ -1458,7 +1502,7 @@ body.rtl .nav-left ul {
    Footer
 ════════════════════════════════ */
 .site-footer {
-  background: #1e1410;
+  background: #07111f;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   position: relative;
@@ -1466,10 +1510,7 @@ body.rtl .nav-left ul {
 
 /* Top gradient accent line */
 .footer-accent {
-  height: 3px;
-  background: linear-gradient(90deg, #7b4fa3, #3caea3, #c4a882, #3caea3, #7b4fa3);
-  background-size: 200% 100%;
-  animation: accentShift 6s linear infinite;
+  display: none;
 }
 
 @keyframes accentShift {
