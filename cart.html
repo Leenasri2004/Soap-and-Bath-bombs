@@ -369,7 +369,21 @@
   </div>
 </footer>
 
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
   <script>
+    const backToTop = document.getElementById('backToTop');
+
+    if (backToTop) {
+      window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.scrollY > 350);
+      });
+
+      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
     const items = [...document.querySelectorAll('.cart-item')];
     const subtotalEl = document.getElementById('cartSubtotal');
     const totalEl = document.getElementById('cartTotal');

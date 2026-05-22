@@ -8,9 +8,9 @@
 <title>Shop - Natural Soap Collection | Soap Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/shop.css?v=2">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/dark.css">
+    <link rel="stylesheet" href="css/dark.css?v=2">
 </head>
 <body class="page-shop">
 
@@ -1112,7 +1112,22 @@ In contrast, organic soaps from Soap Studio are carefully handcrafted using natu
   </div>
 </footer>
 
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
 <script src="shop.js"></script>
+<script>
+  const backToTop = document.getElementById('backToTop');
+
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 350);
+    });
+
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+</script>
 <script src="js/theme.js"></script>
 </body>
 </html>
