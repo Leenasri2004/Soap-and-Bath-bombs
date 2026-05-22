@@ -357,9 +357,11 @@ function scrollKits(direction) {
 
 const darkBtnMobile = document.getElementById("darkToggleMobile");
 
-darkBtnMobile.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-});
+if (darkBtnMobile) {
+  darkBtnMobile.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+}
 
 
 
