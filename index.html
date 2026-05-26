@@ -1249,14 +1249,18 @@
   const collectionSection = document.querySelector('.collection');
 
   if (colGrid && colPrev && colNext) {
-    const scrollAmount = 250; // adjust if needed
+    const getCollectionStep = () => {
+      const card = colGrid.querySelector('.collection-item');
+      const gap = parseFloat(window.getComputedStyle(colGrid).gap) || 0;
+      return card ? card.getBoundingClientRect().width + gap : colGrid.clientWidth;
+    };
 
     colNext.addEventListener('click', () => {
-      colGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      colGrid.scrollBy({ left: getCollectionStep(), behavior: 'smooth' });
     });
 
     colPrev.addEventListener('click', () => {
-      colGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      colGrid.scrollBy({ left: -getCollectionStep(), behavior: 'smooth' });
     });
   }
 
