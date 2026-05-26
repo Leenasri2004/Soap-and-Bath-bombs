@@ -854,7 +854,7 @@ body {
 
 /* COLLECTION HORIZONTAL */
 .collection {
-    padding: 80px 20px;
+    padding: 80px clamp(20px, 5vw, 80px);
     background: #f7f3ef;
 }
 
@@ -951,6 +951,23 @@ body {
     opacity: 1;
 }
 
+@media (min-width: 1025px) {
+    .collection-grid {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .collection-item {
+        flex: 0 0 calc((100% - 90px) / 4);
+        min-width: 0;
+        width: auto;
+        scroll-snap-align: start;
+    }
+}
+
 /* SCROLL BUTTONS */
 .col-btn {
     border: none;
@@ -1039,15 +1056,16 @@ body {
 
 @media (max-width: 640px) {
     .collection {
-        padding: 60px 20px;
+        padding: 60px 16px;
     }
     .collection-wrapper {
         gap: 0;
         overflow: visible;
     }
     .collection-grid {
+        width: 100%;
         gap: 12px;
-        padding: 10px 4px;
+        padding: 10px 0;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
     }
@@ -1075,8 +1093,8 @@ body {
         right: 8px;
     }
     .collection-item {
-        min-width: 78%;
-        width: 78%;
+        min-width: 100%;
+        width: 100%;
         scroll-snap-align: start;
     }
 }
